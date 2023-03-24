@@ -1,6 +1,13 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { findTheme, ThemeTypes } from "@/common/theme/custom-theme";
+import "@/fonts/font.style.css";
+import "@/common/theme/styles/globals.css";
+import { ThemeProvider } from "@mui/material";
+import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider theme={findTheme(ThemeTypes.Light)}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
