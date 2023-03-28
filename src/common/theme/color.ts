@@ -9,6 +9,7 @@ export enum LightColor {
   LightBlue = "rgba(208, 239, 254, 1)",
   LightNavy = "#F6F2FF",
   LightPink = "#FDF5FB",
+  Gray = "#C4C4C4",
 }
 
 export const lightPalette: PaletteOptions = {};

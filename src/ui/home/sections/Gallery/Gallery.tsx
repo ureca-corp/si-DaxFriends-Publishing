@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import ImgPink from "@/assets/pc/gallery/img-blur-pink.png";
 import ImgBlue from "@/assets/pc/gallery/img-blur-blue.png";
+import { SwiperSection } from "./components/SwiperSection";
 
 export const Gallery = () => {
   return (
@@ -17,6 +18,7 @@ export const Gallery = () => {
           <Image fill src={ImgBlue} alt="blue" />
         </div>
       </div>
+      <SwiperSection />
     </section>
   );
 };
