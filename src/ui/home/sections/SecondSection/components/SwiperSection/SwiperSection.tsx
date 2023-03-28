@@ -87,8 +87,8 @@ const st = {
   `,
 
   card: css`
-    width: 100%;
-    height: 100%;
+    width: 67.7vw;
+    aspect-ratio: 1/0.369;
     display: flex;
     justify-content: space-between;
     padding-left: 10.41vw;

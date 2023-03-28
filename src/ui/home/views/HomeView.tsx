@@ -5,6 +5,8 @@ import {
   ThirdSection,
   Gallery,
   Utility,
+  Partners,
+  Team,
 } from "../sections";
 
 export const HomeView = () => {
@@ -15,6 +17,8 @@ export const HomeView = () => {
       <ThirdSection />
       <Utility />
       <Gallery />
+      <Team />
+      <Partners />
     </Stack>
   );
 };

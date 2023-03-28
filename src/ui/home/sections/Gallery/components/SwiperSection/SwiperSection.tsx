@@ -1,10 +1,9 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperCore, { Autoplay } from "swiper";
+import  { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useState } from "react";
 import { GalleryModels } from "../../models/gallery.model";
 import Image from "next/image";
 import { LightColor } from "@/common/theme/color";
@@ -12,8 +11,6 @@ import { Typography } from "@mui/material";
 import IconSharp from "@/assets/pc/gallery/icon-sharp.png";
 
 export const SwiperSection = () => {
-  const [swiper, setSwiper] = useState<SwiperCore>();
-
   const models = GalleryModels;
 
   return (
@@ -25,9 +22,6 @@ export const SwiperSection = () => {
         slidesPerView={6}
         modules={[Autoplay]}
         autoplay={{ delay: 1, disableOnInteraction: true }}
-        onSwiper={(swiper) => {
-          setSwiper(swiper);
-        }}
         speed={6000}
       >
         {models.map((it, index) => (
@@ -64,14 +58,14 @@ const st = {
     bottom: 5.2vw;
   `,
   card: css`
-    width: 260px;
-    height: 308px;
+    width: 13.54vw;
+    aspect-ratio: 1/1.18;
     display: flex;
     flex-direction: column;
   `,
   cardImage: css`
     width: 100%;
-    height: 260px;
+    aspect-ratio: 1;
     position: relative;
     background-color: ${LightColor.Gray};
   `,
