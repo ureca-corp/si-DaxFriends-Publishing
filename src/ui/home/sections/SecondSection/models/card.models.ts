@@ -2,7 +2,6 @@ import Card1 from "@/assets/pc/swiper/card/card-1.png";
 import Card2 from "@/assets/pc/swiper/card/card-2.png";
 import Card3 from "@/assets/pc/swiper/card/card-3.png";
 import Card4 from "@/assets/pc/swiper/card/card-4.png";
-import Card5 from "@/assets/pc/swiper/card/card-5.png";
 
 export const CardModels = [
   {
@@ -24,10 +23,5 @@ export const CardModels = [
     img: Card4,
     title: "EP04. 백우",
     text: "돌아온 깜소와 코랑이는 그동안 쌓은 실력을 맘껏 발휘하며 투자하는 것마다 이익을 실현했어요. 때로는 예상치 못한 복병을 만나 고전하기도 했지만 결국은 승리하여 졸업할 수 있었어요. 멋진 외양간을 마련한 깜소. 오랫동안 연모해온 백우에게 고백을 하는데… 과연 깜소의 고백은 성공했을까요?",
-  },
-  {
-    img: Card5,
-    title: "EP05. 깜소",
-    text: "어느 먼 나라에 깜소가 살고 있었어요. 깜소는 자신만의 외양간을 마련하기 위해 열심히 일을 해서 은행에 저축했어요. 그러다가 실질금리 마이너스 시대에 저축은 어리석은 행동이란 걸 깨닫고 크립토 투자의 전쟁판에 뛰어들었어요. 그러나 지식과 경험이 모자랐던 우리의 깜소는, 저축했던 자산을 거의 다 잃어버리고 절망에 빠지게 되었답니다.",
   },
 ];
