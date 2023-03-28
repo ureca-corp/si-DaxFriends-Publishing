@@ -8,6 +8,8 @@ import { useState } from "react";
 import { GalleryModels } from "../../models/gallery.model";
 import Image from "next/image";
 import { LightColor } from "@/common/theme/color";
+import { Typography } from "@mui/material";
+import IconSharp from "@/assets/pc/gallery/icon-sharp.png";
 
 export const SwiperSection = () => {
   const [swiper, setSwiper] = useState<SwiperCore>();
@@ -34,7 +36,18 @@ export const SwiperSection = () => {
               <div css={st.cardImage}>
                 <Image src={it.img} alt="image" />
               </div>
-              <div css={st.cardText}>{it.name}</div>
+              <div css={st.cardText}>
+                <div css={st.icon}>
+                  <Image fill src={IconSharp} alt="#" />
+                </div>
+                <Typography
+                  fontSize="16px"
+                  color={LightColor.BrandBlue}
+                  lineHeight={1.4}
+                >
+                  {it.name}
+                </Typography>
+              </div>
             </div>
           </SwiperSlide>
         ))}
@@ -62,9 +75,18 @@ const st = {
     position: relative;
     background-color: ${LightColor.Gray};
   `,
+  icon: css`
+    position: relative;
+    width: 0.73vw;
+    aspect-ratio: 1;
+  `,
   cardText: css`
     width: 100%;
     flex: 1;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
   `,
 };
