@@ -28,7 +28,7 @@ export const SwiperSection = () => {
         onSwiper={(swiper) => {
           setSwiper(swiper);
         }}
-        speed={5000}
+        speed={6000}
       >
         {models.map((it, index) => (
           <SwiperSlide key={index}>
