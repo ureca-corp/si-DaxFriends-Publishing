@@ -1,7 +1,8 @@
+import { HomeView } from "@/ui/home/views";
 import { NextPage } from "next";
 
 const HomePage: NextPage = () => {
-  return <div>hi</div>;
+  return <HomeView />;
 };
 
 export default HomePage;

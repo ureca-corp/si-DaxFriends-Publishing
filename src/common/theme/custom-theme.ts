@@ -1,6 +1,6 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { useMemo, useState } from "react";
-import { LightColor, lightPalette } from "./color";
+import { lightPalette } from "./color";
 import { ScreenType } from "./screen";
 import { lightTypographyOptions } from "./typography";
 
@@ -24,9 +24,6 @@ export const lightTheme = createTheme({
       defaultProps: {
         color: "transparent",
         elevation: 0,
-        style: {
-          borderBottom: `1px solid ${LightColor.BorderColor1}`,
-        },
       },
     },
     MuiButton: {

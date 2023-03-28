@@ -1,10 +1,8 @@
 import { TypographyOptions } from "@mui/material/styles/createTypography";
-import { LightColor } from "./color";
 
 const baseTypographyOptions: TypographyOptions = {
-  fontFamily: "Pretendard",
+  fontFamily: "BMJUA",
   allVariants: {
-    color: LightColor.TextColor1,
     whiteSpace: "pre-wrap",
   },
   body1: {
