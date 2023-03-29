@@ -32,7 +32,7 @@ export const GalleryModels = [
   },
   {
     img: Aja,
-    name: "Aja",
+    name: "AJA",
   },
   {
     img: Clinking,
