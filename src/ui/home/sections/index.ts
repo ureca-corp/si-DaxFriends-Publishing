@@ -5,3 +5,5 @@ export { Utility } from "./Utility";
 export { Gallery } from "./Gallery";
 export { Team } from "./Team";
 export { Partners } from "./Partners";
+export { Faq } from "./Faq";
+export { Footer } from "./Footer";
