@@ -4,12 +4,12 @@ import { BackgroundImage, MainTitle } from "./components";
 import { TitleModels } from "./models/title.model";
 
 export const Main = () => {
-  const { isMedium } = useCustomMediaQuery();
+  const { isTablet } = useCustomMediaQuery();
   const models = TitleModels;
 
   return (
     <section css={st.root}>
-      {isMedium || <MainTitle main={models.main} desc={models.desc} />}
+      {isTablet || <MainTitle main={models.main} desc={models.desc} />}
       <BackgroundImage />
     </section>
   );

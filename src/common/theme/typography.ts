@@ -6,7 +6,7 @@ const baseTypographyOptions: TypographyOptions = {
     whiteSpace: "pre-wrap",
   },
   h1: {
-    fontSize: "56px",
+    fontSize: "2.91vw",
     lineHeight: 1.4,
   },
   h2: {
@@ -27,7 +27,7 @@ const baseTypographyOptions: TypographyOptions = {
     lineHeight: 1.4,
   },
   body2: {
-    fontSize: "26px",
+    fontSize: "1.35vw",
     lineHeight: 1.4,
   },
   subtitle1: {

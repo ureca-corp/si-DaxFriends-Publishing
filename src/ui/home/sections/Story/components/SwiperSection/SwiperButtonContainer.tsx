@@ -37,5 +37,6 @@ const st = {
     width: 3.12vw;
     aspect-ratio: 1/1.32;
     cursor: pointer;
+    z-index: 3;
   `,
 };

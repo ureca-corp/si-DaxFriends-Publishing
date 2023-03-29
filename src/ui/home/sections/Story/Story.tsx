@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import ImgBackgronud from "@/assets/pc/img-bg-cloud.png";
 import { SwiperSection } from "./components/SwiperSection";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const Story = () => {
   return (
