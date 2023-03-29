@@ -31,17 +31,11 @@ export const Team = () => {
             <div css={st.image}>
               <Image fill src={it.img} alt="member" />
             </div>
-            <Typography
-              fontSize="20px"
-              lineHeight={1.4}
-              color={LightColor.Gray100}
-            >
+            <Typography variant="subtitle2" color={LightColor.Gray100}>
               {it.department}
             </Typography>
             <div css={st.name}>
-              <Typography fontSize="30px" lineHeight={1.4}>
-                {it.name}
-              </Typography>
+              <Typography variant="body1">{it.name}</Typography>
 
               <div css={st.link}>
                 <div css={st.linkImage}>

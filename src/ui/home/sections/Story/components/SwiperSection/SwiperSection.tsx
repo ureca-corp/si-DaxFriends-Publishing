@@ -45,18 +45,10 @@ export const SwiperSection = () => {
                   <Image fill src={it.img} alt="card-image" />
                 </div>
                 <div css={st.textWrapper}>
-                  <Typography
-                    fontSize="56px"
-                    lineHeight={1.4}
-                    color={LightColor.BrandWhite}
-                  >
+                  <Typography variant="h1" color={LightColor.BrandWhite}>
                     {it.title}
                   </Typography>
-                  <Typography
-                    fontSize="26px"
-                    lineHeight={1.4}
-                    color={LightColor.BrandWhite}
-                  >
+                  <Typography variant="body2" color={LightColor.BrandWhite}>
                     {it.text}
                   </Typography>
                 </div>

@@ -1,12 +1,12 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { useMemo, useState } from "react";
 import { lightPalette } from "./color";
 import { ScreenType } from "./screen";
-import { lightTypographyOptions } from "./typography";
+import { typographyOptions } from "./typography";
 
 export const lightTheme = createTheme({
   palette: lightPalette,
-  typography: lightTypographyOptions,
+  typography: typographyOptions,
   breakpoints: {
     values: {
       xs: 0,
@@ -57,19 +57,12 @@ export enum ThemeTypes {
   Dark,
 }
 
-export const findTheme = (theme: ThemeTypes) => {
-  switch (theme) {
-    default:
-      return responsiveFontSizes(lightTheme);
-  }
-};
-
 export const useThemeHook = () => {
   const [theme, setTheme] = useState(lightTheme);
   const palette = theme.palette;
 
   const colorMode = useMemo(
-    () => (theme: ThemeTypes) => setTheme(findTheme(theme)),
+    () => (theme: ThemeTypes) => setTheme(lightTheme),
     []
   );
 

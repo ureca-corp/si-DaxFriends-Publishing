@@ -31,7 +31,7 @@ export const AccordionContainer = () => {
           onChange={handleChange(index)}
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-            <Typography fontSize="22px" lineHeight={1.4}>
+            <Typography variant="subtitle1">
               <span css={st.purpleText}>Q.</span> {it.question}
             </Typography>
           </AccordionSummary>
@@ -39,8 +39,7 @@ export const AccordionContainer = () => {
           <AccordionDetails>
             <Typography
               css={st.answer}
-              fontSize="20px"
-              lineHeight={1.4}
+              variant="subtitle2"
               color={LightColor.Gray300}
             >
               <span css={st.blueText}>A.</span> {it.answer}

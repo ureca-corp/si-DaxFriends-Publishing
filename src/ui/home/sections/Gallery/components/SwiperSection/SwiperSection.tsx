@@ -36,11 +36,7 @@ export const SwiperSection = () => {
                 <div css={st.icon}>
                   <Image fill src={IconSharp} alt="#" />
                 </div>
-                <Typography
-                  fontSize="16px"
-                  color={LightColor.BrandBlue}
-                  lineHeight={1.4}
-                >
+                <Typography variant="caption" color={LightColor.BrandBlue}>
                   {it.name}
                 </Typography>
               </div>
