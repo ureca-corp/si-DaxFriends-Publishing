@@ -59,10 +59,10 @@ const st = {
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 14.98vw;
+    bottom: 15.98vw;
     display: flex;
     flex-direction: column;
-    gap: 9.52vw;
+    gap: 10.52vw;
   `,
   swiper: css`
     width: 100%;

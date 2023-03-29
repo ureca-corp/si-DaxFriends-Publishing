@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import  { Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { GalleryModels } from "../../models/gallery.model";
@@ -23,12 +23,14 @@ export const SwiperSection = () => {
         modules={[Autoplay]}
         autoplay={{ delay: 1, disableOnInteraction: true }}
         speed={6000}
+        grabCursor={false}
+        allowTouchMove={false}
       >
         {models.map((it, index) => (
           <SwiperSlide key={index}>
             <div css={st.card}>
               <div css={st.cardImage}>
-                <Image src={it.img} alt="image" />
+                <Image fill src={it.img} alt="image" />
               </div>
               <div css={st.cardText}>
                 <div css={st.icon}>
@@ -64,9 +66,9 @@ const st = {
     flex-direction: column;
   `,
   cardImage: css`
+    position: relative;
     width: 100%;
     aspect-ratio: 1;
-    position: relative;
     background-color: ${LightColor.Gray};
   `,
   icon: css`
