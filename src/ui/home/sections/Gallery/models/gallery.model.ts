@@ -8,50 +8,50 @@ import Trill from "@/assets/pc/gallery/card/Trill.png";
 export const GalleryModels = [
   {
     img: Aja,
-    name: "12341234",
+    name: "AJA",
   },
   {
     img: Clinking,
-    name: "12341234",
+    name: "Clinking",
   },
   {
     img: Hogom,
-    name: "12341234",
+    name: "Hogom",
   },
   {
     img: Manta,
-    name: "12341234",
+    name: "Manta",
   },
   {
     img: Rich,
-    name: "12341234",
+    name: "Rich",
   },
   {
     img: Trill,
-    name: "12341234",
+    name: "Trill",
   },
   {
     img: Aja,
-    name: "12341234",
+    name: "Aja",
   },
   {
     img: Clinking,
-    name: "12341234",
+    name: "Clinking",
   },
   {
     img: Hogom,
-    name: "12341234",
+    name: "Hogom",
   },
   {
     img: Manta,
-    name: "12341234",
+    name: "Manta",
   },
   {
     img: Rich,
-    name: "12341234",
+    name: "Rich",
   },
   {
     img: Trill,
-    name: "12341234",
+    name: "Trill",
   },
 ];
