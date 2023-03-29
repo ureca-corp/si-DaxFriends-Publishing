@@ -6,7 +6,6 @@ import ImgFoldedLetter from "@/assets/pc/utility/img-letter-fold.png";
 import ImgPinkBlur from "@/assets/pc/utility/img-blur.png";
 import ImgLock from "@/assets/pc/utility/img-lock.png";
 import { useState } from "react";
-import { DiamondButton } from "./components/DiamondButton";
 
 export const Utility = () => {
   const [letterOpen, setLetterOpen] = useState(false);
@@ -45,7 +44,7 @@ export const Utility = () => {
       </div>
       <div css={st.blurWrapper}>
         <div css={st.blur}>
-          <Image fill src={ImgPinkBlur} alt="bg-pink" />
+          <Image fill src={ImgPinkBlur} alt="blur" />
         </div>
       </div>
     </section>
@@ -59,6 +58,7 @@ const st = {
     background-color: ${LightColor.LightPink};
     position: relative;
     overflow: hidden;
+    z-index: 1;
   `,
   inner: css`
     width: 100%;
