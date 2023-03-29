@@ -4,10 +4,14 @@ import Image from "next/image";
 import ImgPink from "@/assets/pc/gallery/img-blur-pink.png";
 import ImgBlue from "@/assets/pc/gallery/img-blur-blue.png";
 import { SwiperSection } from "./components/SwiperSection";
+import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
+import { MovingIcon } from "@/common/components/MovingIcon";
 
 export const Gallery = () => {
+  const movingIcon = UseGetAsset("gallery");
   return (
     <section css={st.root}>
+      <MovingIcon props={movingIcon[0]} />
       <div css={st.pinkBlur}>
         <div css={st.blur}>
           <Image fill src={ImgPink} alt="pink" />

@@ -3,10 +3,14 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import { AccordionContainer } from "./components";
 import ImgBlueBlur from "@/assets//pc/faq/img-blur-blue.png";
+import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
+import { MovingIcon } from "@/common/components/MovingIcon";
 
 export const Faq = () => {
+  const movingIcon = UseGetAsset("faq");
   return (
     <section css={st.root}>
+      <MovingIcon props={movingIcon[0]} />
       <div css={st.blurWrapper}>
         <div css={st.blur}>
           <Image fill src={ImgBlueBlur} alt="blur" />

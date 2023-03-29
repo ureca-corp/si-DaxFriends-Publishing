@@ -1,1 +1,0 @@
-export { ThirdSection } from "./ThirdSection";

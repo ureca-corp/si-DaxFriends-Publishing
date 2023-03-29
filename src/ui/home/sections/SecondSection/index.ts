@@ -1,1 +1,0 @@
-export { SecondSection } from "./SecondSection";

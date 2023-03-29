@@ -65,7 +65,7 @@ export const findTheme = (theme: ThemeTypes) => {
 };
 
 export const useThemeHook = () => {
-  const [theme, setTheme] = useState(findTheme(ThemeTypes.Light));
+  const [theme, setTheme] = useState(lightTheme);
   const palette = theme.palette;
 
   const colorMode = useMemo(

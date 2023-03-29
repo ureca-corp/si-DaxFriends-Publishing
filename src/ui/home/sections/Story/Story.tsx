@@ -3,7 +3,7 @@ import Image from "next/image";
 import ImgBackgronud from "@/assets/pc/img-bg-cloud.png";
 import { SwiperSection } from "./components/SwiperSection";
 
-export const SecondSection = () => {
+export const Story = () => {
   return (
     <section css={st.root}>
       <div css={st.bgWrapper}>

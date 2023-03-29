@@ -1,0 +1,1 @@
+export { MovingIcon } from "./MovingIcon";

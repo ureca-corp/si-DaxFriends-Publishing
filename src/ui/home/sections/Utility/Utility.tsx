@@ -6,8 +6,11 @@ import ImgFoldedLetter from "@/assets/pc/utility/img-letter-fold.png";
 import ImgPinkBlur from "@/assets/pc/utility/img-blur.png";
 import ImgLock from "@/assets/pc/utility/img-lock.png";
 import { useState } from "react";
+import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
+import { MovingIcon } from "@/common/components/MovingIcon";
 
 export const Utility = () => {
+  const movingIcon = UseGetAsset("utility");
   const [letterOpen, setLetterOpen] = useState(false);
   const handleLetterOpen = () => {
     setLetterOpen(true);
@@ -17,6 +20,7 @@ export const Utility = () => {
   };
   return (
     <section css={st.root}>
+      <MovingIcon props={movingIcon[0]} topShort />
       <div css={st.inner}>
         {letterOpen ? (
           <div css={st.letter} onClick={handleLetterClose}>

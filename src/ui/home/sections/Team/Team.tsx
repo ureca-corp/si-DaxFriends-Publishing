@@ -6,11 +6,15 @@ import { LightColor } from "@/common/theme/color";
 import { Typography } from "@mui/material";
 import { TeamModels } from "./models/team.models";
 import ImgLink from "@/assets//pc/team/icon-link.png";
+import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
+import { MovingIcon } from "@/common/components/MovingIcon";
 
 export const Team = () => {
+  const movingIcon = UseGetAsset("team");
   const models = TeamModels;
   return (
     <section css={st.root}>
+      <MovingIcon props={movingIcon[0]} />
       <div css={st.purpleBlur}>
         <div css={st.blur}>
           <Image fill src={ImgPurple} alt="blue" />
