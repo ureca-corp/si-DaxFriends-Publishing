@@ -9,7 +9,7 @@ export const lightTheme = createTheme({
   typography: typographyOptions,
   breakpoints: {
     values: {
-      xs: 0,
+      xs: ScreenType.xs + 1,
       sm: ScreenType.sm + 1,
       md: ScreenType.md + 1,
       lg: ScreenType.lg + 1,

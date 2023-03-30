@@ -5,6 +5,7 @@ import { AccordionContainer } from "./components";
 import ImgBlueBlur from "@/assets//pc/faq/img-blur-blue.png";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const Faq = () => {
   const movingIcon = UseGetAsset("faq");
@@ -29,10 +30,15 @@ const st = {
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
     padding: 0 5.2vw;
-    padding-top: 16.66vw;
+    padding-bottom: 4.62vh;
+
+    @media ${MediaQueries.xs} {
+      padding: 0;
+      padding-bottom: 5.55vw;
+    }
   `,
   blurWrapper: css`
     position: absolute;

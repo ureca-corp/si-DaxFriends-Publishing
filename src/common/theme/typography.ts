@@ -31,7 +31,7 @@ const baseTypographyOptions: TypographyOptions = {
     lineHeight: 1.4,
   },
   subtitle1: {
-    fontSize: "22px",
+    fontSize: "1.14vw",
     lineHeight: 1.4,
   },
   subtitle2: {
@@ -39,7 +39,7 @@ const baseTypographyOptions: TypographyOptions = {
     lineHeight: 1.4,
   },
   caption: {
-    fontSize: "14px",
+    fontSize: "1.04vw",
     lineHeight: 1.4,
   },
 };
