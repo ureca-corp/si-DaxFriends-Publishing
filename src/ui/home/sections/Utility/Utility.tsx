@@ -2,7 +2,6 @@ import { LightColor } from "@/common/theme/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import ImgPinkBlur from "@/assets/pc/utility/img-blur.png";
-import { useState } from "react";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
 import { Letter } from "./components/Letter";
