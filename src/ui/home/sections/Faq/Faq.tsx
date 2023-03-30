@@ -1,11 +1,11 @@
 import { LightColor } from "@/common/theme/color";
 import { css } from "@emotion/react";
 import Image from "next/image";
-import { AccordionContainer } from "./components";
 import ImgBlueBlur from "@/assets//pc/faq/img-blur-blue.png";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
 import { MediaQueries } from "@/common/theme/screen";
+import { AccordionContainer } from "./components/AccordionContainer";
 
 export const Faq = () => {
   const movingIcon = UseGetAsset("faq");

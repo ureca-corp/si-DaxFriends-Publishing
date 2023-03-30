@@ -1,13 +1,15 @@
 import { css } from "@emotion/react";
 import { useState } from "react";
-import { styled } from "@mui/material/styles";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { LightColor } from "@/common/theme/color";
-import { FaqModels } from "../models/faq.models";
 import { MediaQueries } from "@/common/theme/screen";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import { Accordion } from "./Accordion";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionDivider,
+  AccordionSummary,
+} from "./elements";
+import { FaqModels } from "../../models/faq.models";
 
 export const AccordionContainer = () => {
   const [expanded, setExpanded] = useState<number | false>(1);
@@ -52,22 +54,13 @@ export const AccordionContainer = () => {
 const st = {
   root: css`
     width: 100%;
-  `,
-  dividerWrapper: css`
-    width: 100%;
-    padding: 0 1.04vw;
-    height: 1px;
-    text-align: center;
+
     @media ${MediaQueries.xs} {
-      padding: 0 4.44vw;
+      height: calc((14.44vw * 7) + 6px);
+      overflow: scroll;
     }
   `,
-  divider: css`
-    width: 100%;
-    height: 100%;
-    background-color: ${LightColor.Gray200};
-    margin: 0 auto;
-  `,
+
   purpleText: css`
     color: ${LightColor.BrandPrimary};
   `,
@@ -94,24 +87,4 @@ const st = {
       margin-left: 10px;
     }
   `,
-};
-
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: "16px",
-  paddingLeft: "22px",
-  [theme.breakpoints.down("lg")]: {
-    padding: "2.6vw",
-  },
-  [theme.breakpoints.down("xs")]: {
-    padding: "4.44vw",
-    paddingLeft: "5.55vw",
-  },
-}));
-
-const AccordionDivider = () => {
-  return (
-    <div css={st.dividerWrapper}>
-      <div css={st.divider}></div>
-    </div>
-  );
 };
