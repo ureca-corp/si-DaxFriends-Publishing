@@ -1,21 +1,19 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperCore, { Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useState } from "react";
 import { CardModels } from "../../models/card.models";
 import Image from "next/image";
-import { Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { LightColor } from "@/common/theme/color";
 import { SwiperButtonContainer } from "./SwiperButtonContainer";
 import { UseSwiperButton } from "./UseSwiperButton";
-import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const SwiperSection = () => {
   const { handleSetSwiper, buttonState } = UseSwiperButton();
-  const { isTablet, isSmall } = useCustomMediaQuery();
   const models = CardModels;
 
   return (
@@ -32,27 +30,10 @@ export const SwiperSection = () => {
         >
           {models.map((it, index) => (
             <SwiperSlide key={index}>
-              <div css={st.card}>
-                <div css={st.image}>
-                  <Image fill src={it.img} alt="card-image" />
-                </div>
-                <div css={st.textWrapper}>
-                  <Typography
-                    variant="h1"
-                    color={LightColor.BrandWhite}
-                    css={st.title}
-                  >
-                    {it.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color={LightColor.BrandWhite}
-                    css={st.desc}
-                  >
-                    {it.text}
-                  </Typography>
-                </div>
-              </div>
+              <Stack css={st.card}>
+                <SlideImage image={it.img} />
+                <SlideText title={it.title} desc={it.text} />
+              </Stack>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -84,11 +65,10 @@ const st = {
       aspect-ratio: unset;
     }
   `,
-
   card: css`
     width: 67.7vw;
     aspect-ratio: 1/0.369;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-left: 10.41vw;
 
@@ -133,4 +113,31 @@ const st = {
       font-size: 3.9vw;
     }
   `,
+};
+
+interface SlideProps {
+  image?: any;
+  title?: string;
+  desc?: string;
+}
+
+const SlideImage = ({ image }: SlideProps) => {
+  return (
+    <div css={st.image}>
+      <Image fill src={image} alt="card-image" />
+    </div>
+  );
+};
+
+const SlideText = ({ title, desc }: SlideProps) => {
+  return (
+    <div css={st.textWrapper}>
+      <Typography variant="h1" color={LightColor.BrandWhite} css={st.title}>
+        {title}
+      </Typography>
+      <Typography variant="body2" color={LightColor.BrandWhite} css={st.desc}>
+        {desc}
+      </Typography>
+    </div>
+  );
 };
