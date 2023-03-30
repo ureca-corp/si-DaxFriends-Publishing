@@ -1,20 +1,16 @@
 import { css } from "@emotion/react";
 import { useState } from "react";
 import { styled } from "@mui/material/styles";
-import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
-import MuiAccordionSummary, {
-  AccordionSummaryProps,
-} from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { LightColor } from "@/common/theme/color";
 import { FaqModels } from "../models/faq.models";
-import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
+import { MediaQueries } from "@/common/theme/screen";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import { Accordion } from "./Accordion";
 
 export const AccordionContainer = () => {
   const [expanded, setExpanded] = useState<number | false>(1);
-  const { isTablet, isExtraSmall } = useCustomMediaQuery();
 
   const handleChange =
     (panelIndex: number) =>
@@ -99,59 +95,6 @@ const st = {
     }
   `,
 };
-
-const Accordion = styled((props: AccordionProps) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.05)",
-  "& .MuiButtonBase-root": {
-    height: "6.66vh",
-    [theme.breakpoints.down("xs")]: {
-      height: "14.44vw",
-    },
-  },
-  marginBottom: "1.85vh",
-  borderRadius: "36px",
-  [theme.breakpoints.down("xs")]: {
-    marginBottom: "0vh !important",
-    borderRadius: "0px",
-  },
-  "&:not(:last-child)": {
-    borderBottom: "1px solid #CED5E1",
-  },
-
-  "&:before": {
-    display: "none",
-  },
-}));
-
-const AccordionSummary = styled((props: AccordionSummaryProps) => (
-  <MuiAccordionSummary
-    expandIcon={
-      <ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem", fill: "black" }} />
-    }
-    {...props}
-  />
-))(({ theme }) => ({
-  backgroundColor: "white",
-  borderRadius: "36px",
-  flexDirection: "row",
-
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
-  },
-  [theme.breakpoints.down("xs")]: {
-    "& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root": {
-      fontSize: "medium",
-    },
-  },
-  [theme.breakpoints.down("xs")]: {
-    borderRadius: "0px",
-    "& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root": {
-      fontSize: "small",
-    },
-  },
-}));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: "16px",
