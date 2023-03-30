@@ -1,57 +1,54 @@
-import Aja from "@/assets/pc/gallery/card/Aja.png";
-import Clinking from "@/assets/pc/gallery/card/Clinking.png";
-import Hogom from "@/assets/pc/gallery/card/Hogom.png";
-import Manta from "@/assets/pc/gallery/card/Manta.png";
-import Rich from "@/assets/pc/gallery/card/Rich.png";
-import Trill from "@/assets/pc/gallery/card/Trill.png";
-
 export const GalleryModels = [
   {
-    img: Aja,
-    name: "AJA",
+    img: "",
+    name: "123345",
   },
   {
-    img: Clinking,
-    name: "Clinking",
+    img: "",
+    name: "123345",
   },
   {
-    img: Hogom,
-    name: "Hogom",
+    img: "",
+    name: "123345",
   },
   {
-    img: Manta,
-    name: "Manta",
+    img: "",
+    name: "123345",
   },
   {
-    img: Rich,
-    name: "Rich",
+    img: "",
+    name: "123345",
   },
   {
-    img: Trill,
-    name: "Trill",
+    img: "",
+    name: "123345",
   },
   {
-    img: Aja,
-    name: "AJA",
+    img: "",
+    name: "123345",
   },
   {
-    img: Clinking,
-    name: "Clinking",
+    img: "",
+    name: "123345",
   },
   {
-    img: Hogom,
-    name: "Hogom",
+    img: "",
+    name: "123345",
   },
   {
-    img: Manta,
-    name: "Manta",
+    img: "",
+    name: "123345",
   },
   {
-    img: Rich,
-    name: "Rich",
+    img: "",
+    name: "123345",
   },
   {
-    img: Trill,
-    name: "Trill",
+    img: "",
+    name: "123345",
+  },
+  {
+    img: "",
+    name: "123345",
   },
 ];

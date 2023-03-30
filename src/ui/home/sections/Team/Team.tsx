@@ -8,6 +8,7 @@ import { TeamModels } from "./models/team.models";
 import ImgLink from "@/assets//pc/team/icon-link.png";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
+import Link from "next/link";
 
 export const Team = () => {
   const movingIcon = UseGetAsset("team");
@@ -37,11 +38,11 @@ export const Team = () => {
             <div css={st.name}>
               <Typography variant="body1">{it.name}</Typography>
 
-              <div css={st.link}>
+              <Link href={it.link} target="_blank" css={st.link}>
                 <div css={st.linkImage}>
                   <Image src={ImgLink} alt="link" />
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         ))}
@@ -95,6 +96,8 @@ const st = {
     width: 12.5vw;
     aspect-ratio: 1;
     margin-bottom: 2.08vw;
+    border-radius: 6.25vw;
+    overflow: hidden;
   `,
   name: css`
     position: relative;
