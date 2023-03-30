@@ -6,13 +6,13 @@ import Image from "next/image";
 import { useCustomMediaQuery } from "@/common/theme/screen";
 
 export const BackgroundImage = () => {
-  const { isTablet, isSmall } = useCustomMediaQuery();
+  const { isTablet, isExtraSmall } = useCustomMediaQuery();
   return (
     <div css={st.bg}>
       <Image
         fill
         src={
-          isSmall
+          isExtraSmall
             ? ImgMobileBackground
             : isTablet
             ? ImgTabletBackground

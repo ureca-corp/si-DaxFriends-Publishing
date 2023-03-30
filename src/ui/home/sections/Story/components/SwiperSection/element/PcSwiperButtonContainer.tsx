@@ -2,11 +2,7 @@ import Image from "next/image";
 import { css } from "@emotion/react";
 import LeftButton from "@/assets/pc/swiper/btn/icon-left-btn.png";
 import RightButton from "@/assets/pc/swiper/btn/icon-right-btn.png";
-
-interface SwiperButtonProps {
-  onPrev: () => void;
-  onNext: () => void;
-}
+import { SwiperButtonProps } from "../SwiperButtonContainer";
 
 export const PcSwiperButtonContainer = ({
   onPrev,

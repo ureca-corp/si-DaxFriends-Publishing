@@ -4,7 +4,6 @@ import "swiper/css";
 import { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { CardModels } from "../../models/card.models";
 import Image from "next/image";
 import { Stack, Typography } from "@mui/material";
 import { LightColor } from "@/common/theme/color";
@@ -13,8 +12,8 @@ import { UseSwiperButton } from "./UseSwiperButton";
 import { MediaQueries } from "@/common/theme/screen";
 
 export const SwiperSection = () => {
-  const { handleSetSwiper, buttonState } = UseSwiperButton();
-  const models = CardModels;
+  const { handleSetSwiper, buttonState, slideState, models } =
+    UseSwiperButton();
 
   return (
     <div css={st.root}>
@@ -41,6 +40,7 @@ export const SwiperSection = () => {
       <SwiperButtonContainer
         onPrev={buttonState.onPrev}
         onNext={buttonState.onNext}
+        slideIndex={slideState.value}
       />
     </div>
   );
@@ -81,6 +81,10 @@ const st = {
       gap: 3.9vh;
       padding-left: 0vw;
     }
+
+    @media ${MediaQueries.xs} {
+      gap: 5.55vw;
+    }
   `,
   image: css`
     position: relative;
@@ -89,6 +93,9 @@ const st = {
 
     @media ${MediaQueries.lg} {
       width: 39.06vw;
+    }
+    @media ${MediaQueries.xs} {
+      width: 55.55vw;
     }
   `,
   textWrapper: css`
@@ -101,16 +108,25 @@ const st = {
       padding: 0 5vw;
       gap: 1vh;
     }
+    @media ${MediaQueries.xs} {
+      padding: 0 11.11vw;
+    }
   `,
   title: css`
     @media ${MediaQueries.lg} {
       font-size: 5.98vw;
       text-align: center;
     }
+    @media ${MediaQueries.xs} {
+      font-size: 8.33vw;
+    }
   `,
   desc: css`
     @media ${MediaQueries.lg} {
       font-size: 3.9vw;
+    }
+    @media ${MediaQueries.xs} {
+      font-size: 4.44vw;
     }
   `,
 };
