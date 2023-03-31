@@ -23,7 +23,7 @@ export const SwiperSection = () => {
           speed={6000}
         >
           {models.secondModels.map((it, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={`top-${index}`}>
               <div css={st.logo}>
                 <Image fill src={it} alt="solana" />
               </div>
@@ -42,7 +42,7 @@ export const SwiperSection = () => {
           speed={6000}
         >
           {models.secondModels.map((it, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={`down-${index}`}>
               <div css={st.logo}>
                 <Image fill src={it} alt="solana" />
               </div>

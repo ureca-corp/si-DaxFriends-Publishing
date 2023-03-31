@@ -10,6 +10,7 @@ import {
   AccordionSummary,
 } from "./elements";
 import { FaqModels } from "../../models/faq.models";
+import parse from "html-react-parser";
 
 export const AccordionContainer = () => {
   const [expanded, setExpanded] = useState<number | false>(1);
@@ -42,7 +43,7 @@ export const AccordionContainer = () => {
               variant="subtitle2"
               color={LightColor.Gray300}
             >
-              <span css={st.blueText}>A.</span> {it.answer}
+              <span css={st.blueText}>A.</span> {parse(it.answer)}
             </Typography>
           </AccordionDetails>
         </Accordion>

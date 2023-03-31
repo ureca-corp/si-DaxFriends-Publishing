@@ -20,7 +20,7 @@ export const MovingIcon = ({ props, topShort = false }: MovingIcon) => {
 const st = {
   wrapper: (topShort: boolean) => css`
     position: absolute;
-    top: ${topShort ? "2.65vw" : "5.2vw"};
+    top: ${topShort ? "2.65vw" : "3.2vw"};
     left: 5.2vw;
     z-index: 3;
   `,
