@@ -17,6 +17,7 @@ export enum LightColor {
   Gray100 = "#858D9A",
   Gray200 = "#CED5E1",
   Gray300 = "#606060",
+  LightBlack = "rgba(0, 0, 0, 1)"
 }
 
 export const lightPalette: PaletteOptions = {};

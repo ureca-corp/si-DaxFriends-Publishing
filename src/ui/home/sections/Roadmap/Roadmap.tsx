@@ -4,6 +4,7 @@ import Image from "next/image";
 import ImgBlackCow from "@/assets/pc/img-black-cow.png";
 import { MovingIcon } from "@/common/components/MovingIcon";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
+import { RoadmapItemContainer } from "./components/RoadmapItemContainer";
 
 export const Roadmap = () => {
   const movingIcon = UseGetAsset("road");
@@ -13,6 +14,7 @@ export const Roadmap = () => {
       <div css={st.image}>
         <Image src={ImgBlackCow} alt="bg-character" />
       </div>
+      <RoadmapItemContainer />
     </section>
   );
 };
