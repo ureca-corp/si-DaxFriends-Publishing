@@ -13,7 +13,7 @@ import { FaqModels } from "../../models/faq.models";
 import parse from "html-react-parser";
 
 export const AccordionContainer = () => {
-  const [expanded, setExpanded] = useState<number | false>(1);
+  const [expanded, setExpanded] = useState<number | false>(false);
 
   const handleChange =
     (panelIndex: number) =>
