@@ -1,7 +1,7 @@
 import { LightColor } from "@/common/theme/color";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
-import { RoadmapItemType } from "../models/roadmap.type";
+import { RoadmapItemType } from "../../models/roadmap.type";
 
 export const RoadmapBox = ({ title, descList }: RoadmapItemType) => {
   return (

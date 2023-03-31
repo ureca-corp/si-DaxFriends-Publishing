@@ -1,8 +1,9 @@
+import { MediaQueries } from "@/common/theme/screen";
 import { css } from "@emotion/react";
-import { RoadmapItemModels } from "../models/roadmap.type";
+import { RoadmapItemModels } from "../../models/roadmap.type";
 import { RoadmapBox } from "./RoadmapBox";
 
-export const RoadmapItemContainer = () => {
+export const MobileRoadmapItems = () => {
   const models = RoadmapItemModels;
   return (
     <div css={st.root}>
@@ -28,6 +29,10 @@ const st = {
 
     ::-webkit-scrollbar {
       display: none;
+    }
+
+    @media ${MediaQueries.lg} {
+      width: 51.08vw;
     }
   `,
   inner: css`
