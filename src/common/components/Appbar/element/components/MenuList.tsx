@@ -75,9 +75,9 @@ const MenuItem = ({ linkText, linkTo, icon }: MenuItemType) => {
   return (
     <Link href={linkTo} target="_blank" css={st.li}>
       <div css={st.img}>
-        <Image src={icon} alt="link" />
+        <Image fill src={icon} alt="link" />
       </div>
-      <Typography fontSize="20px" color="white">
+      <Typography fontSize="20px" color="white" lineHeight={1}>
         {linkText}
       </Typography>
     </Link>
