@@ -33,7 +33,7 @@ export const Footer = () => {
 const st = {
   footer: css`
     width: 100%;
-    padding: 2.08vw;
+    padding: 3.12vw 5.2vw;
     background-color: white;
     display: flex;
     flex-direction: column;
