@@ -28,6 +28,6 @@ export const FaqModels = [
   {
     question: "7. 깃든 얼라이언스는 무엇인가요?",
     answer:
-      "Web 3.0 대중화 및 블록체인 생태계 확장을 위해 국내 유수의 블록체인 기업 7개사가 만든 동맹체입니다. 닥스프렌즈는 <a href='http://gitdeun.com' target='_blank'>깃든 얼라이언스</a>에 가입되어 있습니다.",
+      "Web 3.0 대중화 및 블록체인 생태계 확장을 위해 국내 유수의 블록체인 기업 7개사가 만든 동맹체입니다. 닥스프렌즈는 <a href='https://discord.gg/gitdeun' target='_blank'>깃든 얼라이언스</a>에 가입되어 있습니다.",
   },
 ];
