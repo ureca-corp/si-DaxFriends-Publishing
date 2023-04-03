@@ -9,6 +9,7 @@ import ImgLink from "@/assets//pc/team/icon-link.png";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
 import Link from "next/link";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const Team = () => {
   const movingIcon = UseGetAsset("team");
@@ -32,12 +33,17 @@ export const Team = () => {
             <div css={st.image}>
               <Image fill src={it.img} alt="member" />
             </div>
-            <Typography variant="subtitle2" color={LightColor.Gray100}>
+            <Typography
+              variant="subtitle2"
+              css={st.departmentText}
+              color={LightColor.Gray100}
+            >
               {it.department}
             </Typography>
             <div css={st.name}>
-              <Typography variant="body1">{it.name}</Typography>
-
+              <Typography variant="body1" css={st.nameText}>
+                {it.name}
+              </Typography>
               <Link href={it.link} target="_blank" css={st.link}>
                 <div css={st.linkImage}>
                   <Image src={ImgLink} alt="link" />
@@ -58,6 +64,19 @@ const st = {
     background-color: ${LightColor.LightNavy};
     position: relative;
     overflow: hidden;
+
+    @media ${MediaQueries.lg} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 23.4vw;
+      gap: 5.2vw;
+    }
+
+    @media ${MediaQueries.sm} {
+      padding-top: 25vw;
+      gap: 11.11vw;
+    }
   `,
 
   purpleBlur: css`
@@ -85,6 +104,18 @@ const st = {
     transform: translate(-50%, 0);
     row-gap: 2.08vw;
     padding-bottom: 3.33vw;
+
+    @media ${MediaQueries.lg} {
+      position: relative;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 5.2vw;
+      row-gap: 5.2vw;
+      overflow-y: scroll;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    }
   `,
   member: css`
     display: flex;
@@ -98,6 +129,11 @@ const st = {
     margin-bottom: 2.08vw;
     border-radius: 6.25vw;
     overflow: hidden;
+    @media ${MediaQueries.lg} {
+      width: 31.25vw;
+      border-radius: 18.22vw;
+      margin-bottom: 5.2vw;
+    }
   `,
   name: css`
     position: relative;
@@ -116,5 +152,19 @@ const st = {
     position: relative;
     width: 1.25vw;
     aspect-ratio: 1;
+    @media ${MediaQueries.lg} {
+      width: 1.3vw;
+    }
+  `,
+
+  departmentText: css`
+    @media ${MediaQueries.lg} {
+      font-size: 2.6vw;
+    }
+  `,
+  nameText: css`
+    @media ${MediaQueries.lg} {
+      font-size: 3.9vw;
+    }
   `,
 };

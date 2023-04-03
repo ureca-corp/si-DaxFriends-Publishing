@@ -6,7 +6,7 @@ import ImgBlue from "@/assets/pc/gallery/img-blur-blue.png";
 import { SwiperSection } from "./components/SwiperSection";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
-import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const Gallery = () => {
   const movingIcon = UseGetAsset("gallery");
