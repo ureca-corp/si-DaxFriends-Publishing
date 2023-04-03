@@ -8,7 +8,7 @@ export const Roadmap = () => {
   const movingIcon = UseGetAsset("road");
   return (
     <section css={st.root}>
-      <MovingIcon props={movingIcon[0]} />
+      <MovingIcon props={movingIcon} />
       <BackgroundImage />
       <RoadmapContainer />
     </section>

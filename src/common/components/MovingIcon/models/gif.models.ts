@@ -26,9 +26,9 @@ export const AssetModels: AssetCategoryType[] = [
   {
     name: "gallery",
     data: [
-      { asset: GalleryGif, w: "10.41vw", h: "1/0.88" },
-      { asset: GalleryGif, w: "18.22vw", h: "1/0.88" },
-      { asset: GalleryGif, w: "27.77vw", h: "1/0.88" },
+      { asset: GalleryGif, w: "10.41vw", h: "1" },
+      { asset: GalleryGif, w: "18.22vw", h: "1" },
+      { asset: GalleryGif, w: "27.77vw", h: "1" },
     ],
   },
   {

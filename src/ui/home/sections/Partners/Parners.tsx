@@ -10,7 +10,7 @@ export const Partners = () => {
   const movingIcon = UseGetAsset("partners");
   return (
     <section css={st.root}>
-      <MovingIcon props={movingIcon[0]} />
+      <MovingIcon props={movingIcon} />
       <div css={st.blueBlur}>
         <div css={st.blur}>
           <Image fill src={ImgBlue} alt="blue" />

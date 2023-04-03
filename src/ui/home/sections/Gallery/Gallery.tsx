@@ -6,12 +6,13 @@ import ImgBlue from "@/assets/pc/gallery/img-blur-blue.png";
 import { SwiperSection } from "./components/SwiperSection";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
+import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 
 export const Gallery = () => {
   const movingIcon = UseGetAsset("gallery");
   return (
     <section css={st.root}>
-      <MovingIcon props={movingIcon[0]} />
+      <MovingIcon props={movingIcon} />
       <div css={st.pinkBlur}>
         <div css={st.blur}>
           <Image fill src={ImgPink} alt="pink" />
@@ -34,6 +35,19 @@ const st = {
     background-color: ${LightColor.LightNavy};
     position: relative;
     overflow: hidden;
+
+    @media ${MediaQueries.lg} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 23.4vw;
+      gap: 5.2vw;
+    }
+
+    @media ${MediaQueries.sm} {
+      padding-top: 25vw;
+      gap: 11.11vw;
+    }
   `,
 
   pinkBlur: css`

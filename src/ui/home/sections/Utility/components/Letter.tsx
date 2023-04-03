@@ -18,16 +18,9 @@ const st = {
     position: relative;
 
     @media ${MediaQueries.lg} {
-      align-items: flex-end;
-      justify-content: flex-end;
-      padding: 0 7.5vw;
-      padding-bottom: 4vh;
-    }
-
-    @media ${MediaQueries.sm} {
+      display: unset;
+      align-items: unset;
       justify-content: unset;
-      padding: 0 8.33vw;
-      padding-bottom: 17.05vh;
     }
   `,
 };

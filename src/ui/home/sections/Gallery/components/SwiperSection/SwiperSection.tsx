@@ -9,17 +9,20 @@ import Image from "next/image";
 import { LightColor } from "@/common/theme/color";
 import { Typography } from "@mui/material";
 import IconSharp from "@/assets/pc/gallery/icon-sharp.png";
+import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 
 export const SwiperSection = () => {
   const models = GalleryModels;
+  const { isSmall, isTablet } = useCustomMediaQuery();
 
   return (
     <div css={st.root}>
       <Swiper
         loop
         freeMode={{ enabled: true, momentum: false }}
-        spaceBetween={0}
-        slidesPerView={6}
+        spaceBetween={isSmall ? 40 : isTablet ? 80 : 0}
+        slidesPerView={isSmall ? 1.5 : isTablet ? 2.2 : 6}
+        centeredSlides={isTablet ? true : false}
         modules={[Autoplay]}
         autoplay={{ delay: 1, disableOnInteraction: true }}
         speed={6000}
@@ -36,7 +39,12 @@ export const SwiperSection = () => {
                 <div css={st.icon}>
                   <Image fill src={IconSharp} alt="#" />
                 </div>
-                <Typography variant="caption" color={LightColor.BrandBlue}>
+                <Typography
+                  variant="caption"
+                  lineHeight={1}
+                  color={LightColor.BrandBlue}
+                  css={st.name}
+                >
                   {it.name}
                 </Typography>
               </div>
@@ -54,12 +62,18 @@ const st = {
     position: absolute;
     left: 0;
     bottom: 5.2vw;
+    @media ${MediaQueries.lg} {
+      position: relative;
+    }
   `,
   card: css`
     width: 13.54vw;
     aspect-ratio: 1/1.18;
     display: flex;
     flex-direction: column;
+    @media ${MediaQueries.lg} {
+      width: 100%;
+    }
   `,
   cardImage: css`
     position: relative;
@@ -71,6 +85,13 @@ const st = {
     position: relative;
     width: 0.73vw;
     aspect-ratio: 1;
+
+    @media ${MediaQueries.lg} {
+      width: 2.68vw;
+    }
+    @media ${MediaQueries.sm} {
+      width: 6.2vw;
+    }
   `,
   cardText: css`
     width: 100%;
@@ -80,5 +101,13 @@ const st = {
     justify-content: center;
     align-items: center;
     gap: 4px;
+  `,
+  name: css`
+    @media ${MediaQueries.lg} {
+      font-size: 3.9vw;
+    }
+    @media ${MediaQueries.sm} {
+      font-size: 6.2vw;
+    }
   `,
 };

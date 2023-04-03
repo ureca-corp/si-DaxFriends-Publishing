@@ -15,7 +15,7 @@ export const Team = () => {
   const models = TeamModels;
   return (
     <section css={st.root}>
-      <MovingIcon props={movingIcon[0]} />
+      <MovingIcon props={movingIcon} />
       <div css={st.purpleBlur}>
         <div css={st.blur}>
           <Image fill src={ImgPurple} alt="blue" />

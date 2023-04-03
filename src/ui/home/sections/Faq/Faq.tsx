@@ -11,7 +11,7 @@ export const Faq = () => {
   const movingIcon = UseGetAsset("faq");
   return (
     <section css={st.root}>
-      <MovingIcon props={movingIcon[0]} />
+      <MovingIcon props={movingIcon} />
       <div css={st.blurWrapper}>
         <div css={st.blur}>
           <Image fill src={ImgBlueBlur} alt="blur" />
