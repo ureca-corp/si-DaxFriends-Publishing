@@ -1,8 +1,18 @@
+import { MediaQueries } from "@/common/theme/screen";
 import { css } from "@emotion/react";
-import { LetterSectorProps } from "./types/sector.type";
+import { MemoContent } from "./MemoContent";
+import { PcLetterSectorProps } from "./types/sector.type";
 
-export const LetterTopLeftSector = ({ onClick }: LetterSectorProps) => {
-  return <div css={st.root} onClick={onClick}></div>;
+export const LetterTopLeftSector = ({
+  onClick,
+  isVisible,
+  memoState,
+}: PcLetterSectorProps) => {
+  return (
+    <div css={st.root} onClick={onClick}>
+      {isVisible && <MemoContent props={memoState} />}
+    </div>
+  );
 };
 
 const st = {
@@ -15,5 +25,13 @@ const st = {
     background-color: transparent;
     z-index: 3;
     cursor: pointer;
+    padding: 2.08vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.04vw;
+    @media ${MediaQueries.lg} {
+      padding: 3.6vw 1.8vw;
+      gap: 3.2vw;
+    }
   `,
 };

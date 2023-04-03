@@ -19,6 +19,6 @@ export const UseMobileLetter = () => {
       onIndexOpen: handleLetterOpen,
       onClose: handleLetterClose,
     },
-    textState: letterText,
+    memoState: letterText,
   };
 };

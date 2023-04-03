@@ -1,9 +1,9 @@
-export interface UtilityType {
+export interface MemoType {
   title: string;
   desc: string[];
 }
 
-export const UtilityModels: UtilityType[] = [
+export const UtilityModels: MemoType[] = [
   {
     title: "A. U1 Physical Giveaways",
     desc: [

@@ -20,7 +20,7 @@ const st = {
     @media ${MediaQueries.lg} {
       align-items: flex-end;
       justify-content: flex-end;
-      padding: 0 10.9vw;
+      padding: 0 7.5vw;
       padding-bottom: 4vh;
     }
 

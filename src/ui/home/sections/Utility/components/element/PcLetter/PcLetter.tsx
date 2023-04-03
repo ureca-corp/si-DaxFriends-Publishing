@@ -14,7 +14,7 @@ import { MediaQueries } from "@/common/theme/screen";
 import { Lock } from "../common";
 
 export const PcLetter = () => {
-  const { letterState } = UsePcLetter();
+  const { letterState, memo } = UsePcLetter();
 
   return (
     <div css={st.letter} onClick={() => null}>
@@ -26,9 +26,21 @@ export const PcLetter = () => {
         />
       </div>
       <Lock />
-      <LetterTopRightSector onClick={letterState.onIndexOpen(1)} />
-      <LetterTopLeftSector onClick={letterState.onIndexOpen(2)} />
-      <LetterBottomLeftSector onClick={letterState.onIndexOpen(3)} />
+      <LetterTopRightSector
+        onClick={letterState.onIndexOpen(1)}
+        isVisible={letterState.index === 1}
+        memoState={memo}
+      />
+      <LetterTopLeftSector
+        onClick={letterState.onIndexOpen(2)}
+        isVisible={letterState.index === 2}
+        memoState={memo}
+      />
+      <LetterBottomLeftSector
+        onClick={letterState.onIndexOpen(3)}
+        isVisible={letterState.index === 3}
+        memoState={memo}
+      />
     </div>
   );
 };
