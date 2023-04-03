@@ -4,8 +4,7 @@ import Image from "next/image";
 import ImgPinkBlur from "@/assets/pc/utility/img-blur.png";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
-import { Letter } from "./components/Letter";
-import { MediaQueries } from "@/common/theme/screen";
+import { Letter } from "./components";
 
 export const Utility = () => {
   const movingIcon = UseGetAsset("utility");
@@ -13,9 +12,7 @@ export const Utility = () => {
   return (
     <section css={st.root}>
       <MovingIcon props={movingIcon[0]} topShort />
-      <div css={st.inner}>
-        <Letter />
-      </div>
+      <Letter />
       <div css={st.blurWrapper}>
         <div css={st.blur}>
           <Image fill src={ImgPinkBlur} alt="blur" />
@@ -34,22 +31,6 @@ const st = {
     overflow: hidden;
     z-index: 1;
   `,
-  inner: css`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    @media ${MediaQueries.lg} {
-      align-items: flex-end;
-      justify-content: flex-end;
-      padding: 0 10.9vw;
-      padding-bottom: 4vh;
-    }
-  `,
-
   blurWrapper: css`
     position: absolute;
     bottom: -25vw;
