@@ -25,6 +25,7 @@ const st = {
     height: 100vh;
     background-color: ${LightColor.LightBlue};
     position: relative;
+    overflow: hidden;
   `,
   image: css`
     position: absolute;

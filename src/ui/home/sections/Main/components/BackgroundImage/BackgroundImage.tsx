@@ -1,25 +1,22 @@
 import { css } from "@emotion/react";
-import ImgPcBackground from "@/assets/pc/img-bg.png";
-import ImgTabletBackground from "@/assets/tablet/img-bg.png";
-import ImgMobileBackground from "@/assets/mb/img-bg.png";
-import Image from "next/image";
 import { useCustomMediaQuery } from "@/common/theme/screen";
+import {
+  MobileBackgroundImage,
+  PcBackgroundImage,
+  TabletBackgroundImage,
+} from "./element";
 
 export const BackgroundImage = () => {
   const { isTablet, isExtraSmall } = useCustomMediaQuery();
   return (
     <div css={st.bg}>
-      <Image
-        fill
-        src={
-          isExtraSmall
-            ? ImgMobileBackground
-            : isTablet
-            ? ImgTabletBackground
-            : ImgPcBackground
-        }
-        alt="bg"
-      />
+      {isExtraSmall ? (
+        <MobileBackgroundImage />
+      ) : isTablet ? (
+        <TabletBackgroundImage />
+      ) : (
+        <PcBackgroundImage />
+      )}
     </div>
   );
 };
