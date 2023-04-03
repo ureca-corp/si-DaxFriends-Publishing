@@ -6,18 +6,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { PartnerModels } from "../models/partner.models";
 import Image from "next/image";
+import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 
 export const SwiperSection = () => {
   const models = PartnerModels;
-
+  const { isSmall, isTablet } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       <div css={st.swiper}>
         <Swiper
           loop
           freeMode={{ enabled: true, momentum: false }}
-          spaceBetween={0}
-          slidesPerView={6}
+          spaceBetween={isSmall ? 20 : isTablet ? 60 : 0}
+          slidesPerView={isSmall ? 2 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
           autoplay={{ delay: 1, disableOnInteraction: true }}
           speed={6000}
@@ -35,8 +36,8 @@ export const SwiperSection = () => {
         <Swiper
           loop
           freeMode={{ enabled: true, momentum: false }}
-          spaceBetween={0}
-          slidesPerView={6}
+          spaceBetween={isSmall ? 20 : isTablet ? 60 : 0}
+          slidesPerView={isSmall ? 2 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
           autoplay={{ delay: 1, disableOnInteraction: true }}
           speed={6000}
@@ -63,6 +64,12 @@ const st = {
     display: flex;
     flex-direction: column;
     gap: 10.52vw;
+
+    @media ${MediaQueries.lg} {
+      position: relative;
+      bottom: unset;
+      gap: 23.6vw;
+    }
   `,
   swiper: css`
     width: 100%;
@@ -71,5 +78,8 @@ const st = {
     position: relative;
     width: 13.33vw;
     aspect-ratio: 1/0.27;
+    @media ${MediaQueries.lg} {
+      width: 33.33vw;
+    }
   `,
 };

@@ -5,6 +5,7 @@ import { LightColor } from "@/common/theme/color";
 import { SwiperSection } from "./components/SwiperSection";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const Partners = () => {
   const movingIcon = UseGetAsset("partners");
@@ -28,6 +29,19 @@ const st = {
     background-color: ${LightColor.LightNavy};
     position: relative;
     overflow: hidden;
+
+    @media ${MediaQueries.lg} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 23.4vw;
+      gap: 5.2vw;
+    }
+
+    @media ${MediaQueries.sm} {
+      padding-top: 25vw;
+      gap: 20.5vw;
+    }
   `,
   blur: css`
     position: relative;

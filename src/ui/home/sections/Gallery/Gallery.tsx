@@ -46,7 +46,7 @@ const st = {
 
     @media ${MediaQueries.sm} {
       padding-top: 25vw;
-      gap: 11.11vw;
+      gap: 20.5vw;
     }
   `,
 
