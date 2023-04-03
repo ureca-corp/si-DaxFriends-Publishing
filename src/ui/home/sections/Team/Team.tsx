@@ -69,12 +69,12 @@ const st = {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 23.4vw;
-      gap: 5.2vw;
+      padding-top: 19vw;
+      gap: 8vw;
     }
 
     @media ${MediaQueries.sm} {
-      padding-top: 25vw;
+      padding-top: 18vw;
       gap: 11.11vw;
     }
   `,

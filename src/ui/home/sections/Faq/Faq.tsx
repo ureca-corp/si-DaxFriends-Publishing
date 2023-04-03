@@ -35,9 +35,22 @@ const st = {
     padding: 0 5.2vw;
     padding-bottom: 4.62vh;
 
+    @media ${MediaQueries.lg} {
+      align-items: center;
+      flex-direction: column;
+      padding-top: 18vw;
+      gap: 8vw;
+    }
+
+    @media ${MediaQueries.sm} {
+      padding-top: 18vw;
+      gap: 0;
+    }
+
     @media ${MediaQueries.xs} {
       padding: 0;
-      padding-bottom: 5.55vw;
+      padding-top: 18vw;
+      //padding-bottom: 5.55vw;
     }
   `,
   blurWrapper: css`

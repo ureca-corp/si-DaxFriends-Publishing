@@ -44,7 +44,7 @@ const st = {
     @media ${MediaQueries.lg} {
       width: 7.81vw;
     }
-    @media ${MediaQueries.xs} {
+    @media ${MediaQueries.sm} {
       width: 11.11vw;
     }
   `,

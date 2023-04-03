@@ -20,7 +20,7 @@ const st = {
     @media ${MediaQueries.lg} {
       width: 18.22vw;
     }
-    @media ${MediaQueries.xs} {
+    @media ${MediaQueries.sm} {
       width: 22.22vw;
     }
   `,

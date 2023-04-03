@@ -1,3 +1,4 @@
+import { MediaQueries } from "@/common/theme/screen";
 import { css } from "@emotion/react";
 import { Logo, MenuIcon } from "./components";
 
@@ -21,5 +22,19 @@ const st = {
     left: 0;
     z-index: 10;
     padding: 0 5.2vw;
+
+    @media ${MediaQueries.lg} {
+      align-items: center;
+      top: 0;
+      left: 0;
+    }
+
+    @media ${MediaQueries.sm} {
+      top: 5.55vw;
+    }
+
+    @media ${MediaQueries.xs} {
+      padding: 0 11.11vw;
+    }
   `,
 };

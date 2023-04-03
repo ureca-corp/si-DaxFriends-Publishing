@@ -1,12 +1,11 @@
-import { useCustomMediaQuery } from "@/common/theme/screen";
 import { css } from "@emotion/react";
-import { MobileAppbar, PcAppbar } from "./element";
+import { PcAppbar } from "./element";
 
 export const Appbar = () => {
-  const { isTablet } = useCustomMediaQuery();
   return (
     <header css={st.appbar}>
-      {isTablet ? <MobileAppbar /> : <PcAppbar />}
+      {/* {isTablet ? <MobileAppbar /> : <PcAppbar />} */}
+      <PcAppbar />
     </header>
   );
 };

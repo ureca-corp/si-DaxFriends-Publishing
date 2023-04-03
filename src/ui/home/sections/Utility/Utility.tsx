@@ -37,13 +37,13 @@ const st = {
       flex-direction: column;
       align-items: center;
       padding: 0 7.5vw;
-      padding-top: 23.4vw;
-      gap: 5.2vw;
+      padding-top: 19vw;
+      gap: 8vw;
     }
 
     @media ${MediaQueries.sm} {
       padding: 0 8.33vw;
-      padding-top: 25vw;
+      padding-top: 18vw;
       gap: 20.5vw;
     }
   `,
