@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
-import ImgMobileBackground from "@/assets/mb/img-bg.png";
+import ImgMobileBackground from "@/assets/mb/main/375_667.png";
 import Image from "next/image";
 
-export const MobileBackgroundImage = () => {
+export const ExtraSmallImage = () => {
   return (
     <div css={st.bg}>
       <Image fill src={ImgMobileBackground} alt="bg" />

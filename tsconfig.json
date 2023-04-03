@@ -20,6 +20,11 @@
     },
     "jsxImportSource": "@emotion/react"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/ui/home/sections/Main/components/BackgroundImage/element/MobileBackgroundImage/element/ExtraSmallImagetsx"
+  ],
   "exclude": ["node_modules"]
 }

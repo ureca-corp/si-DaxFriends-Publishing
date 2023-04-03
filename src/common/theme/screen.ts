@@ -9,6 +9,13 @@ export enum ScreenType {
   xxl = 1440,
 }
 
+export const MobileMediaQueries = {
+  xs: `screen and (max-width: 375px), screen and (max-height: 667px)`,
+  sm: `screen and (max-width: 375px), screen and (max-height: 812px)`,
+  md: `screen and (max-width: 414px), screen and (max-height: 736px)`,
+  lg: `screen and (max-width: 414px), screen and (max-height: 896px)`,
+};
+
 export const MediaQueries = {
   xs: `(max-width:${ScreenType.xs}px)`,
   sm: `(max-width:${ScreenType.sm}px)`,
@@ -24,6 +31,20 @@ export const TypographyMediaQueries = {
   lg: `@media (max-width:${ScreenType.lg}px)`,
   xl: `@media (max-width:${ScreenType.xl}px)`,
   xxl: `@media (max-width:${ScreenType.xxl}px)`,
+};
+
+export const useCustomMobileMediaQuery = () => {
+  const isMobileExtraSmall = useMediaQuery(MobileMediaQueries.xs);
+  const isMobileSmall = useMediaQuery(MobileMediaQueries.sm);
+  const isMobileMedium = useMediaQuery(MobileMediaQueries.md);
+  const isMobileLarge = useMediaQuery(MobileMediaQueries.lg);
+
+  return {
+    isMobileExtraSmall,
+    isMobileSmall,
+    isMobileMedium,
+    isMobileLarge,
+  };
 };
 
 export const useCustomMediaQuery = () => {
