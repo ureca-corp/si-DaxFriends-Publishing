@@ -7,10 +7,10 @@ import {
 } from "./element";
 
 export const BackgroundImage = () => {
-  const { isTablet, isExtraSmall } = useCustomMediaQuery();
+  const { isTablet, isSmall } = useCustomMediaQuery();
   return (
     <div css={st.bg}>
-      {isExtraSmall ? (
+      {isSmall ? (
         <MobileBackgroundImage />
       ) : isTablet ? (
         <TabletBackgroundImage />
