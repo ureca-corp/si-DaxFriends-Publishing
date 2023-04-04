@@ -42,6 +42,18 @@ const st = {
       padding-top: 18vw;
       gap: 20.5vw;
     }
+    @media (max-width: 414px) and (max-height: 896px) {
+      gap: 35.5vw;
+    }
+    @media (max-width: 414px) and (max-height: 736px) {
+      gap: 22.5vw;
+    }
+    @media (max-width: 375px) and (max-height: 812px) {
+      gap: 35.5vw;
+    }
+    @media (max-width: 375px) and (max-height: 667px) {
+      gap: 22.5vw;
+    }
   `,
   blur: css`
     position: relative;

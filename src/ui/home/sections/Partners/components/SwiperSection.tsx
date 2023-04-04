@@ -17,10 +17,14 @@ export const SwiperSection = () => {
         <Swiper
           loop
           freeMode={{ enabled: true, momentum: false }}
-          spaceBetween={isSmall ? 20 : isTablet ? 60 : 0}
-          slidesPerView={isSmall ? 2 : isTablet ? 2.6 : 6}
+          spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
+          slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
-          autoplay={{ delay: 1, disableOnInteraction: true }}
+          autoplay={{
+            delay: 1,
+            disableOnInteraction: true,
+            reverseDirection: true,
+          }}
           speed={6000}
         >
           {models.secondModels.map((it, index) => (
@@ -36,8 +40,8 @@ export const SwiperSection = () => {
         <Swiper
           loop
           freeMode={{ enabled: true, momentum: false }}
-          spaceBetween={isSmall ? 20 : isTablet ? 60 : 0}
-          slidesPerView={isSmall ? 2 : isTablet ? 2.6 : 6}
+          spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
+          slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
           autoplay={{ delay: 1, disableOnInteraction: true }}
           speed={6000}
@@ -80,6 +84,9 @@ const st = {
     aspect-ratio: 1/0.27;
     @media ${MediaQueries.lg} {
       width: 33.33vw;
+    }
+    @media ${MediaQueries.sm} {
+      width: 55.55vw;
     }
   `,
 };
