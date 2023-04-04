@@ -22,6 +22,8 @@ export const SwiperSection = () => {
           slidesPerView={1}
           initialSlide={0}
           loop
+          grabCursor={false}
+          allowTouchMove={false}
           modules={[Autoplay]}
           onSwiper={(swiper) => {
             handleSetSwiper(swiper);

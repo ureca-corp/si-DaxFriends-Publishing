@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { RoadmapBox } from "../components/RoadmapBox";
-import { MbSwiperButtonContainer } from "./SwiperButtonContainer";
 import { UseSwiperButton } from "./UseSwiperButton";
+import { MbSwiperButtonContainer } from "@/ui/home/sections/Story/components/SwiperSection/SwiperButtonContainer/element";
 
 export const MobileRoadmapItems = () => {
   const { models, slideState, handleSetSwiper, buttonState } =
@@ -17,6 +17,8 @@ export const MobileRoadmapItems = () => {
           loop
           spaceBetween={20}
           slidesPerView={1}
+          grabCursor={false}
+          allowTouchMove={false}
           onSwiper={(swiper) => {
             handleSetSwiper(swiper);
           }}
@@ -32,6 +34,7 @@ export const MobileRoadmapItems = () => {
         onNext={buttonState.onNext}
         onPrev={buttonState.onPrev}
         slideIndex={slideState.value}
+        pageText={"Phase"}
       />
     </div>
   );
@@ -39,14 +42,10 @@ export const MobileRoadmapItems = () => {
 
 const st = {
   root: css`
-    position: absolute;
     width: 100%;
     z-index: 2;
     display: flex;
-    align-items: center;
     justify-content: center;
-    left: 0;
-    bottom: 24.87vh;
   `,
 
   inner: css`

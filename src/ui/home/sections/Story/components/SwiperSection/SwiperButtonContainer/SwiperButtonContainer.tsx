@@ -6,6 +6,7 @@ export interface SwiperButtonProps {
   onPrev: () => void;
   onNext: () => void;
   slideIndex?: number;
+  pageText?: string;
 }
 
 export const SwiperButtonContainer = ({
@@ -21,6 +22,7 @@ export const SwiperButtonContainer = ({
           onPrev={onPrev}
           onNext={onNext}
           slideIndex={slideIndex}
+          pageText={"EP"}
         />
       ) : (
         <PcSwiperButtonContainer onPrev={onPrev} onNext={onNext} />

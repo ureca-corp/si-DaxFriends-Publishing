@@ -12,7 +12,7 @@ export const AssetModels: AssetCategoryType[] = [
     data: [
       { asset: RoadGif, w: "10.41vw", h: "1" },
       { asset: RoadGif, w: "18.22vw", h: "1" },
-      { asset: RoadGif, w: "27.77vw", h: "1" },
+      { asset: RoadGif, w: "30vw", h: "1" },
     ],
   },
   {
@@ -20,7 +20,7 @@ export const AssetModels: AssetCategoryType[] = [
     data: [
       { asset: UtilityGif, w: "10.41vw", h: "1/1.38" },
       { asset: UtilityGif, w: "18.22vw", h: "1/1.06" },
-      { asset: UtilityGif, w: "27.77vw", h: "1/1.06" },
+      { asset: UtilityGif, w: "30vw", h: "1/1.06" },
     ],
   },
   {
@@ -28,15 +28,15 @@ export const AssetModels: AssetCategoryType[] = [
     data: [
       { asset: GalleryGif, w: "10.41vw", h: "1" },
       { asset: GalleryGif, w: "18.22vw", h: "1" },
-      { asset: GalleryGif, w: "27.77vw", h: "1" },
+      { asset: GalleryGif, w: "30vw", h: "1" },
     ],
   },
   {
     name: "team",
     data: [
-      { asset: TeamGif, w: "10.41vw", h: "1/0.88" },
-      { asset: TeamGif, w: "18.22vw", h: "1/0.88" },
-      { asset: TeamGif, w: "27.77vw", h: "1/0.88" },
+      { asset: TeamGif, w: "10.41vw", h: "1" },
+      { asset: TeamGif, w: "18.22vw", h: "1" },
+      { asset: TeamGif, w: "30vw", h: "1" },
     ],
   },
   {
@@ -44,7 +44,7 @@ export const AssetModels: AssetCategoryType[] = [
     data: [
       { asset: PartnerGif, w: "10.41vw", h: "1" },
       { asset: PartnerGif, w: "18.22vw", h: "1" },
-      { asset: PartnerGif, w: "27.77vw", h: "1" },
+      { asset: PartnerGif, w: "30vw", h: "1" },
     ],
   },
   {
@@ -52,7 +52,7 @@ export const AssetModels: AssetCategoryType[] = [
     data: [
       { asset: FaqGif, w: "10.41vw", h: "1" },
       { asset: FaqGif, w: "18.22vw", h: "1" },
-      { asset: FaqGif, w: "27.77vw", h: "1" },
+      { asset: FaqGif, w: "30vw", h: "1" },
     ],
   },
 ];

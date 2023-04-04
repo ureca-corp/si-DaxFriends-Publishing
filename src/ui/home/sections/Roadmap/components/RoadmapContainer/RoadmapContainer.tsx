@@ -1,5 +1,6 @@
 import { useCustomMediaQuery } from "@/common/theme/screen";
-import React from "react";
+import { css } from "@emotion/react";
+
 import {
   MobileRoadmapItems,
   PcRoadmapItems,
@@ -9,7 +10,7 @@ import {
 export const RoadmapContainer = () => {
   const { isSmall, isTablet } = useCustomMediaQuery();
   return (
-    <React.Fragment>
+    <div css={st.root}>
       {isSmall ? (
         <MobileRoadmapItems />
       ) : isTablet ? (
@@ -17,6 +18,12 @@ export const RoadmapContainer = () => {
       ) : (
         <PcRoadmapItems />
       )}
-    </React.Fragment>
+    </div>
   );
+};
+
+const st = {
+  root: css`
+    width: 100%;
+  `,
 };

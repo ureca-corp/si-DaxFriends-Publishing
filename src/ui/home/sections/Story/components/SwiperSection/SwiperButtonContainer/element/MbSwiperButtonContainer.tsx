@@ -11,6 +11,7 @@ export const MbSwiperButtonContainer = ({
   slideIndex,
   onPrev,
   onNext,
+  pageText,
 }: SwiperButtonProps) => {
   return (
     <div css={st.btnWrapper}>
@@ -18,7 +19,7 @@ export const MbSwiperButtonContainer = ({
         <Image fill src={LeftButton} alt="previous" />
       </div>
       <Typography color={LightColor.BrandPrimary} css={st.text}>
-        {`EP 0${slideIndex! + 1}`}
+        {`${pageText} 0${slideIndex! + 1}`}
       </Typography>
       <div css={st.btn} onClick={onNext}>
         <Image fill src={RightButton} alt="next" />
@@ -37,6 +38,7 @@ const st = {
     left: 50%;
     bottom: 30px;
     transform: translateX(-50%);
+    z-index: 3;
     @media ${MediaQueries.sm} {
       bottom: 5.02vh;
     }
