@@ -48,7 +48,7 @@ const st = {
       gap: 11.11vw;
     }
     @media (max-width: 414px) and (max-height: 896px) {
-      gap: 309.5vw;
+      gap: 30.5vw;
     }
     @media (max-width: 414px) and (max-height: 736px) {
       gap: 27.5vw;
