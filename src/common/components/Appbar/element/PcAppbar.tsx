@@ -28,11 +28,9 @@ const st = {
       top: 20px;
       left: 0;
     }
-
     @media ${MediaQueries.sm} {
       top: 5.55vw;
     }
-
     @media ${MediaQueries.xs} {
       padding: 0 11.11vw;
     }
