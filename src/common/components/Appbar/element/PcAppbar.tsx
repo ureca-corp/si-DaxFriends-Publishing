@@ -25,7 +25,7 @@ const st = {
 
     @media ${MediaQueries.lg} {
       align-items: center;
-      top: 0;
+      top: 20px;
       left: 0;
     }
 
