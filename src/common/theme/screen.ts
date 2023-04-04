@@ -10,10 +10,10 @@ export enum ScreenType {
 }
 
 export const MobileMediaQueries = {
-  xs: `screen and (max-width: 375px), screen and (max-height: 667px)`,
-  sm: `screen and (max-width: 375px), screen and (max-height: 812px)`,
-  md: `screen and (max-width: 414px), screen and (max-height: 736px)`,
-  lg: `screen and (max-width: 414px), screen and (max-height: 896px)`,
+  xs: `(max-width: 375px) and (max-height: 667px)`,
+  sm: `(max-width: 375px) and (max-height: 812px)`,
+  md: `(max-width: 414px) and (max-height: 736px)`,
+  lg: `(max-width: 414px) and (max-height: 896px)`,
 };
 
 export const MediaQueries = {
