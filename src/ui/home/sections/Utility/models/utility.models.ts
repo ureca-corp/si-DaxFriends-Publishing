@@ -5,6 +5,15 @@ export interface MemoType {
 
 export const UtilityModels: MemoType[] = [
   {
+    title: "C. U3 Investment",
+    desc: [
+      "1. 선정된 디지털 자산에 대한 리서치 리포트 특별판 제공",
+      "2. 투자자 보호 교육에 우선 초대",
+      "3. 코어닥스 경영진/실무진과의 주기적인 밋업",
+      "4. 홀더 전용 프라이빗 파티 및 밋업 등 오프라인 행사 초대",
+    ],
+  },
+  {
     title: "A. U1 Physical Giveaways",
     desc: [
       "1. 카드형 하드월렛(키페어)",
@@ -23,15 +32,6 @@ export const UtilityModels: MemoType[] = [
       "3. 코어닥스에서 수행하는 NFT 프로젝트 민팅 시 혜택",
       "4. 깃든 얼라이언스 혜택",
       "5. 거래소 캐릭터 IP를 이용한 2차 창작 시 지원",
-    ],
-  },
-  {
-    title: "C. U3 Investment",
-    desc: [
-      "1. 선정된 디지털 자산에 대한 리서치 리포트 특별판 제공",
-      "2. 투자자 보호 교육에 우선 초대",
-      "3. 코어닥스 경영진/실무진과의 주기적인 밋업",
-      "4. 홀더 전용 프라이빗 파티 및 밋업 등 오프라인 행사 초대",
     ],
   },
 ];
