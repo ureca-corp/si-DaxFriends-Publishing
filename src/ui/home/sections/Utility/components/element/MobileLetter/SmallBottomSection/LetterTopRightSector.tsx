@@ -15,5 +15,7 @@ const st = {
     background-color: transparent;
     z-index: 3;
     cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   `,
 };
