@@ -29,6 +29,7 @@ const st = {
     display: flex;
     flex-direction: column;
     gap: 1.04vw;
+    -webkit-tap-highlight-color: transparent;
     @media ${MediaQueries.lg} {
       padding: 3.6vw 1.8vw;
       gap: 3.2vw;
