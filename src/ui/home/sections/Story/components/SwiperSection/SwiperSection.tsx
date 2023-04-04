@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
+import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import { LightColor } from "@/common/theme/color";
 import { SwiperButtonContainer } from "./SwiperButtonContainer";
 import { UseSwiperButton } from "./UseSwiperButton";
 import { MediaQueries } from "@/common/theme/screen";
+import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 
 export const SwiperSection = () => {
   const { handleSetSwiper, buttonState, slideState, models } =
@@ -18,13 +19,14 @@ export const SwiperSection = () => {
   return (
     <div css={st.root}>
       <div css={st.inner}>
-        <Swiper
+        <CustomSwiper
           slidesPerView={1}
           initialSlide={0}
           loop
-          grabCursor={false}
-          allowTouchMove={false}
           modules={[Autoplay]}
+          onSlideChange={(e) => {
+            slideState.onChange(e.realIndex + 1);
+          }}
           onSwiper={(swiper) => {
             handleSetSwiper(swiper);
           }}
@@ -37,7 +39,7 @@ export const SwiperSection = () => {
               </Stack>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </CustomSwiper>
       </div>
       <SwiperButtonContainer
         onPrev={buttonState.onPrev}

@@ -19,7 +19,7 @@ export const MbSwiperButtonContainer = ({
         <Image fill src={LeftButton} alt="previous" />
       </div>
       <Typography color={LightColor.BrandPrimary} css={st.text}>
-        {`${pageText} 0${slideIndex! + 1}`}
+        {`${pageText} 0${slideIndex!}`}
       </Typography>
       <div css={st.btn} onClick={onNext}>
         <Image fill src={RightButton} alt="next" />

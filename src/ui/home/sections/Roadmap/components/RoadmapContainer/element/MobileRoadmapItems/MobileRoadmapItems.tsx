@@ -1,11 +1,12 @@
 import { css } from "@emotion/react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { RoadmapBox } from "../components/RoadmapBox";
 import { UseSwiperButton } from "./UseSwiperButton";
 import { MbSwiperButtonContainer } from "@/ui/home/sections/Story/components/SwiperSection/SwiperButtonContainer/element";
+import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 
 export const MobileRoadmapItems = () => {
   const { models, slideState, handleSetSwiper, buttonState } =
@@ -13,12 +14,13 @@ export const MobileRoadmapItems = () => {
   return (
     <div css={st.root}>
       <div css={st.inner}>
-        <Swiper
+        <CustomSwiper
           loop
           spaceBetween={20}
           slidesPerView={1}
-          grabCursor={false}
-          allowTouchMove={false}
+          onSlideChange={(e) => {
+            slideState.onChange(e.realIndex + 1);
+          }}
           onSwiper={(swiper) => {
             handleSetSwiper(swiper);
           }}
@@ -28,7 +30,7 @@ export const MobileRoadmapItems = () => {
               <RoadmapBox title={it.title} descList={it.descList} />
             </SwiperSlide>
           ))}
-        </Swiper>
+        </CustomSwiper>
       </div>
       <MbSwiperButtonContainer
         onNext={buttonState.onNext}
