@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { PartnerModels } from "../models/partner.models";
 import Image from "next/image";
 import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
+import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 
 export const SwiperSection = () => {
   const models = PartnerModels;
@@ -14,12 +15,13 @@ export const SwiperSection = () => {
   return (
     <div css={st.root}>
       <div css={st.swiper}>
-        <Swiper
+        <CustomSwiper
           loop
           freeMode={{ enabled: true, momentum: false }}
           spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
+          initialSlide={0}
           autoplay={{
             delay: 1,
             disableOnInteraction: true,
@@ -27,17 +29,17 @@ export const SwiperSection = () => {
           }}
           speed={6000}
         >
-          {models.secondModels.map((it, index) => (
+          {models.firstModels.map((it, index) => (
             <SwiperSlide key={`top-${index}`}>
               <div css={st.logo}>
                 <Image fill src={it} alt="solana" />
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </CustomSwiper>
       </div>
       <div css={st.swiper}>
-        <Swiper
+        <CustomSwiper
           loop
           freeMode={{ enabled: true, momentum: false }}
           spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
@@ -53,7 +55,7 @@ export const SwiperSection = () => {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </CustomSwiper>
       </div>
     </div>
   );
@@ -64,7 +66,7 @@ const st = {
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 15.98vw;
+    bottom: 11.5vw;
     display: flex;
     flex-direction: column;
     gap: 10.52vw;
@@ -74,7 +76,7 @@ const st = {
       bottom: unset;
       gap: 23.6vw;
     }
-    @media ${MediaQueries.lg} {
+    @media ${MediaQueries.sm} {
       gap: 28.77vw;
     }
   `,
