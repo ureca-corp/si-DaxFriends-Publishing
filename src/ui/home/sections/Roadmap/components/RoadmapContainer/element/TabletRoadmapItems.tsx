@@ -22,21 +22,16 @@ const st = {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 46.87vw;
+    overflow-y: scroll;
   `,
   inner: css`
     width: 52.08vw;
+    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 3.12vh;
-    overflow-y: scroll;
-    height: 100%;
     padding-bottom: 13.02vw;
-    position: relative;
     z-index: 2;
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
   `,
 };

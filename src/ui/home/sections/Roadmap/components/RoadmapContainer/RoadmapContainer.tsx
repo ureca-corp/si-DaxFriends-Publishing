@@ -1,4 +1,4 @@
-import { useCustomMediaQuery } from "@/common/theme/screen";
+import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 import { css } from "@emotion/react";
 
 import {
@@ -25,5 +25,11 @@ export const RoadmapContainer = () => {
 const st = {
   root: css`
     width: 100%;
+    @media ${MediaQueries.lg} {
+      overflow-y: scroll;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    }
   `,
 };

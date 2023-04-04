@@ -27,7 +27,7 @@ const st = {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12.5vh;
+      gap: 4.5vh;
       padding-top: 19vw;
     }
     @media ${MediaQueries.sm} {
