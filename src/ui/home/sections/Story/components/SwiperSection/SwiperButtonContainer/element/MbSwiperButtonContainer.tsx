@@ -37,9 +37,8 @@ const st = {
     left: 50%;
     bottom: 30px;
     transform: translateX(-50%);
-
-    @media ${MediaQueries.xs} {
-      bottom: 16px;
+    @media ${MediaQueries.sm} {
+      bottom: 5.02vh;
     }
   `,
   btn: css`
@@ -48,14 +47,18 @@ const st = {
     aspect-ratio: 1/1.32;
     cursor: pointer;
     z-index: 3;
-
+    @media ${MediaQueries.sm} {
+      width: 3.2vw;
+    }
     @media ${MediaQueries.xs} {
       width: 2.88vw; // 1vw 줄임
     }
   `,
   text: css`
     font-size: 2.86vw;
-
+    @media ${MediaQueries.sm} {
+      font-size: 4.5vw;
+    }
     @media ${MediaQueries.xs} {
       font-size: 5.11vw; // 1vw 줄임
     }

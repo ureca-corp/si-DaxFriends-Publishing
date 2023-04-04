@@ -54,6 +54,7 @@ const st = {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 8vh;
   `,
   inner: css`
     position: absolute;
@@ -81,7 +82,9 @@ const st = {
       gap: 3.9vh;
       padding-left: 0vw;
     }
-
+    @media ${MediaQueries.sm} {
+      gap: 4.5vw;
+    }
     @media ${MediaQueries.xs} {
       gap: 5.55vw;
     }
@@ -93,6 +96,9 @@ const st = {
 
     @media ${MediaQueries.lg} {
       width: 39.06vw;
+    }
+    @media ${MediaQueries.sm} {
+      width: 52vw;
     }
     @media ${MediaQueries.xs} {
       width: 55.55vw;
@@ -108,6 +114,10 @@ const st = {
       padding: 0 5vw;
       gap: 1vh;
     }
+
+    @media ${MediaQueries.sm} {
+      padding: 0 8vw;
+    }
     @media ${MediaQueries.xs} {
       padding: 0 11.11vw;
     }
@@ -117,6 +127,9 @@ const st = {
       font-size: 5.98vw;
       text-align: center;
     }
+    @media ${MediaQueries.sm} {
+      font-size: 8vw;
+    }
     @media ${MediaQueries.xs} {
       font-size: 8.33vw;
     }
@@ -124,6 +137,10 @@ const st = {
   desc: css`
     @media ${MediaQueries.lg} {
       font-size: 3.9vw;
+    }
+
+    @media ${MediaQueries.sm} {
+      font-size: 4.8vw;
     }
     @media ${MediaQueries.xs} {
       font-size: 4.44vw;
