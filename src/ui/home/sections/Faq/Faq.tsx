@@ -30,23 +30,20 @@ const st = {
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     padding: 0 5.2vw;
-    padding-bottom: 4.62vh;
-
+    padding-top: 10vw;
     @media ${MediaQueries.lg} {
       align-items: center;
       flex-direction: column;
-      padding-top: 18vw;
-      gap: 8vw;
+      padding-top: 2vw;
+      gap: 4vw;
     }
-
     @media ${MediaQueries.sm} {
-      padding-top: 18vw;
+      padding-top: 12vw;
       gap: 0;
     }
-
     @media ${MediaQueries.xs} {
       padding: 0;
       padding-top: 18vw;
