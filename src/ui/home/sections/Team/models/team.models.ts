@@ -2,7 +2,7 @@ import Rich from "@/assets/pc/team/member/Rich.png";
 import Clinking from "@/assets/pc/team/member/Clinking.png";
 import Hogom from "@/assets/pc/team/member/Hogom.png";
 import Manta from "@/assets/pc/team/member/Manta.png";
-import Aja from "@/assets/pc/team/member/Aja.png";
+import Newssy from "@/assets/pc/team/member/Newssy.png";
 import Trill from "@/assets/pc/team/member/Trill.png";
 
 export const TeamModels = [
@@ -31,9 +31,9 @@ export const TeamModels = [
     link: "https://t.me/GAORI777",
   },
   {
-    img: Aja,
+    img: Newssy,
     department: "커뮤니티 매니저",
-    name: "AJA",
+    name: "Newssy",
     link: "https://twitter.com/newssyjj?s=21&t=311OW_-0RnqkZhNAAljytA",
   },
   {
