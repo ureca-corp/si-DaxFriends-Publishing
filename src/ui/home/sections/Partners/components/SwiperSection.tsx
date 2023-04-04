@@ -74,6 +74,9 @@ const st = {
       bottom: unset;
       gap: 23.6vw;
     }
+    @media ${MediaQueries.lg} {
+      gap: 28.77vw;
+    }
   `,
   swiper: css`
     width: 100%;
