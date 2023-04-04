@@ -44,7 +44,7 @@ const st = {
     @media ${MediaQueries.sm} {
       padding: 0 8.33vw;
       padding-top: 18vw;
-      gap: 20.5vw;
+      gap: 15vw;
     }
   `,
   blurWrapper: css`
