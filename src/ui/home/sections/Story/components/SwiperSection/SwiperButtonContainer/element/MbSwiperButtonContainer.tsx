@@ -20,16 +20,16 @@ export const MbSwiperButtonContainer = ({
       x: -25,
       repeat: -1,
       yoyo: true,
-      duration: 0.7,
-      repeatDelay: 0.8,
+      duration: 0.8,
+      repeatDelay: 0.9,
     });
 
     gsap.to(".story-mb-next", {
       x: 25,
       repeat: -1,
       yoyo: true,
-      duration: 0.7,
-      repeatDelay: 0.8,
+      duration: 0.8,
+      repeatDelay: 0.9,
     });
   }, []);
 
