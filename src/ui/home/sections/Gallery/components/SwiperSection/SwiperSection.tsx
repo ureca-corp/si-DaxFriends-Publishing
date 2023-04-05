@@ -65,6 +65,15 @@ const st = {
     @media ${MediaQueries.lg} {
       position: relative;
     }
+    @media ${MediaQueries.sm} {
+      width: 100%;
+      height: 70vh;
+      bottom: unset;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   `,
   card: css`
     width: 13.54vw;

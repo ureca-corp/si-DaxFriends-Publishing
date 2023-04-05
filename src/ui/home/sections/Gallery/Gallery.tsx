@@ -45,11 +45,13 @@ const st = {
     }
 
     @media ${MediaQueries.sm} {
-      padding-top: 18vw;
-      gap: 20.5vw;
+      display: unset;
+      flex-direction: unset;
+      align-items: unset;
+      padding-top: unset;
     }
 
-    @media (max-width: 414px) and (max-height: 896px) {
+    /* @media (max-width: 414px) and (max-height: 896px) {
       gap: 33.5vw;
     }
     @media (max-width: 414px) and (max-height: 736px) {
@@ -60,7 +62,7 @@ const st = {
     }
     @media (max-width: 375px) and (max-height: 667px) {
       gap: 20.5vw;
-    }
+    } */
   `,
 
   pinkBlur: css`

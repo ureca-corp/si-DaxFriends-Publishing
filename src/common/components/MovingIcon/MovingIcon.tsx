@@ -1,4 +1,4 @@
-import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
+import { MediaQueries } from "@/common/theme/screen";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import { UseMovingIcon } from "./UseMovingIcon";
