@@ -1,5 +1,5 @@
 import Rich from "@/assets/pc/team/member/Rich.png";
-import Clinking from "@/assets/pc/team/member/Clinking.png";
+import Coinking from "@/assets/pc/team/member/Coinking.png";
 import Hogom from "@/assets/pc/team/member/Hogom.png";
 import Manta from "@/assets/pc/team/member/Manta.png";
 import Newssy from "@/assets/pc/team/member/Newssy.png";
@@ -13,9 +13,9 @@ export const TeamModels = [
     link: "https://www.linkedin.com/in/thewelldigger/",
   },
   {
-    img: Clinking,
+    img: Coinking,
     department: "시장감사위원장",
-    name: "Clinking",
+    name: "Coinking",
     link: "https://www.coredax.com/safety/content/marketsurveil_greeting.html",
   },
   {

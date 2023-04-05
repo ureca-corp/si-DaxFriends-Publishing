@@ -44,20 +44,8 @@ const st = {
       gap: 8vw;
     }
     @media ${MediaQueries.sm} {
-      padding-top: 18vw;
-      gap: 11.11vw;
-    }
-    @media (max-width: 414px) and (max-height: 896px) {
-      gap: 30.5vw;
-    }
-    @media (max-width: 414px) and (max-height: 736px) {
-      gap: 27.5vw;
-    }
-    @media (max-width: 375px) and (max-height: 812px) {
-      gap: 30.5vw;
-    }
-    @media (max-width: 375px) and (max-height: 667px) {
-      gap: 8.11vw;
+      padding-top: unset;
+      display: unset;
     }
   `,
   purpleBlur: css`

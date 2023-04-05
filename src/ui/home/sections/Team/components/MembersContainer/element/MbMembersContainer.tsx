@@ -8,6 +8,7 @@ import { Link, Typography } from "@mui/material";
 import { TeamModels } from "../../../models/team.models";
 import { LightColor } from "@/common/theme/color";
 import ImgLink from "@/assets//pc/team/icon-link.png";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const MbMembersContainer = () => {
   const models = TeamModels;
@@ -48,6 +49,13 @@ export const MbMembersContainer = () => {
 const st = {
   root: css`
     width: 100%;
+
+    @media ${MediaQueries.sm} {
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   `,
   member: css`
     display: flex;
