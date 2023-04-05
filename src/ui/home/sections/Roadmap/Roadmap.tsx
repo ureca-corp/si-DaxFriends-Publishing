@@ -36,6 +36,7 @@ const st = {
       padding-top: unset;
       display: unset;
       align-items: unset;
+   
       /* display: flex;
       flex-direction: column;
       align-items: center;

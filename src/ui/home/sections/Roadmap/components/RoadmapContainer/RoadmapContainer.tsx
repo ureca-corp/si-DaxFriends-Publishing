@@ -37,6 +37,7 @@ const st = {
       display: flex;
       align-content: center;
       justify-content: center;
+      padding-bottom: 17.77vh;
     }
   `,
 };
