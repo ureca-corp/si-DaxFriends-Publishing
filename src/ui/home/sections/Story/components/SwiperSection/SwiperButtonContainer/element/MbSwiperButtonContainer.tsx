@@ -60,7 +60,14 @@ const st = {
     transform: translateX(-50%);
     z-index: 3;
     @media ${MediaQueries.sm} {
-      bottom: 5.02vh;
+      width: 100%;
+      position: relative;
+      left: unset;
+      bottom: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: unset;
     }
   `,
   btn: css`

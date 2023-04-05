@@ -50,7 +50,9 @@ const st = {
     display: flex;
     justify-content: center;
     @media ${MediaQueries.sm} {
+      flex-direction: column;
       align-items: center;
+      gap: 23.51vh;
     }
   `,
 
