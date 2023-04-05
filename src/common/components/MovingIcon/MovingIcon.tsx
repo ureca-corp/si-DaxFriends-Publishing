@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import { UseMovingIcon } from "./UseMovingIcon";
 import { AssetType } from "./type/gif.type";
+import { UtilityText } from "./components";
 
 interface MovingIcon {
   props: AssetType[];
@@ -16,6 +17,7 @@ export const MovingIcon = ({ props, topShort = false }: MovingIcon) => {
     <div css={st.wrapper(topShort)}>
       <div css={st.gif(assetData.w, assetData.h)}>
         <Image fill src={assetData.asset} alt="gif" />
+        {props[0].name === "utility" && <UtilityText />}
       </div>
     </div>
   );

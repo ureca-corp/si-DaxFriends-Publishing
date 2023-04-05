@@ -10,49 +10,49 @@ export const AssetModels: AssetCategoryType[] = [
   {
     name: "road",
     data: [
-      { asset: RoadGif, w: "10.41vw", h: "1" },
-      { asset: RoadGif, w: "18.22vw", h: "1" },
-      { asset: RoadGif, w: "30vw", h: "1" },
+      { name: "road", asset: RoadGif, w: "10.41vw", h: "1" },
+      { name: "road", asset: RoadGif, w: "18.22vw", h: "1" },
+      { name: "road", asset: RoadGif, w: "30vw", h: "1" },
     ],
   },
   {
     name: "utility",
     data: [
-      { asset: UtilityGif, w: "10.41vw", h: "1" },
-      { asset: UtilityGif, w: "18.22vw", h: "1" },
-      { asset: UtilityGif, w: "30vw", h: "1" },
+      { name: "utility", asset: UtilityGif, w: "10.41vw", h: "1" },
+      { name: "utility", asset: UtilityGif, w: "18.22vw", h: "1" },
+      { name: "utility", asset: UtilityGif, w: "30vw", h: "1" },
     ],
   },
   {
     name: "gallery",
     data: [
-      { asset: GalleryGif, w: "10.41vw", h: "1" },
-      { asset: GalleryGif, w: "18.22vw", h: "1" },
-      { asset: GalleryGif, w: "30vw", h: "1" },
+      { name: "gallery", asset: GalleryGif, w: "10.41vw", h: "1" },
+      { name: "gallery", asset: GalleryGif, w: "18.22vw", h: "1" },
+      { name: "gallery", asset: GalleryGif, w: "30vw", h: "1" },
     ],
   },
   {
     name: "team",
     data: [
-      { asset: TeamGif, w: "10.41vw", h: "1" },
-      { asset: TeamGif, w: "18.22vw", h: "1" },
-      { asset: TeamGif, w: "30vw", h: "1" },
+      { name: "team", asset: TeamGif, w: "10.41vw", h: "1" },
+      { name: "team", asset: TeamGif, w: "18.22vw", h: "1" },
+      { name: "team", asset: TeamGif, w: "30vw", h: "1" },
     ],
   },
   {
     name: "partners",
     data: [
-      { asset: PartnerGif, w: "10.41vw", h: "1" },
-      { asset: PartnerGif, w: "18.22vw", h: "1" },
-      { asset: PartnerGif, w: "30vw", h: "1" },
+      { name: "road", asset: PartnerGif, w: "10.41vw", h: "1" },
+      { name: "road", asset: PartnerGif, w: "18.22vw", h: "1" },
+      { name: "road", asset: PartnerGif, w: "30vw", h: "1" },
     ],
   },
   {
     name: "faq",
     data: [
-      { asset: FaqGif, w: "10.41vw", h: "1" },
-      { asset: FaqGif, w: "18.22vw", h: "1" },
-      { asset: FaqGif, w: "30vw", h: "1" },
+      { name: "faq", asset: FaqGif, w: "10.41vw", h: "1" },
+      { name: "faq", asset: FaqGif, w: "18.22vw", h: "1" },
+      { name: "faq", asset: FaqGif, w: "30vw", h: "1" },
     ],
   },
 ];

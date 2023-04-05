@@ -4,6 +4,7 @@ export interface AssetCategoryType {
 }
 
 export interface AssetType {
+  name: string;
   asset: any;
   w: string;
   h: string;
