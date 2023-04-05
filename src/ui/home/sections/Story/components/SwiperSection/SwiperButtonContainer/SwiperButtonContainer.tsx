@@ -1,6 +1,9 @@
 import { useCustomMediaQuery } from "@/common/theme/screen";
 import { css } from "@emotion/react";
-import { MbSwiperButtonContainer, PcSwiperButtonContainer } from "./element";
+import {
+  MbStorySwiperButtonContainer,
+  PcSwiperButtonContainer,
+} from "./element";
 
 export interface SwiperButtonProps {
   onPrev: () => void;
@@ -18,7 +21,7 @@ export const SwiperButtonContainer = ({
   return (
     <div css={st.root}>
       {isTablet ? (
-        <MbSwiperButtonContainer
+        <MbStorySwiperButtonContainer
           onPrev={onPrev}
           onNext={onNext}
           slideIndex={slideIndex}
