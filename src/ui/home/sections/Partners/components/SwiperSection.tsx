@@ -17,13 +17,12 @@ export const SwiperSection = () => {
       <div css={st.swiper}>
         <CustomSwiper
           loop
-          freeMode={{ enabled: true, momentum: false }}
+          freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
           spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
-          initialSlide={0}
           autoplay={{
-            delay: 1,
+            delay: 0,
             disableOnInteraction: true,
             reverseDirection: true,
           }}
@@ -41,11 +40,11 @@ export const SwiperSection = () => {
       <div css={st.swiper}>
         <CustomSwiper
           loop
-          freeMode={{ enabled: true, momentum: false }}
+          freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
           spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
-          autoplay={{ delay: 1, disableOnInteraction: true }}
+          autoplay={{ delay: 0, disableOnInteraction: true }}
           speed={6000}
         >
           {models.secondModels.map((it, index) => (
