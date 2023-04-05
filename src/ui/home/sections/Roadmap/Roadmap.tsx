@@ -4,11 +4,12 @@ import { MovingIcon } from "@/common/components/MovingIcon";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { BackgroundImage, RoadmapContainer } from "./components";
 import { MediaQueries } from "@/common/theme/screen";
+import { sectionIds } from "../../common/SectionIds";
 
 export const Roadmap = () => {
   const movingIcon = UseGetAsset("road");
   return (
-    <section css={st.root}>
+    <section id={sectionIds[2]} css={st.root}>
       <MovingIcon props={movingIcon} />
       <RoadmapContainer />
       <BackgroundImage />
@@ -31,11 +32,11 @@ const st = {
       padding-top: 19vw;
     }
     @media ${MediaQueries.sm} {
-      padding-top: 0vw;
-      gap: 0vh;
-      padding-top: unset;
       display: unset;
+      flex-direction: unset;
       align-items: unset;
+      gap: unset;
+      padding-top: unset;
     }
   `,
   image: css`

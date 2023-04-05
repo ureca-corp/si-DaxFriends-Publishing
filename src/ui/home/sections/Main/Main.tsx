@@ -1,5 +1,6 @@
 import { useCustomMediaQuery } from "@/common/theme/screen";
 import { css } from "@emotion/react";
+import { sectionIds } from "../../common/SectionIds";
 import { BackgroundImage, MainTitle } from "./components";
 import { TitleModels } from "./models/title.model";
 
@@ -8,7 +9,7 @@ export const Main = () => {
   const models = TitleModels;
 
   return (
-    <section css={st.root}>
+    <section id={sectionIds[0]} css={st.root}>
       {isTablet || <MainTitle main={models.main} desc={models.desc} />}
       <BackgroundImage />
     </section>
@@ -20,5 +21,6 @@ const st = {
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden;
   `,
 };

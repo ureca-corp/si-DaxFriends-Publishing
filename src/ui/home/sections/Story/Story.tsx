@@ -2,10 +2,11 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import ImgBackgronud from "@/assets/pc/img-bg-cloud.png";
 import { SwiperSection } from "./components/SwiperSection";
+import { sectionIds } from "../../common/SectionIds";
 
 export const Story = () => {
   return (
-    <section css={st.root}>
+    <section id={sectionIds[1]} css={st.root}>
       <div css={st.bgWrapper}>
         <div css={st.bg}>
           <Image fill src={ImgBackgronud} alt="bg" />

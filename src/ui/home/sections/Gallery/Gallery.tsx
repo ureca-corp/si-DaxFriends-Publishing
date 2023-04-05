@@ -7,11 +7,12 @@ import { SwiperSection } from "./components/SwiperSection";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
 import { MediaQueries } from "@/common/theme/screen";
+import { sectionIds } from "../../common/SectionIds";
 
 export const Gallery = () => {
   const movingIcon = UseGetAsset("gallery");
   return (
-    <section css={st.root}>
+    <section id={sectionIds[4]} css={st.root}>
       <MovingIcon props={movingIcon} />
       <div css={st.pinkBlur}>
         <div css={st.blur}>

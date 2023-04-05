@@ -1,5 +1,9 @@
 import { Appbar } from "@/common/components/Appbar";
-import { Stack } from "@mui/material";
+import { useFullpage } from "@/common/hooks/useFullPage";
+import { useCustomMediaQuery } from "@/common/theme/screen";
+import { sectionIds } from "../common/SectionIds";
+import { css } from "@emotion/react";
+
 import {
   Gallery,
   Utility,
@@ -13,8 +17,10 @@ import {
 } from "../sections";
 
 export const HomeView = () => {
+  const { isSmall } = useCustomMediaQuery();
+  const { fullpageRef } = useFullpage(sectionIds, isSmall);
   return (
-    <Stack sx={{ position: "relative" }}>
+    <div ref={fullpageRef} css={st.root}>
       <Appbar />
       <Main />
       <Story />
@@ -25,6 +31,14 @@ export const HomeView = () => {
       <Partners />
       <Faq />
       <Footer />
-    </Stack>
+    </div>
   );
+};
+
+const st = {
+  root: css`
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  `,
 };

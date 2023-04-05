@@ -6,11 +6,12 @@ import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
 import { MediaQueries } from "@/common/theme/screen";
 import { AccordionContainer } from "./components/AccordionContainer";
+import { sectionIds } from "../../common/SectionIds";
 
 export const Faq = () => {
   const movingIcon = UseGetAsset("faq");
   return (
-    <section css={st.root}>
+    <section id={sectionIds[7]} css={st.root}>
       <MovingIcon props={movingIcon} />
       <div css={st.blurWrapper}>
         <div css={st.blur}>

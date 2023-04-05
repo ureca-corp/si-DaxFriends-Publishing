@@ -1,10 +1,11 @@
 import { MediaQueries } from "@/common/theme/screen";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
+import { sectionIds } from "../../common/SectionIds";
 
 export const Footer = () => {
   return (
-    <footer css={st.footer}>
+    <footer id={sectionIds[8]} css={st.footer}>
       <Typography css={st.company}>{"COREDAX"}</Typography>
       <div css={st.inner}>
         <Typography className="info" css={st.info}>
@@ -32,12 +33,14 @@ export const Footer = () => {
 
 const st = {
   footer: css`
+    position: relative;
     width: 100%;
     padding: 3.12vw 5.2vw;
     background-color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 9;
     @media ${MediaQueries.lg} {
       padding: 4.2vw;
     }

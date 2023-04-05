@@ -7,11 +7,12 @@ import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { MovingIcon } from "@/common/components/MovingIcon";
 import { MediaQueries } from "@/common/theme/screen";
 import { MembersContainer } from "./components";
+import { sectionIds } from "../../common/SectionIds";
 
 export const Team = () => {
   const movingIcon = UseGetAsset("team");
   return (
-    <section css={st.root}>
+    <section id={sectionIds[5]} css={st.root}>
       <MovingIcon props={movingIcon} />
       <div css={st.purpleBlur}>
         <div css={st.blur}>
@@ -47,6 +48,11 @@ const st = {
       padding-top: unset;
       display: unset;
     }
+  `,
+
+  inner: css`
+    width: 100%;
+    height: 100%;
   `,
   purpleBlur: css`
     position: absolute;

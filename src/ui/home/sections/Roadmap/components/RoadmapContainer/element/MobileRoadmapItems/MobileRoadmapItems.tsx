@@ -5,10 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { RoadmapBox } from "../components/RoadmapBox";
 import { UseSwiperButton } from "./UseSwiperButton";
-import {
-  MbStorySwiperButtonContainer,
-  MbSwiperButtonContainer,
-} from "@/ui/home/sections/Story/components/SwiperSection/SwiperButtonContainer/element";
+import { MbStorySwiperButtonContainer } from "@/ui/home/sections/Story/components/SwiperSection/SwiperButtonContainer/element";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 import { MediaQueries } from "@/common/theme/screen";
 
@@ -55,7 +52,6 @@ const st = {
     @media ${MediaQueries.sm} {
       flex-direction: column;
       align-items: center;
-      gap: 23.51vh;
     }
   `,
 

@@ -25,6 +25,7 @@ export const RoadmapContainer = () => {
 const st = {
   root: css`
     width: 100%;
+
     @media ${MediaQueries.lg} {
       overflow-y: scroll;
       ::-webkit-scrollbar {
@@ -32,6 +33,7 @@ const st = {
       }
     }
     @media ${MediaQueries.sm} {
+      position: relative;
       overflow-y: unset;
       height: 70vh;
       display: flex;

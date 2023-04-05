@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper";
+import { Autoplay, FreeMode } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { PartnerModels } from "../models/partner.models";
@@ -20,7 +20,7 @@ export const SwiperSection = () => {
           freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
           spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
-          modules={[Autoplay]}
+          modules={[Autoplay, FreeMode]}
           autoplay={{
             delay: 0,
             disableOnInteraction: true,
@@ -43,7 +43,7 @@ export const SwiperSection = () => {
           freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
           spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
-          modules={[Autoplay]}
+          modules={[Autoplay, FreeMode]}
           autoplay={{ delay: 0, disableOnInteraction: true }}
           speed={6000}
         >

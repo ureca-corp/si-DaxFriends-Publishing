@@ -12,7 +12,6 @@ interface MovingIcon {
 
 export const MovingIcon = ({ props, topShort = false }: MovingIcon) => {
   const { assetData } = UseMovingIcon(props);
-
   return (
     <div css={st.wrapper(topShort)}>
       <div css={st.gif(assetData.w, assetData.h)}>
@@ -29,13 +28,11 @@ const st = {
     top: ${topShort ? "2.65vw" : "3.2vw"};
     left: 5.2vw;
     z-index: 3;
-
     @media ${MediaQueries.lg} {
       position: relative;
       top: unset;
       left: unset;
     }
-
     @media ${MediaQueries.sm} {
       width: 100%;
       height: 30vh;
