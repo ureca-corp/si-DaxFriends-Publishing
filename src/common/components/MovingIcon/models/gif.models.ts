@@ -18,9 +18,9 @@ export const AssetModels: AssetCategoryType[] = [
   {
     name: "utility",
     data: [
-      { asset: UtilityGif, w: "10.41vw", h: "1/1.38" },
-      { asset: UtilityGif, w: "18.22vw", h: "1/1.06" },
-      { asset: UtilityGif, w: "30vw", h: "1/1.06" },
+      { asset: UtilityGif, w: "10.41vw", h: "1" },
+      { asset: UtilityGif, w: "18.22vw", h: "1" },
+      { asset: UtilityGif, w: "30vw", h: "1" },
     ],
   },
   {
