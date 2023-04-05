@@ -41,13 +41,12 @@ const st = {
       gap: 4vw;
     }
     @media ${MediaQueries.sm} {
-      padding-top: 12vw;
-      gap: 0;
+      padding-top: unset;
+      display: unset;
+      gap: unset;
     }
     @media ${MediaQueries.xs} {
       padding: 0;
-      padding-top: 18vw;
-      //padding-bottom: 5.55vw;
     }
   `,
   blurWrapper: css`

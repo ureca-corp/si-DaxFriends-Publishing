@@ -55,6 +55,10 @@ export const AccordionContainer = () => {
 const st = {
   root: css`
     width: 100%;
+    @media ${MediaQueries.sm} {
+      height: 70vh;
+      background-color: blue;
+    }
 
     @media ${MediaQueries.xs} {
       height: calc((14.44vw * 7) + 6px);
