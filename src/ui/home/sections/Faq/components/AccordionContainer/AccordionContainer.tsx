@@ -60,7 +60,7 @@ const st = {
     }
 
     @media ${MediaQueries.xs} {
-      height: calc((14.44vw * 7) + 6px);
+      height: 70vh;
       overflow: scroll;
     }
   `,

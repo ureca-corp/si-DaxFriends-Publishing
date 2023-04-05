@@ -5,7 +5,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { RoadmapBox } from "../components/RoadmapBox";
 import { UseSwiperButton } from "./UseSwiperButton";
-import { MbSwiperButtonContainer } from "@/ui/home/sections/Story/components/SwiperSection/SwiperButtonContainer/element";
+import {
+  MbStorySwiperButtonContainer,
+  MbSwiperButtonContainer,
+} from "@/ui/home/sections/Story/components/SwiperSection/SwiperButtonContainer/element";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 import { MediaQueries } from "@/common/theme/screen";
 
@@ -33,7 +36,7 @@ export const MobileRoadmapItems = () => {
           ))}
         </CustomSwiper>
       </div>
-      <MbSwiperButtonContainer
+      <MbStorySwiperButtonContainer
         onNext={buttonState.onNext}
         onPrev={buttonState.onPrev}
         slideIndex={slideState.value}
@@ -57,7 +60,7 @@ const st = {
   `,
 
   inner: css`
-    width: 77.22vw;
+    width: 100%;
     aspect-ratio: 1/0.8;
   `,
 };
