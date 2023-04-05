@@ -57,7 +57,6 @@ const st = {
     width: 100%;
     @media ${MediaQueries.sm} {
       height: 70vh;
-      background-color: blue;
     }
 
     @media ${MediaQueries.xs} {
