@@ -7,6 +7,7 @@ import { RoadmapBox } from "../components/RoadmapBox";
 import { UseSwiperButton } from "./UseSwiperButton";
 import { MbSwiperButtonContainer } from "@/ui/home/sections/Story/components/SwiperSection/SwiperButtonContainer/element";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
+import { MediaQueries } from "@/common/theme/screen";
 
 export const MobileRoadmapItems = () => {
   const { models, slideState, handleSetSwiper, buttonState } =
@@ -48,6 +49,9 @@ const st = {
     z-index: 2;
     display: flex;
     justify-content: center;
+    @media ${MediaQueries.sm} {
+      align-items: center;
+    }
   `,
 
   inner: css`

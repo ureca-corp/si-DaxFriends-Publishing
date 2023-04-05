@@ -31,5 +31,12 @@ const st = {
         display: none;
       }
     }
+    @media ${MediaQueries.sm} {
+      overflow-y: unset;
+      height: 70vh;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
   `,
 };

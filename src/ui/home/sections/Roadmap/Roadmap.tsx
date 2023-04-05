@@ -31,7 +31,16 @@ const st = {
       padding-top: 19vw;
     }
     @media ${MediaQueries.sm} {
-      padding-top: 18vw;
+      padding-top: 0vw;
+      gap: 0vh;
+      padding-top: unset;
+      display: unset;
+      align-items: unset;
+      /* display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15vh 0; */
     }
   `,
   image: css`

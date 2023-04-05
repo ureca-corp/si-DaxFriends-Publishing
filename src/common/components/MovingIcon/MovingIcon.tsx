@@ -33,6 +33,14 @@ const st = {
       top: unset;
       left: unset;
     }
+
+    @media ${MediaQueries.sm} {
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   `,
   gif: (width: string, aspectRatio: string) => css`
     position: relative;

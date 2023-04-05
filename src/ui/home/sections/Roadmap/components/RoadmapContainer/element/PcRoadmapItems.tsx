@@ -1,4 +1,3 @@
-import { MediaQueries } from "@/common/theme/screen";
 import { css } from "@emotion/react";
 import { RoadmapItemModels } from "../../../models/roadmap.type";
 import { RoadmapBox } from "./components/RoadmapBox";
