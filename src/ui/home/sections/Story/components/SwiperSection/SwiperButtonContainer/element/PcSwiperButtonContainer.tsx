@@ -3,17 +3,37 @@ import { css } from "@emotion/react";
 import LeftButton from "@/assets/pc/swiper/btn/icon-left-btn.png";
 import RightButton from "@/assets/pc/swiper/btn/icon-right-btn.png";
 import { SwiperButtonProps } from "../SwiperButtonContainer";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
 
 export const PcSwiperButtonContainer = ({
   onPrev,
   onNext,
 }: SwiperButtonProps) => {
+  useLayoutEffect(() => {
+    gsap.to(".story-prev", {
+      x: -50,
+      repeat: -1,
+      yoyo: true,
+      duration: 0.6,
+      repeatDelay: 0.6,
+    });
+
+    gsap.to(".story-next", {
+      x: 50,
+      repeat: -1,
+      yoyo: true,
+      duration: 0.6,
+      repeatDelay: 0.6,
+    });
+  }, []);
+
   return (
     <div css={st.btnWrapper}>
-      <div css={st.btn} onClick={onPrev}>
+      <div className="story-prev" css={st.btn} onClick={onPrev}>
         <Image fill src={LeftButton} alt="previous" />
       </div>
-      <div css={st.btn} onClick={onNext}>
+      <div className="story-next" css={st.btn} onClick={onNext}>
         <Image fill src={RightButton} alt="next" />
       </div>
     </div>
