@@ -27,7 +27,7 @@ const st = {
       height: 70vh;
       height: 70vh;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
     }
   `,
