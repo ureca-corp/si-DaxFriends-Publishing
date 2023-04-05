@@ -77,6 +77,12 @@ const st = {
       gap: 23.6vw;
     }
     @media ${MediaQueries.sm} {
+      height: 70vh;
+      bottom: unset;
+      left: unset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       gap: 28.77vw;
     }
   `,
