@@ -45,10 +45,11 @@ const st = {
     }
 
     @media ${MediaQueries.sm} {
-      width: 100%;
+      width: 77.22vw;
       aspect-ratio: 1/0.8;
       border-radius: 11.11vw;
       padding: 7.77vw;
+      margin: 0 auto;
     }
   `,
 
