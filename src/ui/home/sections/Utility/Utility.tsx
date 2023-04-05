@@ -42,9 +42,10 @@ const st = {
     }
 
     @media ${MediaQueries.sm} {
+      display: unset;
+      flex-direction: unset;
+      align-items: unset;
       padding: 0 8.33vw;
-      padding-top: 18vw;
-      gap: 15vw;
     }
   `,
   blurWrapper: css`

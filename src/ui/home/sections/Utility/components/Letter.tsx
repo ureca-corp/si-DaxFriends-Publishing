@@ -22,5 +22,13 @@ const st = {
       align-items: unset;
       justify-content: unset;
     }
+
+    @media ${MediaQueries.sm} {
+      height: 70vh;
+      height: 70vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   `,
 };
