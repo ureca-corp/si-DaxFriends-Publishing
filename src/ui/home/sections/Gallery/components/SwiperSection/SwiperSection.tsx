@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper";
+import { Autoplay, FreeMode } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { GalleryModels } from "../../models/gallery.model";
@@ -10,6 +10,7 @@ import { LightColor } from "@/common/theme/color";
 import { Typography } from "@mui/material";
 import IconSharp from "@/assets/pc/gallery/icon-sharp.png";
 import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
+import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 
 export const SwiperSection = () => {
   const models = GalleryModels;
@@ -17,9 +18,9 @@ export const SwiperSection = () => {
 
   return (
     <div css={st.root}>
-      <Swiper
+      <CustomSwiper
         loop
-        freeMode={{ enabled: true, momentum: false }}
+        freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
         spaceBetween={isSmall ? 40 : isTablet ? 80 : 0}
         slidesPerView={isSmall ? 1.5 : isTablet ? 2.2 : 6}
         centeredSlides={isTablet ? true : false}
@@ -51,7 +52,7 @@ export const SwiperSection = () => {
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </CustomSwiper>
     </div>
   );
 };

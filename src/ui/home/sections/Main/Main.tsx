@@ -1,3 +1,4 @@
+import { Appbar } from "@/common/components/Appbar";
 import { useCustomMediaQuery } from "@/common/theme/screen";
 import { css } from "@emotion/react";
 import { sectionIds } from "../../common/SectionIds";
@@ -10,6 +11,7 @@ export const Main = () => {
 
   return (
     <section id={sectionIds[0]} css={st.root}>
+      <Appbar />
       {isTablet || <MainTitle main={models.main} desc={models.desc} />}
       <BackgroundImage />
     </section>

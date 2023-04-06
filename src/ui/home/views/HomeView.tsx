@@ -1,32 +1,119 @@
-import { Appbar } from "@/common/components/Appbar";
 import { css } from "@emotion/react";
-
+import Swiper, { Mousewheel, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 import {
   Gallery,
   Utility,
   Partners,
   Team,
   Faq,
-  Footer,
   Main,
   Story,
   Roadmap,
 } from "../sections";
 import { Stack } from "@mui/material";
+import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
+import { useState } from "react";
+import { SwiperSlide } from "swiper/react";
+import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 
 export const HomeView = () => {
+  const { isSmall } = useCustomMediaQuery();
+  const [swiper, setSwiper] = useState<Swiper | undefined>();
   return (
     <Stack css={st.root}>
-      <Appbar />
-      <Main />
-      <Story />
-      <Roadmap />
-      <Utility />
-      <Gallery />
-      <Team />
-      <Partners />
-      <Faq />
-      <Footer />
+      <CustomSwiper
+        mousewheel
+        direction={"vertical"}
+        modules={[Mousewheel, Pagination]}
+        pagination={{
+          clickable: true,
+        }}
+        css={css`
+          display: flex;
+          flex-direcion: column;
+          position: relative;
+          height: 100vh;
+
+          & .swiper-pagination {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @media ${MediaQueries.lg} {
+              gap: 16px;
+            }
+            @media ${MediaQueries.sm} {
+              gap: 12px;
+            }
+          }
+          & .swiper-pagination .swiper-pagination-bullet {
+            background: white;
+            opacity: 1;
+            width: 20px;
+            height: 20px;
+            @media ${MediaQueries.lg} {
+              width: 16px;
+              height: 16px;
+            }
+            @media ${MediaQueries.sm} {
+              width: 12px;
+              height: 12px;
+            }
+          }
+          & .swiper-pagination .swiper-pagination-bullet-active {
+            background: #9000ff;
+            width: 30px;
+            height: 30px;
+            @media ${MediaQueries.lg} {
+              width: 24px;
+              height: 24px;
+            }
+            @media ${MediaQueries.sm} {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        `}
+        onSlideChange={(e) => {
+          if (!isSmall && e.activeIndex === 2) {
+            e.mousewheel.disable();
+          } else {
+            e.mousewheel.enable();
+          }
+        }}
+        onSwiper={(swiper) => {
+          setSwiper(swiper);
+        }}
+      >
+        <SwiperSlide>
+          <Main />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Story />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Roadmap fullpageSwiper={swiper} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Utility />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Gallery />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Team />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Partners />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Faq />
+        </SwiperSlide>
+      </CustomSwiper>
+      {/* <Footer /> */}
     </Stack>
   );
 };

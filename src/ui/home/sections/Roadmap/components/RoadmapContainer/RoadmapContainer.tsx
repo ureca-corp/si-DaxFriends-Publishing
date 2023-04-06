@@ -1,4 +1,5 @@
 import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
+import { SlideProps } from "@/ui/home/common/type/slide.type";
 import { css } from "@emotion/react";
 
 import {
@@ -7,16 +8,16 @@ import {
   TabletRoadmapItems,
 } from "./element";
 
-export const RoadmapContainer = () => {
+export const RoadmapContainer = ({ fullpageSwiper }: SlideProps) => {
   const { isSmall, isTablet } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       {isSmall ? (
         <MobileRoadmapItems />
       ) : isTablet ? (
-        <TabletRoadmapItems />
+        <TabletRoadmapItems fullpageSwiper={fullpageSwiper} />
       ) : (
-        <PcRoadmapItems />
+        <PcRoadmapItems fullpageSwiper={fullpageSwiper} />
       )}
     </div>
   );

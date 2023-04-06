@@ -43,7 +43,7 @@ const st = {
     }
 
     @media ${MediaQueries.sm} {
-      display: unset;
+      display: block;
       flex-direction: unset;
       align-items: unset;
       padding: 0 8.33vw;

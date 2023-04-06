@@ -46,7 +46,7 @@ const st = {
     }
 
     @media ${MediaQueries.sm} {
-      display: unset;
+      display: block;
       flex-direction: unset;
       align-items: unset;
       padding-top: unset;

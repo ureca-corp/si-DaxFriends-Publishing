@@ -4,14 +4,14 @@ import { MovingIcon } from "@/common/components/MovingIcon";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { BackgroundImage, RoadmapContainer } from "./components";
 import { MediaQueries } from "@/common/theme/screen";
-import { sectionIds } from "../../common/SectionIds";
+import { SlideProps } from "../../common/type/slide.type";
 
-export const Roadmap = () => {
+export const Roadmap = ({ fullpageSwiper }: SlideProps) => {
   const movingIcon = UseGetAsset("road");
   return (
-    <section id={sectionIds[2]} css={st.root}>
+    <section css={st.root}>
       <MovingIcon props={movingIcon} />
-      <RoadmapContainer />
+      <RoadmapContainer fullpageSwiper={fullpageSwiper} />
       <BackgroundImage />
     </section>
   );
@@ -32,7 +32,7 @@ const st = {
       padding-top: 19vw;
     }
     @media ${MediaQueries.sm} {
-      display: unset;
+      display: block;
       flex-direction: unset;
       align-items: unset;
       gap: unset;
