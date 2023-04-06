@@ -35,10 +35,10 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
             }
           `}
           onReachEnd={() => {
-            fullpageSwiper?.mousewheel.enable();
+            fullpageSwiper?.enable();
           }}
           onReachBeginning={() => {
-            fullpageSwiper?.mousewheel.enable();
+            fullpageSwiper?.enable();
           }}
         >
           <SwiperSlide></SwiperSlide>

@@ -97,9 +97,9 @@ export const HomeView = () => {
         `}
         onSlideChange={(e) => {
           if (!isSmall && e.activeIndex === 2) {
-            e.mousewheel.disable();
+            e.disable();
           } else {
-            e.mousewheel.enable();
+            e.enable();
           }
         }}
         onSwiper={(swiper) => {
