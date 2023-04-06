@@ -75,6 +75,9 @@ const st = {
     @media ${MediaQueries.lg} {
       font-size: 2.86vw;
     }
+    @media ${MediaQueries.sm} {
+      font-size: 3.2vw;
+    }
     @media ${MediaQueries.xs} {
       font-size: 3.8vw;
     }
@@ -84,6 +87,11 @@ const st = {
     margin-left: 16px;
     @media ${MediaQueries.lg} {
       font-size: 2.6vw;
+    }
+    @media ${MediaQueries.sm} {
+      text-indent: -16px;
+      margin-left: 20px;
+      font-size: 3vw;
     }
     @media ${MediaQueries.xs} {
       font-size: 3.4vw;

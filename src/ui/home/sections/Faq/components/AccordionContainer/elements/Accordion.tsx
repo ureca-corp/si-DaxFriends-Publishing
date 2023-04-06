@@ -14,6 +14,9 @@ export const Accordion = styled((props: AccordionProps) => (
   },
   marginBottom: "1.85vh",
   borderRadius: "36px",
+  [theme.breakpoints.down("sm")]: {
+    borderRadius: "24px",
+  },
   [theme.breakpoints.down("xs")]: {
     marginBottom: "0vh !important",
     borderRadius: "0px",
