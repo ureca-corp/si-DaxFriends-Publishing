@@ -55,4 +55,48 @@ export const GalleryModels = [
     img: Image11,
     name: "123345",
   },
+  {
+    img: Image1,
+    name: "123345",
+  },
+  {
+    img: Image2,
+    name: "123345",
+  },
+  {
+    img: Image3,
+    name: "123345",
+  },
+  {
+    img: Image4,
+    name: "123345",
+  },
+  {
+    img: Image5,
+    name: "123345",
+  },
+  {
+    img: Image6,
+    name: "123345",
+  },
+  {
+    img: Image7,
+    name: "123345",
+  },
+  {
+    img: Image8,
+    name: "123345",
+  },
+  {
+    img: Image9,
+    name: "123345",
+  },
+  {
+    img: Image10,
+    name: "123345",
+  },
+  {
+    img: Image11,
+    name: "123345",
+  },
 ];
