@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 import { SlideProps } from "@/ui/home/common/type/slide.type";
 import "swiper/css";
-import { Mousewheel } from "swiper";
+import { FreeMode, Mousewheel } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import { RoadmapItemModels } from "../../../models/roadmap.type";
 import { RoadmapBox } from "./components/RoadmapBox";
@@ -16,7 +16,8 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           mousewheel
           slidesPerView={2.3}
           direction={"vertical"}
-          modules={[Mousewheel]}
+          freeMode={true}
+          modules={[Mousewheel, FreeMode]}
           css={css`
             position: relative;
             height: 100%;

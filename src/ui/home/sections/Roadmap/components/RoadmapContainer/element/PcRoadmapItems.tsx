@@ -4,7 +4,7 @@ import "swiper/css";
 import { SlideProps } from "@/ui/home/common/type/slide.type";
 import { RoadmapItemModels } from "../../../models/roadmap.type";
 import { RoadmapBox } from "./components/RoadmapBox";
-import { Mousewheel } from "swiper";
+import { FreeMode, Mousewheel } from "swiper";
 import { SwiperSlide } from "swiper/react";
 
 export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
@@ -15,7 +15,8 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         mousewheel
         slidesPerView={2.3}
         direction={"vertical"}
-        modules={[Mousewheel]}
+        freeMode={true}
+        modules={[Mousewheel, FreeMode]}
         css={css`
           position: relative;
           height: 100%;
