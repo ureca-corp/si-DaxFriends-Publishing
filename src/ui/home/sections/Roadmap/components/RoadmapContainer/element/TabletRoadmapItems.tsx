@@ -18,6 +18,7 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           direction={"vertical"}
           freeMode={true}
           modules={[Mousewheel, FreeMode]}
+          spaceBetween={260}
           css={css`
             position: relative;
             height: 100%;
@@ -57,7 +58,6 @@ const st = {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 3.12vh;
     padding-bottom: 13.02vw;
     z-index: 2;
   `,

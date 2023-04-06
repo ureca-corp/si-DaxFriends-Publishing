@@ -40,8 +40,9 @@ const st = {
 
     @media ${MediaQueries.lg} {
       width: 51.08vw;
+      height: 28.7vh;
       border-radius: 7.81vw;
-      padding: 5.2vw;
+      padding: 3.2vh;
     }
 
     @media ${MediaQueries.sm} {
@@ -56,6 +57,9 @@ const st = {
   ul: css`
     list-style-type: disc;
     padding-left: 3.7vh;
+    @media ${MediaQueries.lg} {
+      padding-left: 2.7vh;
+    }
     @media ${MediaQueries.sm} {
       padding-left: 3vh;
     }
