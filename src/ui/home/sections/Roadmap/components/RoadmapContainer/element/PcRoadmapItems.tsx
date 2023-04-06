@@ -24,12 +24,12 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         css={css`
           position: relative;
           height: 100%;
-          & .swiper-wrapper {
+          & > .swiper-wrapper {
             display: flex;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
           }
 
-          & .swiper-scrollbar .swiper-scrollbar-drag {
+          & > .swiper-scrollbar .swiper-scrollbar-drag {
             height: 100%;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
             background: rgba(0, 0, 0, 0.4);

@@ -24,6 +24,7 @@ export const HomeView = () => {
   return (
     <Stack css={st.root}>
       <CustomSwiper
+        className="main"
         mousewheel={{ sensitivity: 5.5 }}
         direction={"vertical"}
         modules={[Mousewheel, Pagination]}
@@ -36,23 +37,23 @@ export const HomeView = () => {
           position: relative;
           height: 100vh;
 
-          & .swiper-container .swiper-wrapper {
+          & > .swiper-container .swiper-wrapper {
             transition-duration: 3s !important;
             transition-timing-function: ease-out;
           }
 
-          & .swiper-wrapper {
+          & > .swiper-wrapper {
             display: flex;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
           }
 
-          & .swiper-scrollbar .swiper-scrollbar-drag {
+          & > .swiper-scrollbar .swiper-scrollbar-drag {
             height: 100%;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
             background: rgba(0, 0, 0, 0.4);
           }
 
-          & .swiper-pagination {
+          & > .swiper-pagination {
             align-items: center;
             display: ${isTablet ? "none" : "flex"};
             flex-direction: column;
@@ -66,7 +67,7 @@ export const HomeView = () => {
               gap: 12px;
             }
           }
-          & .swiper-pagination .swiper-pagination-bullet {
+          & > .swiper-pagination .swiper-pagination-bullet {
             background: white;
             opacity: 1;
             width: 20px;
@@ -80,7 +81,7 @@ export const HomeView = () => {
               height: 12px;
             }
           }
-          & .swiper-pagination .swiper-pagination-bullet-active {
+          & > .swiper-pagination .swiper-pagination-bullet-active {
             background: #9000ff;
             width: 30px;
             height: 30px;

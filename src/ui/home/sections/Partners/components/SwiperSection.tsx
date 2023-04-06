@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
 import "swiper/css/navigation";
@@ -16,7 +16,7 @@ export const SwiperSection = () => {
     <div css={st.root}>
       <div css={st.swiper}>
         {isSmall ? (
-          <CustomSwiper
+          <Swiper
             loop
             freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
             spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
@@ -28,6 +28,10 @@ export const SwiperSection = () => {
               reverseDirection: true,
             }}
             speed={6000}
+            css={css`
+              position: relative;
+              width: 100%;
+            `}
           >
             {models.firstModels.map((it, index) => (
               <SwiperSlide key={`top-${index}`}>
@@ -36,9 +40,9 @@ export const SwiperSection = () => {
                 </div>
               </SwiperSlide>
             ))}
-          </CustomSwiper>
+          </Swiper>
         ) : (
-          <CustomSwiper
+          <Swiper
             loop
             freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
             spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
@@ -58,7 +62,7 @@ export const SwiperSection = () => {
                 </div>
               </SwiperSlide>
             ))}
-          </CustomSwiper>
+          </Swiper>
         )}
       </div>
       <div css={st.swiper}>
@@ -70,6 +74,10 @@ export const SwiperSection = () => {
           modules={[Autoplay]}
           autoplay={{ delay: 0, disableOnInteraction: true }}
           speed={6000}
+          css={css`
+            position: relative;
+            width: 100%;
+          `}
         >
           {models.secondModels.map((it, index) => (
             <SwiperSlide key={`down-${index}`}>
