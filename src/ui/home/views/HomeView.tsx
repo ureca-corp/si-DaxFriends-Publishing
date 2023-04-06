@@ -24,7 +24,7 @@ export const HomeView = () => {
   return (
     <Stack css={st.root}>
       <CustomSwiper
-        mousewheel
+        mousewheel={{ sensitivity: 5.5 }}
         direction={"vertical"}
         modules={[Mousewheel, Pagination]}
         pagination={{
@@ -35,6 +35,22 @@ export const HomeView = () => {
           flex-direcion: column;
           position: relative;
           height: 100vh;
+
+          & .swiper-container .swiper-wrapper {
+            transition-duration: 3s !important;
+            transition-timing-function: ease-out;
+          }
+
+          & .swiper-wrapper {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+          }
+
+          & .swiper-scrollbar .swiper-scrollbar-drag {
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+            background: rgba(0, 0, 0, 0.4);
+          }
 
           & .swiper-pagination {
             align-items: center;

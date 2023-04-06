@@ -15,11 +15,25 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         mousewheel
         slidesPerView={2.3}
         direction={"vertical"}
-        freeMode={true}
         modules={[Mousewheel, FreeMode]}
+        freeMode={{
+          enabled: true,
+          sticky: false,
+          momentumBounce: false,
+        }}
         css={css`
           position: relative;
           height: 100%;
+          & .swiper-wrapper {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+          }
+
+          & .swiper-scrollbar .swiper-scrollbar-drag {
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+            background: rgba(0, 0, 0, 0.4);
+          }
         `}
         onReachEnd={() => {
           fullpageSwiper?.mousewheel.enable();
