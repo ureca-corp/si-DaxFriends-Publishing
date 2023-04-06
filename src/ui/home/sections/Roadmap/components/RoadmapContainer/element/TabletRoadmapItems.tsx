@@ -16,6 +16,7 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           mousewheel
           slidesPerView={2.3}
           direction={"vertical"}
+          slideToClickedSlide
           freeMode={true}
           modules={[Mousewheel, FreeMode]}
           spaceBetween={260}

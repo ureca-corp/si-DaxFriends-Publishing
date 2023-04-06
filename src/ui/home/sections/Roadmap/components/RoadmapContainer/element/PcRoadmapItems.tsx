@@ -16,6 +16,7 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         slidesPerView={2.3}
         direction={"vertical"}
         modules={[Mousewheel, FreeMode]}
+        slideToClickedSlide
         freeMode={{
           enabled: true,
           sticky: false,
