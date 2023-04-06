@@ -19,7 +19,7 @@ import { SwiperSlide } from "swiper/react";
 import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 
 export const HomeView = () => {
-  const { isSmall } = useCustomMediaQuery();
+  const { isSmall, isTablet } = useCustomMediaQuery();
   const [swiper, setSwiper] = useState<Swiper | undefined>();
   return (
     <Stack css={st.root}>
@@ -38,9 +38,10 @@ export const HomeView = () => {
 
           & .swiper-pagination {
             align-items: center;
-            display: flex;
+            display: ${isTablet ? "none" : "flex"};
             flex-direction: column;
             gap: 20px;
+            margin-right: 28px;
 
             @media ${MediaQueries.lg} {
               gap: 16px;
