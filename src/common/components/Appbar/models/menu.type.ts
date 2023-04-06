@@ -16,7 +16,7 @@ export const MenuItemModels: MenuItemType[] = [
   { linkText: "Opensea", linkTo: "", icon: IconOpensea },
   {
     linkText: "Discord",
-    linkTo: "https://discord.gg/XyD3ebFvce",
+    linkTo: "https://discord.gg/gitdeun",
     icon: IconDiscord,
   },
   {
