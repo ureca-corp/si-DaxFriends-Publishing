@@ -11,6 +11,7 @@ export type CustomSwiperProps = {
 export const CustomSwiper = (p: CustomSwiperProps) => (
   <Swiper
     css={css`
+      position: relative;
       width: 100%;
     `}
     {...p}

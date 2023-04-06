@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay, FreeMode } from "swiper";
+import { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { PartnerModels } from "../models/partner.models";
@@ -15,35 +15,59 @@ export const SwiperSection = () => {
   return (
     <div css={st.root}>
       <div css={st.swiper}>
-        <CustomSwiper
-          loop
-          freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
-          spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
-          slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
-          modules={[Autoplay, FreeMode]}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: true,
-            reverseDirection: true,
-          }}
-          speed={6000}
-        >
-          {models.firstModels.map((it, index) => (
-            <SwiperSlide key={`top-${index}`}>
-              <div css={st.logo}>
-                <Image fill src={it} alt="solana" />
-              </div>
-            </SwiperSlide>
-          ))}
-        </CustomSwiper>
+        {isSmall ? (
+          <CustomSwiper
+            loop
+            freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
+            spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
+            slidesPerView={isSmall ? 1.4 : isTablet ? 2.6 : 6}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: true,
+              reverseDirection: true,
+            }}
+            speed={6000}
+          >
+            {models.firstModels.map((it, index) => (
+              <SwiperSlide key={`top-${index}`}>
+                <div css={st.logo}>
+                  <Image fill src={it} alt="solana" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </CustomSwiper>
+        ) : (
+          <CustomSwiper
+            loop
+            freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
+            spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
+            slidesPerView={isSmall ? 1.4 : isTablet ? 2.6 : 6}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: true,
+              reverseDirection: true,
+            }}
+            speed={6000}
+          >
+            {models.firstModels.map((it, index) => (
+              <SwiperSlide key={`top-${index}`}>
+                <div css={st.logo}>
+                  <Image fill src={it} alt="solana" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </CustomSwiper>
+        )}
       </div>
       <div css={st.swiper}>
         <CustomSwiper
           loop
           freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
-          spaceBetween={isSmall ? 10 : isTablet ? 60 : 0}
-          slidesPerView={isSmall ? 1.5 : isTablet ? 2.6 : 6}
-          modules={[Autoplay, FreeMode]}
+          spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
+          slidesPerView={isSmall ? 1 : isTablet ? 2.6 : 6}
+          modules={[Autoplay]}
           autoplay={{ delay: 0, disableOnInteraction: true }}
           speed={6000}
         >

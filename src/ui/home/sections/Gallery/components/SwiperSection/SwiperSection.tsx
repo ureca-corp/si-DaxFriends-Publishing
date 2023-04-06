@@ -25,7 +25,7 @@ export const SwiperSection = () => {
         centeredSlides={isTablet ? true : false}
         modules={[Autoplay]}
         autoplay={{ delay: 1, disableOnInteraction: true }}
-        speed={6000}
+        speed={5000}
         grabCursor={false}
         allowTouchMove={false}
       >
