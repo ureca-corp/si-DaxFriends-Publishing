@@ -11,6 +11,7 @@ import {
   Main,
   Story,
   Roadmap,
+  Footer,
 } from "../sections";
 import { Stack } from "@mui/material";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
@@ -97,9 +98,11 @@ export const HomeView = () => {
         `}
         onSlideChange={(e) => {
           if (!isSmall && e.activeIndex === 2) {
-            e.disable();
+            e.allowTouchMove = false;
+            e.mousewheel.disable();
           } else {
-            e.enable();
+            e.allowTouchMove = true;
+            e.mousewheel.enable();
           }
         }}
         onSwiper={(swiper) => {
@@ -130,8 +133,8 @@ export const HomeView = () => {
         <SwiperSlide>
           <Faq />
         </SwiperSlide>
+        <Footer />
       </CustomSwiper>
-      {/* <Footer /> */}
     </Stack>
   );
 };

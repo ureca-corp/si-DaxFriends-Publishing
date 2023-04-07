@@ -35,10 +35,16 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
             }
           `}
           onReachEnd={() => {
-            fullpageSwiper?.enable();
+            if (fullpageSwiper != undefined) {
+              fullpageSwiper.mousewheel.enable();
+              fullpageSwiper.allowTouchMove = true;
+            }
           }}
           onReachBeginning={() => {
-            fullpageSwiper?.enable();
+            if (fullpageSwiper != undefined) {
+              fullpageSwiper.mousewheel.enable();
+              fullpageSwiper.allowTouchMove = true;
+            }
           }}
         >
           <SwiperSlide></SwiperSlide>
