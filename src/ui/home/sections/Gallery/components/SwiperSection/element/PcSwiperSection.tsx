@@ -34,6 +34,10 @@ export const PcSwiperSection = () => {
           position: relative;
           width: 100%;
 
+          & > .swiper-wrapper .swiper-card {
+            transition: all 0.5s ease-in-out;
+          }
+
           & > .swiper-wrapper .swiper-slide-prev .swiper-card {
             padding: 1.04vw;
             margin-left: -0.52vw;
@@ -87,11 +91,11 @@ const st = {
     bottom: 5.2vw;
   `,
   card: css`
-  width: 100%:
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2.6vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.6vw;
   `,
 
   innerCard: css`

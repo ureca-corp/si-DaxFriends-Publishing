@@ -36,9 +36,10 @@ export const HomeView = () => {
         pagination={{
           clickable: true,
         }}
+        slidesPerView={"auto"}
         css={css`
           display: flex;
-          flex-direcion: column;
+          flex-direction: column;
           position: relative;
           height: 100vh;
 
@@ -139,7 +140,12 @@ export const HomeView = () => {
         <SwiperSlide>
           <Faq />
         </SwiperSlide>
-        <SwiperSlide>
+
+        <SwiperSlide
+          style={{
+            height: "fit-content",
+          }}
+        >
           <Footer />
         </SwiperSlide>
       </CustomSwiper>
