@@ -48,7 +48,7 @@ const st = {
 
     @media ${MediaQueries.sm} {
       width: 77.22vw;
-      height: 32vh;
+      height: 247px;
       border-radius: 11.11vw;
       padding: 7.77vw;
       margin: 0 auto;
