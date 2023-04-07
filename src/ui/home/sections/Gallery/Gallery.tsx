@@ -38,11 +38,8 @@ const st = {
     overflow: hidden;
 
     @media ${MediaQueries.lg} {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 19vw;
-      gap: 14vw;
+      display: block;
+      padding-top: unset;
     }
 
     @media ${MediaQueries.sm} {
@@ -51,7 +48,6 @@ const st = {
       align-items: unset;
       padding-top: unset;
     }
-
   `,
 
   pinkBlur: css`

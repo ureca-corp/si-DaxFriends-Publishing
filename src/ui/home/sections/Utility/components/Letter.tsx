@@ -18,13 +18,13 @@ const st = {
     position: relative;
 
     @media ${MediaQueries.lg} {
-      display: unset;
-      align-items: unset;
-      justify-content: unset;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     @media ${MediaQueries.sm} {
-      height: 70vh;
       height: 70vh;
       display: flex;
       align-items: center;

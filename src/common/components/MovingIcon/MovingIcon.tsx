@@ -32,6 +32,12 @@ const st = {
       position: relative;
       top: unset;
       left: unset;
+
+      width: 100%;
+      height: 28vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     @media ${MediaQueries.sm} {
       width: 100%;

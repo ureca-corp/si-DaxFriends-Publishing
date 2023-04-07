@@ -38,11 +38,8 @@ const st = {
     overflow: hidden;
 
     @media ${MediaQueries.lg} {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 19vw;
-      gap: 8vw;
+      display: block;
+      padding-top: unset;
     }
     @media ${MediaQueries.sm} {
       padding-top: unset;

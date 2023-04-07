@@ -32,17 +32,16 @@ const st = {
     overflow: hidden;
 
     @media ${MediaQueries.lg} {
-      display: flex;
+      display: block;
       flex-direction: column;
       align-items: center;
-      padding-top: 19vw;
-      gap: 14vw;
+      padding-top: unset;
+      gap: unset;
     }
 
     @media ${MediaQueries.sm} {
       padding-top: unset;
       gap: unset;
-      padding-top: unset;
     }
   `,
   blur: css`

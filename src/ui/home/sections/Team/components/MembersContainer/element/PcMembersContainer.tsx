@@ -52,15 +52,12 @@ const st = {
     row-gap: 2.08vw;
     padding-bottom: 3.33vw;
     @media ${MediaQueries.lg} {
+      height: 70vh;
       position: relative;
       width: 100%;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       padding-bottom: 5.2vw;
       row-gap: 5.2vw;
-      overflow-y: scroll;
-      ::-webkit-scrollbar {
-        display: none;
-      }
     }
   `,
   member: css`
@@ -76,9 +73,9 @@ const st = {
     border-radius: 6.25vw;
     overflow: hidden;
     @media ${MediaQueries.lg} {
-      width: 31.25vw;
+      width: 23.5vw;
       border-radius: 18.22vw;
-      margin-bottom: 5.2vw;
+      margin-bottom: 2.8vw;
     }
   `,
   name: css`
@@ -105,12 +102,12 @@ const st = {
 
   departmentText: css`
     @media ${MediaQueries.lg} {
-      font-size: 2.6vw;
+      font-size: 2.3vw;
     }
   `,
   nameText: css`
     @media ${MediaQueries.lg} {
-      font-size: 3.9vw;
+      font-size: 3.6vw;
     }
   `,
 };

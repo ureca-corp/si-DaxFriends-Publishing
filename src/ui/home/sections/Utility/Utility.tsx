@@ -34,12 +34,8 @@ const st = {
     z-index: 1;
 
     @media ${MediaQueries.lg} {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0 7.5vw;
-      padding-top: 19vw;
-      gap: 8vw;
+      display: block;
+      padding: 0 10vw;
     }
 
     @media ${MediaQueries.sm} {

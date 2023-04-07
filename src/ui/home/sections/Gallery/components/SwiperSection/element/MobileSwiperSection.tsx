@@ -65,6 +65,12 @@ const st = {
     bottom: 5.2vw;
     @media ${MediaQueries.lg} {
       position: relative;
+      width: 100%;
+      height: 70vh;
+      bottom: unset;
+      display: flex;
+      align-items: center;
+      justift-content: center;
     }
     @media ${MediaQueries.sm} {
       width: 100%;

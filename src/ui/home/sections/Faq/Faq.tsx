@@ -37,10 +37,8 @@ const st = {
     padding: 0 5.2vw;
     padding-top: 10vw;
     @media ${MediaQueries.lg} {
-      align-items: center;
-      flex-direction: column;
-      padding-top: 2vw;
-      gap: 4vw;
+      display: block;
+      padding-top: unset;
     }
     @media ${MediaQueries.sm} {
       padding-top: unset;

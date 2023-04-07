@@ -103,8 +103,12 @@ const st = {
     gap: 10.52vw;
 
     @media ${MediaQueries.lg} {
-      position: relative;
+      height: 70vh;
       bottom: unset;
+      left: unset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       gap: 23.6vw;
     }
     @media ${MediaQueries.sm} {
