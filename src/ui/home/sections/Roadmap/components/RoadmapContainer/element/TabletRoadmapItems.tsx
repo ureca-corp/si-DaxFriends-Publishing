@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 import { SlideProps } from "@/ui/home/common/type/slide.type";
 import "swiper/css";
 import { FreeMode, Mousewheel } from "swiper";
@@ -14,7 +13,7 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
       <div css={st.inner}>
         <Swiper
           mousewheel
-          slidesPerView={2.3}
+          slidesPerView={3}
           direction={"vertical"}
           slideToClickedSlide
           freeMode={true}
@@ -56,6 +55,7 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
               <RoadmapBox title={it.title} descList={it.descList} />
             </SwiperSlide>
           ))}
+          <SwiperSlide></SwiperSlide>
         </Swiper>
       </div>
     </div>
@@ -77,7 +77,6 @@ const st = {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-bottom: 13.02vw;
     z-index: 2;
   `,
 };
