@@ -54,6 +54,28 @@ const st = {
       padding: 7.77vw;
       margin: 0 auto;
     }
+    @media (max-width: 414px) and (max-height: 896px) {
+      width: 77.22vw;
+      height: 247px;
+      padding: 7.77vw;
+    }
+    @media (max-width: 414px) and (max-height: 736px) {
+      width: 77.22vw;
+      height: 247px;
+      padding: 7.77vw;
+    }
+
+    @media (max-width: 375px) and (max-height: 812px) {
+      width: 77.22vw;
+      height: 210px;
+      padding: 6vw;
+    }
+
+    @media (max-width: 375px) and (max-height: 667px) {
+      width: 77.22vw;
+      height: 210px;
+      padding: 6vw;
+    }
   `,
 
   ul: css`
