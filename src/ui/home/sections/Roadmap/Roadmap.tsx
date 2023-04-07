@@ -6,12 +6,12 @@ import { BackgroundImage, RoadmapContainer } from "./components";
 import { MediaQueries } from "@/common/theme/screen";
 import { SlideProps } from "../../common/type/slide.type";
 
-export const Roadmap = ({ fullpageSwiper }: SlideProps) => {
+export const Roadmap = ({ fullpageSwiper, setSwiper }: SlideProps) => {
   const movingIcon = UseGetAsset("road");
   return (
     <section css={st.root}>
       <MovingIcon props={movingIcon} />
-      <RoadmapContainer fullpageSwiper={fullpageSwiper} />
+      <RoadmapContainer fullpageSwiper={fullpageSwiper} setSwiper={setSwiper} />
       <BackgroundImage />
     </section>
   );

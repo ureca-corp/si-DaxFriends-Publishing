@@ -6,7 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { RoadmapItemModels } from "../../../models/roadmap.type";
 import { RoadmapBox } from "./components/RoadmapBox";
 
-export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
+export const TabletRoadmapItems = ({
+  fullpageSwiper,
+  setSwiper,
+}: SlideProps) => {
   const models = RoadmapItemModels;
   return (
     <div css={st.root}>

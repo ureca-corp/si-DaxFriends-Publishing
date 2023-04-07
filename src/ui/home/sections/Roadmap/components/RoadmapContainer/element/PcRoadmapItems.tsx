@@ -7,7 +7,7 @@ import { RoadmapBox } from "./components/RoadmapBox";
 import { FreeMode, Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
+export const PcRoadmapItems = ({ fullpageSwiper, setSwiper }: SlideProps) => {
   const models = RoadmapItemModels;
   return (
     <div css={st.root}>
@@ -44,6 +44,9 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
             background: rgba(0, 0, 0, 0.4);
           }
         `}
+        onSwiper={(swiper) => {
+          setSwiper(swiper);
+        }}
         onReachEnd={() => {
           if (fullpageSwiper != undefined) {
             fullpageSwiper.allowSlidePrev = false;

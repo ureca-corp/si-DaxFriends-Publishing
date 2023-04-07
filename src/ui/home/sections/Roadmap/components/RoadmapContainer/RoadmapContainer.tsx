@@ -8,16 +8,19 @@ import {
   TabletRoadmapItems,
 } from "./element";
 
-export const RoadmapContainer = ({ fullpageSwiper }: SlideProps) => {
+export const RoadmapContainer = ({ fullpageSwiper, setSwiper }: SlideProps) => {
   const { isSmall, isTablet } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       {isSmall ? (
         <MobileRoadmapItems />
       ) : isTablet ? (
-        <TabletRoadmapItems fullpageSwiper={fullpageSwiper} />
+        <TabletRoadmapItems
+          fullpageSwiper={fullpageSwiper}
+          setSwiper={setSwiper}
+        />
       ) : (
-        <PcRoadmapItems fullpageSwiper={fullpageSwiper} />
+        <PcRoadmapItems fullpageSwiper={fullpageSwiper} setSwiper={setSwiper} />
       )}
     </div>
   );

@@ -22,6 +22,10 @@ import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 export const HomeView = () => {
   const { isSmall, isTablet } = useCustomMediaQuery();
   const [swiper, setSwiper] = useState<Swiper | undefined>();
+  const [innerSwiper, setInnerSwiper] = useState<Swiper | undefined>();
+  const handleSetInnerSwiper = (s: Swiper) => {
+    setInnerSwiper(s);
+  };
   return (
     <Stack css={st.root}>
       <CustomSwiper
@@ -97,14 +101,40 @@ export const HomeView = () => {
           }
         `}
         onSlideChange={(e) => {
+          e.allowSlidePrev = true;
+          e.allowSlideNext = true;
           if (!isSmall && e.activeIndex === 2) {
-            e.mousewheel.disable();
-            e.allowTouchMove = false;
+            if (innerSwiper?.isBeginning || innerSwiper?.isEnd) {
+              e.mousewheel.enable();
+              e.allowTouchMove = true;
+
+              if (innerSwiper?.isBeginning) {
+                e.allowSlideNext = false;
+                setTimeout(() => {
+                  e.allowSlidePrev = true;
+                }, 1000);
+              }
+              if (innerSwiper?.isEnd) {
+                e.allowSlidePrev = false;
+                setTimeout(() => {
+                  e.allowSlideNext = true;
+                }, 1000);
+              }
+              e.mousewheel.disable();
+              e.allowTouchMove = false;
+            } else {
+              e.mousewheel.disable();
+              e.allowTouchMove = false;
+              e.allowSlidePrev = false;
+              e.allowSlideNext = false;
+            }
           } else {
-            e.mousewheel.enable();
-            e.allowTouchMove = true;
-            e.allowSlidePrev = true;
-            e.allowSlideNext = true;
+            setTimeout(() => {
+              e.mousewheel.enable();
+              e.allowTouchMove = true;
+              e.allowSlidePrev = true;
+              e.allowSlideNext = true;
+            }, 1000);
           }
         }}
         onSwiper={(swiper) => {
@@ -118,7 +148,7 @@ export const HomeView = () => {
           <Story />
         </SwiperSlide>
         <SwiperSlide>
-          <Roadmap fullpageSwiper={swiper} />
+          <Roadmap fullpageSwiper={swiper} setSwiper={handleSetInnerSwiper} />
         </SwiperSlide>
         <SwiperSlide>
           <Utility />
