@@ -12,7 +12,7 @@ import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 import { GalleryModels } from "../../../models/gallery.model";
 
-export const PcSwiperSection = () => {
+export const MobileSwiperSection = () => {
   const models = GalleryModels;
   const { isSmall, isTablet } = useCustomMediaQuery();
 

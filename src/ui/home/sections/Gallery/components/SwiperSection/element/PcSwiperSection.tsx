@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
 import "swiper/css/navigation";
@@ -9,7 +9,6 @@ import { LightColor } from "@/common/theme/color";
 import { Typography } from "@mui/material";
 import IconSharp from "@/assets/pc/gallery/icon-sharp.png";
 import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
-import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 import { GalleryModels } from "../../../models/gallery.model";
 
 export const PcSwiperSection = () => {
@@ -18,41 +17,64 @@ export const PcSwiperSection = () => {
 
   return (
     <div css={st.root}>
-      <CustomSwiper
+      <Swiper
+        id="gallery-swiper"
         loop
-        freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
         spaceBetween={isSmall ? 40 : isTablet ? 80 : 0}
-        slidesPerView={isSmall ? 1.5 : isTablet ? 2.2 : 6}
-        centeredSlides={isTablet ? true : false}
+        slidesPerView={isSmall ? 1.5 : isTablet ? 2.2 : 5.6}
+        centeredSlides={true}
         modules={[Autoplay]}
-        autoplay={{ delay: 1, disableOnInteraction: true }}
-        speed={5000}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         grabCursor={false}
         allowTouchMove={false}
+        css={css`
+          position: relative;
+          width: 100%;
+
+          & > .swiper-wrapper .swiper-slide-prev .swiper-card {
+            padding: 1.04vw;
+            margin-left: -0.52vw;
+            margin-right: 0;
+            padding-top: 0.52px;
+            padding-bottom: 0px;
+          }
+          &
+            > .swiper-wrapper
+            .swiper-slide-prev
+            .swiper-card
+            .swiper-inner-card {
+            width: 110%;
+          }
+        `}
       >
         {models.map((it, index) => (
           <SwiperSlide key={index}>
-            <div css={st.card}>
-              <div css={st.cardImage}>
-                <Image fill src={it.img} alt="image" />
-              </div>
-              <div css={st.cardText}>
-                <div css={st.icon}>
-                  <Image fill src={IconSharp} alt="#" />
+            <div className="swiper-card" css={st.card}>
+              <div className="swiper-inner-card" css={st.innerCard}>
+                <div css={st.cardImage}>
+                  <Image fill src={it.img} alt="image" />
                 </div>
-                <Typography
-                  variant="caption"
-                  lineHeight={1}
-                  color={LightColor.BrandBlue}
-                  css={st.name}
-                >
-                  {it.name}
-                </Typography>
+                <div css={st.cardText}>
+                  <div css={st.icon}>
+                    <Image fill src={IconSharp} alt="#" />
+                  </div>
+                  <Typography
+                    variant="caption"
+                    lineHeight={1}
+                    color={LightColor.BrandBlue}
+                    css={st.name}
+                  >
+                    {it.name}
+                  </Typography>
+                </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
-      </CustomSwiper>
+      </Swiper>
     </div>
   );
 };
@@ -63,6 +85,7 @@ const st = {
     position: absolute;
     left: 0;
     bottom: 5.2vw;
+
     @media ${MediaQueries.lg} {
       position: relative;
     }
@@ -70,17 +93,25 @@ const st = {
       width: 100%;
       height: 70vh;
       bottom: unset;
-
       display: flex;
       align-items: center;
       justify-content: center;
     }
   `,
   card: css`
+  width: 100%:
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.6vw;
+  `,
+
+  innerCard: css`
     width: 13.54vw;
     aspect-ratio: 1/1.18;
     display: flex;
     flex-direction: column;
+
     @media ${MediaQueries.lg} {
       width: 100%;
     }
