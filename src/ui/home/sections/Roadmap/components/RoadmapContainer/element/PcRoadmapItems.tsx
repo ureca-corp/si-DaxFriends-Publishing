@@ -25,6 +25,7 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         css={css`
           position: relative;
           height: 100%;
+
           & > .swiper-wrapper {
             display: flex;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
@@ -38,24 +39,26 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         `}
         onReachEnd={() => {
           if (fullpageSwiper != undefined) {
-            fullpageSwiper.mousewheel.enable();
-            fullpageSwiper.allowTouchMove = true;
+            setTimeout(() => {
+              fullpageSwiper.mousewheel.enable();
+              fullpageSwiper.allowTouchMove = true;
+            }, 1000);
           }
         }}
         onReachBeginning={() => {
           if (fullpageSwiper != undefined) {
-            fullpageSwiper.mousewheel.enable();
-            fullpageSwiper.allowTouchMove = true;
+            setTimeout(() => {
+              fullpageSwiper.mousewheel.enable();
+              fullpageSwiper.allowTouchMove = true;
+            }, 1500);
           }
         }}
       >
-        <SwiperSlide></SwiperSlide>
         {models.map((it, _) => (
           <SwiperSlide key={_}>
             <RoadmapBox title={it.title} descList={it.descList} />
           </SwiperSlide>
         ))}
-        <SwiperSlide></SwiperSlide>
       </CustomSwiper>
     </div>
   );

@@ -36,14 +36,18 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           `}
           onReachEnd={() => {
             if (fullpageSwiper != undefined) {
-              fullpageSwiper.mousewheel.enable();
-              fullpageSwiper.allowTouchMove = true;
+              setTimeout(() => {
+                fullpageSwiper.mousewheel.enable();
+                fullpageSwiper.allowTouchMove = true;
+              }, 1000);
             }
           }}
           onReachBeginning={() => {
             if (fullpageSwiper != undefined) {
-              fullpageSwiper.mousewheel.enable();
-              fullpageSwiper.allowTouchMove = true;
+              setTimeout(() => {
+                fullpageSwiper.mousewheel.enable();
+                fullpageSwiper.allowTouchMove = true;
+              }, 1500);
             }
           }}
         >
