@@ -5,13 +5,13 @@ import { SlideProps } from "@/ui/home/common/type/slide.type";
 import { RoadmapItemModels } from "../../../models/roadmap.type";
 import { RoadmapBox } from "./components/RoadmapBox";
 import { FreeMode, Mousewheel } from "swiper";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
   const models = RoadmapItemModels;
   return (
     <div css={st.root}>
-      <CustomSwiper
+      <Swiper
         mousewheel
         slidesPerView={2.3}
         direction={"vertical"}
@@ -24,11 +24,18 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         }}
         css={css`
           position: relative;
+          width: 100%;
           height: 100%;
+          padding-right: 5.2vw !important;
 
           & > .swiper-wrapper {
             display: flex;
+            align-items: end;
             transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+          }
+
+          & > .swiper-wrapper .swiper-slide {
+            width: unset !important;
           }
 
           & > .swiper-scrollbar .swiper-scrollbar-drag {
@@ -54,28 +61,36 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           }
         }}
       >
-        {models.map((it, _) => (
-          <SwiperSlide key={_}>
-            <RoadmapBox title={it.title} descList={it.descList} />
-          </SwiperSlide>
-        ))}
-      </CustomSwiper>
+        <div css={st.inner}>
+          {models.map((it, _) => (
+            <SwiperSlide key={_}>
+              <RoadmapBox title={it.title} descList={it.descList} />
+            </SwiperSlide>
+          ))}
+        </div>
+      </Swiper>
     </div>
   );
 };
 
 const st = {
   root: css`
-    width: 51.85vh;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    right: 5.2vw;
-    z-index: 2;
-    padding: 100px 0;
+    right: 0;
     overflow-y: scroll;
+    display: flex;
+    justify-content: end;
+    z-index: 2;
+    padding-top: 100px;
     ::-webkit-scrollbar {
       display: none;
     }
+  `,
+
+  inner: css`
+    width: 100%;
   `,
 };

@@ -29,7 +29,8 @@ export const RoadmapBox = ({ title, descList }: RoadmapItemType) => {
 
 const st = {
   box: css`
-    width: 100%;
+    width: 51.85vh;
+    height: 32.5vh;
     background-color: white;
     padding: 3.7vh;
     border: 3px solid #121212;
@@ -37,17 +38,18 @@ const st = {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    /* width: 100%; */
 
     @media ${MediaQueries.lg} {
-      width: 51.08vw;
-      height: 28.7vh;
+      width: 100%;
+      height: 25.7vh;
       border-radius: 7.81vw;
       padding: 3.2vh;
     }
 
     @media ${MediaQueries.sm} {
       width: 77.22vw;
-      aspect-ratio: 1/0.8;
+      height: 32vh;
       border-radius: 11.11vw;
       padding: 7.77vw;
       margin: 0 auto;

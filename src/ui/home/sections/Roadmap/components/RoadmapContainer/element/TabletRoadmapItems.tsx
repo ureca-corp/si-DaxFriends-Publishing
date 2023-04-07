@@ -3,7 +3,7 @@ import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
 import { SlideProps } from "@/ui/home/common/type/slide.type";
 import "swiper/css";
 import { FreeMode, Mousewheel } from "swiper";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { RoadmapItemModels } from "../../../models/roadmap.type";
 import { RoadmapBox } from "./components/RoadmapBox";
 
@@ -12,7 +12,7 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
   return (
     <div css={st.root}>
       <div css={st.inner}>
-        <CustomSwiper
+        <Swiper
           mousewheel
           slidesPerView={2.3}
           direction={"vertical"}
@@ -51,14 +51,12 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
             }
           }}
         >
-          <SwiperSlide></SwiperSlide>
           {models.map((it, _) => (
             <SwiperSlide key={_}>
               <RoadmapBox title={it.title} descList={it.descList} />
             </SwiperSlide>
           ))}
-          <SwiperSlide></SwiperSlide>
-        </CustomSwiper>
+        </Swiper>
       </div>
     </div>
   );
