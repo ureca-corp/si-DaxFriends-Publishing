@@ -139,6 +139,9 @@ export const HomeView = () => {
         <SwiperSlide>
           <Faq />
         </SwiperSlide>
+        <SwiperSlide>
+          <Footer />
+        </SwiperSlide>
       </CustomSwiper>
     </Stack>
   );
