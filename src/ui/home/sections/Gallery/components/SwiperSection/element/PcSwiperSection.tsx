@@ -25,7 +25,7 @@ export const PcSwiperSection = () => {
         centeredSlides={true}
         modules={[Autoplay]}
         autoplay={{
-          delay: 2500,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         grabCursor={false}
