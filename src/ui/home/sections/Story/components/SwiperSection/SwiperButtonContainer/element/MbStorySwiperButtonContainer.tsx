@@ -60,7 +60,22 @@ const st = {
     transform: translateX(-50%);
     z-index: 3;
     @media ${MediaQueries.sm} {
-      bottom: 5.02vh;
+      bottom: 11vh;
+
+      @media (max-width: 414px) and (max-height: 896px) {
+        bottom: 11vh;
+      }
+      @media (max-width: 414px) and (max-height: 736px) {
+        bottom: 8vh;
+      }
+
+      @media (max-width: 375px) and (max-height: 812px) {
+        bottom: 10vh;
+      }
+
+      @media (max-width: 375px) and (max-height: 667px) {
+        bottom: 5.02vh;
+      }
     }
   `,
   btn: css`
