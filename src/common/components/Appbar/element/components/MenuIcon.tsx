@@ -18,9 +18,10 @@ export const MenuIcon = () => {
   return (
     <div
       css={st.menu}
-      onClick={handleMenuActive}
+      onClick={() => setIsActiveMenu(!isActiveMenu)}
       onMouseOut={handleMenuInActive}
       onMouseOver={handleMenuActive}
+      onMouseLeave={handleMenuInActive}
     >
       {isActiveMenu ? (
         <React.Fragment>
