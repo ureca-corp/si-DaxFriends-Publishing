@@ -46,6 +46,8 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         `}
         onReachEnd={() => {
           if (fullpageSwiper != undefined) {
+            fullpageSwiper.allowSlidePrev = false;
+            fullpageSwiper.allowSlideNext = true;
             setTimeout(() => {
               fullpageSwiper.mousewheel.enable();
               fullpageSwiper.allowTouchMove = true;
@@ -54,6 +56,8 @@ export const PcRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
         }}
         onReachBeginning={() => {
           if (fullpageSwiper != undefined) {
+            fullpageSwiper.allowSlideNext = false;
+            fullpageSwiper.allowSlidePrev = true;
             setTimeout(() => {
               fullpageSwiper.mousewheel.enable();
               fullpageSwiper.allowTouchMove = true;

@@ -25,6 +25,11 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
             & > .swiper-wrapper {
               display: flex;
               transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+              align-items: center;
+            }
+
+            & > .swiper-wrapper .swiper-slide {
+              width: 52.08vw;
             }
 
             & > .swiper-scrollbar .swiper-scrollbar-drag {
@@ -35,6 +40,8 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           `}
           onReachEnd={() => {
             if (fullpageSwiper != undefined) {
+              fullpageSwiper.allowSlidePrev = false;
+              fullpageSwiper.allowSlideNext = true;
               setTimeout(() => {
                 fullpageSwiper.mousewheel.enable();
                 fullpageSwiper.allowTouchMove = true;
@@ -43,6 +50,8 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           }}
           onReachBeginning={() => {
             if (fullpageSwiper != undefined) {
+              fullpageSwiper.allowSlideNext = false;
+              fullpageSwiper.allowSlidePrev = true;
               setTimeout(() => {
                 fullpageSwiper.mousewheel.enable();
                 fullpageSwiper.allowTouchMove = true;
@@ -72,11 +81,8 @@ const st = {
     overflow-y: scroll;
   `,
   inner: css`
-    width: 52.08vw;
+    width: 100%;
     height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
     z-index: 2;
   `,
 };

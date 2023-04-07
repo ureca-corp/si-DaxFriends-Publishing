@@ -98,11 +98,13 @@ export const HomeView = () => {
         `}
         onSlideChange={(e) => {
           if (!isSmall && e.activeIndex === 2) {
-            e.allowTouchMove = false;
             e.mousewheel.disable();
+            e.allowTouchMove = false;
           } else {
-            e.allowTouchMove = true;
             e.mousewheel.enable();
+            e.allowTouchMove = true;
+            e.allowSlidePrev = true;
+            e.allowSlideNext = true;
           }
         }}
         onSwiper={(swiper) => {
@@ -133,7 +135,6 @@ export const HomeView = () => {
         <SwiperSlide>
           <Faq />
         </SwiperSlide>
-        {/* <Footer /> */}
       </CustomSwiper>
     </Stack>
   );
