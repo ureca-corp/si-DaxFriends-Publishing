@@ -133,7 +133,7 @@ export const HomeView = () => {
         <SwiperSlide>
           <Faq />
         </SwiperSlide>
-        <Footer />
+        {/* <Footer /> */}
       </CustomSwiper>
     </Stack>
   );
