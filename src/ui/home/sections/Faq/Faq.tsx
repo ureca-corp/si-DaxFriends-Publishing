@@ -30,7 +30,6 @@ const st = {
     background-color: ${LightColor.LightBlue100};
     position: relative;
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,13 +39,7 @@ const st = {
       display: block;
       padding-top: unset;
     }
-    @media ${MediaQueries.sm} {
-      padding-top: unset;
-      display: block;
-      align-items: unset;
-      justify-content: unset;
-      gap: unset;
-    }
+
     @media ${MediaQueries.xs} {
       padding: 0;
     }

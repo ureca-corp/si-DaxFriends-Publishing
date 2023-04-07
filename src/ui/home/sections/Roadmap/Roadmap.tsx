@@ -25,17 +25,7 @@ const st = {
     position: relative;
     overflow: hidden;
     @media ${MediaQueries.lg} {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4.5vh;
-      padding-top: 19vw;
-    }
-    @media ${MediaQueries.sm} {
       display: block;
-      flex-direction: unset;
-      align-items: unset;
-      gap: unset;
       padding-top: unset;
     }
   `,

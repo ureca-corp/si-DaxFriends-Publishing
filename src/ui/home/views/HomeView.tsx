@@ -101,40 +101,14 @@ export const HomeView = () => {
           }
         `}
         onSlideChange={(e) => {
-          e.allowSlidePrev = true;
-          e.allowSlideNext = true;
           if (!isSmall && e.activeIndex === 2) {
-            if (innerSwiper?.isBeginning || innerSwiper?.isEnd) {
-              e.mousewheel.enable();
-              e.allowTouchMove = true;
-
-              if (innerSwiper?.isBeginning) {
-                e.allowSlideNext = false;
-                setTimeout(() => {
-                  e.allowSlidePrev = true;
-                }, 1000);
-              }
-              if (innerSwiper?.isEnd) {
-                e.allowSlidePrev = false;
-                setTimeout(() => {
-                  e.allowSlideNext = true;
-                }, 1000);
-              }
-              e.mousewheel.disable();
-              e.allowTouchMove = false;
-            } else {
-              e.mousewheel.disable();
-              e.allowTouchMove = false;
-              e.allowSlidePrev = false;
-              e.allowSlideNext = false;
-            }
+            e.mousewheel.disable();
+            e.allowTouchMove = false;
           } else {
-            setTimeout(() => {
-              e.mousewheel.enable();
-              e.allowTouchMove = true;
-              e.allowSlidePrev = true;
-              e.allowSlideNext = true;
-            }, 1000);
+            e.mousewheel.enable();
+            e.allowTouchMove = true;
+            e.allowSlidePrev = true;
+            e.allowSlideNext = true;
           }
         }}
         onSwiper={(swiper) => {

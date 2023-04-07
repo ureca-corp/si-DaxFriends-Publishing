@@ -36,12 +36,6 @@ const st = {
       flex-direction: column;
       align-items: center;
       padding-top: unset;
-      gap: unset;
-    }
-
-    @media ${MediaQueries.sm} {
-      padding-top: unset;
-      gap: unset;
     }
   `,
   blur: css`

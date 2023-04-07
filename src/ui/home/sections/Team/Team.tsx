@@ -41,10 +41,6 @@ const st = {
       display: block;
       padding-top: unset;
     }
-    @media ${MediaQueries.sm} {
-      padding-top: unset;
-      display: block;
-    }
   `,
 
   inner: css`

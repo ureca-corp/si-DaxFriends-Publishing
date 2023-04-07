@@ -41,7 +41,7 @@ const st = {
 
     @media ${MediaQueries.lg} {
       width: 100%;
-      height: 25.7vh;
+      height: 27.7vh;
       border-radius: 7.81vw;
       padding: 3.2vh;
     }

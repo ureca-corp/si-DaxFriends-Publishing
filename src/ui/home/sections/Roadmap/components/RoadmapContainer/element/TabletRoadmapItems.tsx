@@ -77,11 +77,10 @@ export const TabletRoadmapItems = ({
 const st = {
   root: css`
     width: 100%;
-    height: 100%;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll;
   `,
   inner: css`
     width: 100%;

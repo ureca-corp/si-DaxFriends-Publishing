@@ -41,13 +41,6 @@ const st = {
       display: block;
       padding-top: unset;
     }
-
-    @media ${MediaQueries.sm} {
-      display: block;
-      flex-direction: unset;
-      align-items: unset;
-      padding-top: unset;
-    }
   `,
 
   pinkBlur: css`
