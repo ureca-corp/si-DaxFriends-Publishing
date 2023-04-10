@@ -26,6 +26,7 @@ export const SwiperSection = () => {
     <div css={st.root}>
       <div css={st.swiper}>
         <CustomSwiper
+          className="partners-reverse-swiper"
           observer={true}
           observeParents={true}
           loop
@@ -57,6 +58,7 @@ export const SwiperSection = () => {
       </div>
       <div css={st.swiper}>
         <CustomSwiper
+          className="partners-swiper"
           observer={true}
           resizeObserver={true}
           observeParents={true}
