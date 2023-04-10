@@ -7,13 +7,13 @@ import {
 } from "./element";
 
 export const BackgroundImage = () => {
-  const { isSmall, isTablet } = useCustomMediaQuery();
+  const { isSmall, isTablet, isLargeTablet } = useCustomMediaQuery();
 
   return (
     <React.Fragment>
       {isSmall ? (
         <MobileBackgroundImage />
-      ) : isTablet ? (
+      ) : isLargeTablet ? (
         <TabletBackgroundImage />
       ) : (
         <PcBackgroundImage />

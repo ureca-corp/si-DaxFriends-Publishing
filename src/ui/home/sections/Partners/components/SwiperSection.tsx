@@ -9,18 +9,10 @@ import { PartnerModels } from "../models/partner.models";
 import Image from "next/image";
 import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
-import { useEffect, useState } from "react";
 
 export const SwiperSection = () => {
   const models = PartnerModels;
   const { isSmall, isTablet } = useCustomMediaQuery();
-
-  // if (topSwiper != undefined) {
-  //   if (topSwiper.autoplay != undefined) {
-  //     topSwiper.autoplay.paused = false;
-  //     topSwiper.autoplay.running = true;
-  //   }
-  // }
 
   return (
     <div css={st.root}>

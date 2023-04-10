@@ -5,12 +5,12 @@ import { FreeMode, Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { RoadmapItemModels } from "../../../models/roadmap.type";
 import { RoadmapBox } from "./components/RoadmapBox";
+import { useCustomMediaQuery } from "@/common/theme/screen";
 
-export const TabletRoadmapItems = ({
-  fullpageSwiper,
-  setSwiper,
-}: SlideProps) => {
+export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
   const models = RoadmapItemModels;
+
+  const { isLargeTablet } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       <div css={st.inner}>
@@ -21,7 +21,7 @@ export const TabletRoadmapItems = ({
           slideToClickedSlide
           freeMode={true}
           modules={[Mousewheel, FreeMode]}
-          spaceBetween={260}
+          spaceBetween={isLargeTablet ? 180 : 260}
           css={css`
             position: relative;
             height: 100%;

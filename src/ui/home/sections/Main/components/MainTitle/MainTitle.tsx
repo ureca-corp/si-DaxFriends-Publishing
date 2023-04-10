@@ -9,9 +9,7 @@ interface TitleProps {
 export const MainTitle = ({ main, desc }: TitleProps) => {
   return (
     <div css={st.title}>
-      <Typography css={st.main} variant="h2">
-        {main}
-      </Typography>
+      <Typography css={st.main}>{main}</Typography>
       <Typography css={st.desc} variant="h4" color="white">
         {desc}
       </Typography>
@@ -38,6 +36,8 @@ const st = {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-size: 4.25vh;
+    line-height: 1.4;
     margin-bottom: 1.04vw; //20px
   `,
   desc: css`

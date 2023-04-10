@@ -31,7 +31,7 @@ const st = {
     position: relative;
     overflow: hidden;
 
-    @media ${MediaQueries.lg} {
+    @media ${MediaQueries.xll} {
       display: block;
       flex-direction: column;
       align-items: center;

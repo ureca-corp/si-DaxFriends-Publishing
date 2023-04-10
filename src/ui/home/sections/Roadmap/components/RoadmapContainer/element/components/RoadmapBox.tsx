@@ -7,7 +7,7 @@ import { RoadmapItemType } from "../../../../models/roadmap.type";
 export const RoadmapBox = ({ title, descList }: RoadmapItemType) => {
   return (
     <div css={st.box}>
-      <Typography variant="h3" css={st.title} color={LightColor.LightBlack}>
+      <Typography css={st.title} color={LightColor.LightBlack}>
         {title}
       </Typography>
       <ul css={st.ul}>
@@ -31,6 +31,7 @@ const st = {
   box: css`
     width: 51.85vh;
     height: 32.5vh;
+    max-height: 32.5vh;
     background-color: white;
     padding: 3.7vh;
     border: 3px solid #121212;
@@ -38,6 +39,13 @@ const st = {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media ${MediaQueries.xll} {
+      width: 100%;
+      height: 27.7vh;
+      border-radius: 4.81vw;
+      padding: 3.2vh;
+    }
 
     @media ${MediaQueries.lg} {
       width: 100%;
@@ -89,6 +97,7 @@ const st = {
   `,
 
   title: css`
+    font-size: 2.08vw;
     font-weight: 400;
     @media ${MediaQueries.lg} {
       font-size: 4.42vw;

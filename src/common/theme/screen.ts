@@ -6,6 +6,7 @@ export enum ScreenType {
   md = 768,
   lg = 1024, // Tablet
   xl = 1200, // Laptop
+  xll = 1366,
   xxl = 1440,
 }
 
@@ -22,6 +23,7 @@ export const MediaQueries = {
   md: `(max-width:${ScreenType.md}px)`,
   lg: `(max-width:${ScreenType.lg}px)`,
   xl: `(max-width:${ScreenType.xl}px)`,
+  xll: `(max-width:${ScreenType.xll}px)`,
   xxl: `(max-width:${ScreenType.xxl}px)`,
 };
 export const TypographyMediaQueries = {
@@ -53,6 +55,7 @@ export const useCustomMediaQuery = () => {
   const isMedium = useMediaQuery(MediaQueries.md);
   const isTablet = useMediaQuery(MediaQueries.lg);
   const isLarge = useMediaQuery(MediaQueries.xl);
+  const isLargeTablet = useMediaQuery(MediaQueries.xll);
   const isLaptop = useMediaQuery(MediaQueries.xxl);
 
   return {
@@ -61,6 +64,7 @@ export const useCustomMediaQuery = () => {
     isMedium,
     isTablet,
     isLarge,
+    isLargeTablet,
     isLaptop,
   };
 };

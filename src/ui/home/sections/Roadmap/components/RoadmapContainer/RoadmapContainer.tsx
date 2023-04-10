@@ -9,12 +9,12 @@ import {
 } from "./element";
 
 export const RoadmapContainer = ({ fullpageSwiper, setSwiper }: SlideProps) => {
-  const { isSmall, isTablet } = useCustomMediaQuery();
+  const { isSmall, isLargeTablet } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       {isSmall ? (
         <MobileRoadmapItems />
-      ) : isTablet ? (
+      ) : isLargeTablet ? (
         <TabletRoadmapItems
           fullpageSwiper={fullpageSwiper}
           setSwiper={setSwiper}
@@ -29,8 +29,7 @@ export const RoadmapContainer = ({ fullpageSwiper, setSwiper }: SlideProps) => {
 const st = {
   root: css`
     width: 100%;
-
-    @media ${MediaQueries.lg} {
+    @media ${MediaQueries.xll} {
       overflow-y: scroll;
       ::-webkit-scrollbar {
         display: none;

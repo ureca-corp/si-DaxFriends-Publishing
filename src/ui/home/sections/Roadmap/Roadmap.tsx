@@ -1,10 +1,10 @@
 import { LightColor } from "@/common/theme/color";
 import { css } from "@emotion/react";
-import { MovingIcon } from "@/common/components/MovingIcon";
 import { UseGetAsset } from "@/common/components/MovingIcon/models/gif.models";
 import { BackgroundImage, RoadmapContainer } from "./components";
 import { MediaQueries } from "@/common/theme/screen";
 import { SlideProps } from "../../common/type/slide.type";
+import { MovingIcon } from "./components/MovingIcon/MovingIcon";
 
 export const Roadmap = ({ fullpageSwiper, setSwiper }: SlideProps) => {
   const movingIcon = UseGetAsset("road");
@@ -24,7 +24,7 @@ const st = {
     background-color: ${LightColor.LightBlue};
     position: relative;
     overflow: hidden;
-    @media ${MediaQueries.lg} {
+    @media ${MediaQueries.xll} {
       display: block;
       padding-top: unset;
     }
