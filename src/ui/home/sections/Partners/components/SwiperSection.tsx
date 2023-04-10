@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/autoplay";
 import Swiper, { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
