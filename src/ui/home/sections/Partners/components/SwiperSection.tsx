@@ -24,7 +24,7 @@ export const SwiperSection = () => {
             modules={[Autoplay]}
             autoplay={{
               delay: 0,
-              disableOnInteraction: true,
+              disableOnInteraction: false,
               reverseDirection: true,
             }}
             speed={6000}
@@ -50,7 +50,7 @@ export const SwiperSection = () => {
             modules={[Autoplay]}
             autoplay={{
               delay: 0,
-              disableOnInteraction: true,
+              disableOnInteraction: false,
               reverseDirection: true,
             }}
             speed={6000}
@@ -72,7 +72,7 @@ export const SwiperSection = () => {
           spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
-          autoplay={{ delay: 0, disableOnInteraction: true }}
+          autoplay={{ delay: 0, disableOnInteraction: false }}
           speed={6000}
           css={css`
             position: relative;
