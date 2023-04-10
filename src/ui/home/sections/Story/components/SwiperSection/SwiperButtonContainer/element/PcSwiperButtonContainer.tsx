@@ -43,7 +43,7 @@ export const PcSwiperButtonContainer = ({
 const st = {
   btnWrapper: css`
     width: 100%;
-    padding: 0 11.5vw;
+    padding: 0 10.5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
