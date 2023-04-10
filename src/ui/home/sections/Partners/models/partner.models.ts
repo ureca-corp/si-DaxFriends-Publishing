@@ -1,9 +1,11 @@
 import LogoSolana from "@/assets/pc/partners/logo-solana.png";
+import LogoTheNine from "@/assets/pc/partners/logo-the-nine.png";
+import LogoAlres from "@/assets/pc/partners/logo-alres.png";
 
 export const PartnerModels = {
   firstModels: [
-    LogoSolana,
-    LogoSolana,
+    LogoTheNine,
+    LogoAlres,
     LogoSolana,
     LogoSolana,
     LogoSolana,
@@ -16,8 +18,8 @@ export const PartnerModels = {
     LogoSolana,
   ],
   secondModels: [
-    LogoSolana,
-    LogoSolana,
+    LogoTheNine,
+    LogoAlres,
     LogoSolana,
     LogoSolana,
     LogoSolana,
