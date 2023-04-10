@@ -12,19 +12,19 @@ export const PcSwiperButtonContainer = ({
 }: SwiperButtonProps) => {
   useLayoutEffect(() => {
     gsap.to(".story-prev", {
-      x: -50,
+      x: -60,
       repeat: -1,
       yoyo: true,
-      duration: 0.6,
-      repeatDelay: 0.6,
+      duration: 0.7,
+      repeatDelay: 0.7,
     });
 
     gsap.to(".story-next", {
-      x: 50,
+      x: 60,
       repeat: -1,
       yoyo: true,
-      duration: 0.6,
-      repeatDelay: 0.6,
+      duration: 0.7,
+      repeatDelay: 0.7,
     });
   }, []);
 
@@ -43,7 +43,7 @@ export const PcSwiperButtonContainer = ({
 const st = {
   btnWrapper: css`
     width: 100%;
-    padding: 0 5.2vw;
+    padding: 0 11.5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
