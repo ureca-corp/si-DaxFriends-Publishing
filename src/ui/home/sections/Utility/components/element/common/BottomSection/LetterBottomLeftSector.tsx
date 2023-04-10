@@ -5,24 +5,24 @@ import { PcLetterSectorProps } from "./types/sector.type";
 
 export const LetterBottomLeftSector = ({
   onClick,
-  isVisible,
+  isVisible = false,
   memoState,
 }: PcLetterSectorProps) => {
   return (
-    <div css={st.root} onClick={onClick}>
+    <div css={st.root(isVisible)} onClick={onClick}>
       {isVisible && <MemoContent props={memoState} />}
     </div>
   );
 };
 
 const st = {
-  root: css`
+  root: (isVisible: boolean) => css`
     position: absolute;
     bottom: 0;
     left: 0;
     width: 50%;
     height: 50%;
-    background-color: transparent;
+    background-color: ${isVisible ? "#c1a8ff" : "transparent"};
     z-index: 3;
     cursor: pointer;
     padding: 2.08vw;
