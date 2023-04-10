@@ -1,78 +1,76 @@
 import { css } from "@emotion/react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper";
+import Swiper, { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { PartnerModels } from "../models/partner.models";
 import Image from "next/image";
 import { MediaQueries, useCustomMediaQuery } from "@/common/theme/screen";
 import { CustomSwiper } from "@/common/components/CustomSwiper/CustomSwiper";
+import { useEffect, useState } from "react";
 
 export const SwiperSection = () => {
   const models = PartnerModels;
   const { isSmall, isTablet } = useCustomMediaQuery();
+
+  // if (topSwiper != undefined) {
+  //   if (topSwiper.autoplay != undefined) {
+  //     topSwiper.autoplay.paused = false;
+  //     topSwiper.autoplay.running = true;
+  //   }
+  // }
+
   return (
     <div css={st.root}>
       <div css={st.swiper}>
-        {isSmall ? (
-          <Swiper
-            loop
-            freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
-            spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
-            slidesPerView={isSmall ? 1.4 : isTablet ? 2.6 : 6}
-            modules={[Autoplay]}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              reverseDirection: true,
-            }}
-            speed={6000}
-            css={css`
-              position: relative;
-              width: 100%;
-            `}
-          >
-            {models.firstModels.map((it, index) => (
-              <SwiperSlide key={`top-${index}`}>
-                <div css={st.logo}>
-                  <Image fill src={it} alt="solana" />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        ) : (
-          <Swiper
-            loop
-            freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
-            spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
-            slidesPerView={isSmall ? 1.4 : isTablet ? 2.6 : 6}
-            modules={[Autoplay]}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              reverseDirection: true,
-            }}
-            speed={6000}
-          >
-            {models.firstModels.map((it, index) => (
-              <SwiperSlide key={`top-${index}`}>
-                <div css={st.logo}>
-                  <Image fill src={it} alt="solana" />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
-      </div>
-      <div css={st.swiper}>
         <CustomSwiper
+          observer={true}
+          observeParents={true}
           loop
-          freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
+          freeMode={{ enabled: true }}
           spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
-          autoplay={{ delay: 0, disableOnInteraction: false }}
+          autoplay={{
+            waitForTransition: false,
+            stopOnLastSlide: false,
+            delay: 1,
+            disableOnInteraction: false,
+            reverseDirection: true,
+          }}
+          speed={6000}
+          css={css`
+            position: relative;
+            width: 100%;
+          `}
+        >
+          {models.firstModels.map((it, index) => (
+            <SwiperSlide key={`top-${index}`}>
+              <div css={st.logo}>
+                <Image fill src={it} alt="solana" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </CustomSwiper>
+      </div>
+      <div css={st.swiper}>
+        <CustomSwiper
+          observer={true}
+          resizeObserver={true}
+          observeParents={true}
+          loop
+          freeMode={{
+            enabled: true,
+          }}
+          spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
+          slidesPerView={isSmall ? 1 : isTablet ? 2.6 : 6}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 1,
+            disableOnInteraction: false,
+            stopOnLastSlide: false,
+          }}
           speed={6000}
           css={css`
             position: relative;
