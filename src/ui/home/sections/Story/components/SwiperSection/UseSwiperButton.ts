@@ -1,9 +1,9 @@
 import { useCallback, useState } from "react";
 import SwiperCore, { Swiper } from "swiper";
-import { CardModels } from "../../models/card.models";
+import { CardMobileModels } from "../../models/card.models";
 
 export const UseSwiperButton = () => {
-  const models = CardModels;
+  const models = CardMobileModels;
 
   const [swiper, setSwiper] = useState<Swiper | undefined>();
   const [realIndex, setRealIndex] = useState<number>(1);
