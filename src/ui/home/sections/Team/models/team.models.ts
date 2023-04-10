@@ -3,7 +3,6 @@ import Coinking from "@/assets/pc/team/member/Coinking.png";
 import Hogom from "@/assets/pc/team/member/Hogom.png";
 import Manta from "@/assets/pc/team/member/Manta.png";
 import Newssy from "@/assets/pc/team/member/Newssy.png";
-import Trill from "@/assets/pc/team/member/Trill.png";
 
 export const TeamModels = [
   {
@@ -35,11 +34,5 @@ export const TeamModels = [
     department: "커뮤니티 매니저",
     name: "Newssy",
     link: "https://twitter.com/newssyjj?s=21&t=311OW_-0RnqkZhNAAljytA",
-  },
-  {
-    img: Trill,
-    department: "매니저",
-    name: "Trill",
-    link: "https://twitter.com/dlrjfskwlsdl?s=21&t=311OW_-0RnqkZhNAAljytA",
   },
 ];
