@@ -162,7 +162,7 @@ const st = {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    font-size: 1.13vw;
+    font-size: 1.12vw;
     @media ${MediaQueries.lg} {
       font-size: 3.6vw;
     }

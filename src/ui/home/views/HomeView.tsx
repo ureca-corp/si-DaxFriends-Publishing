@@ -64,7 +64,7 @@ export const HomeView = () => {
             display: ${isTablet ? "none" : "flex"};
             flex-direction: column;
             gap: 20px;
-            margin-right: 28px;
+            margin-right: 1.45vw;
 
             @media ${MediaQueries.lg} {
               gap: 16px;
