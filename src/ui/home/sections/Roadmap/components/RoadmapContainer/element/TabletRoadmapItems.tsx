@@ -10,7 +10,7 @@ import { useCustomMediaQuery } from "@/common/theme/screen";
 export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
   const models = RoadmapItemModels;
 
-  const { isLargeTablet } = useCustomMediaQuery();
+  const { isLargeTablet, isTablet } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       <div css={st.inner}>
@@ -21,7 +21,7 @@ export const TabletRoadmapItems = ({ fullpageSwiper }: SlideProps) => {
           slideToClickedSlide
           freeMode={true}
           modules={[Mousewheel, FreeMode]}
-          spaceBetween={isLargeTablet ? 180 : 260}
+          spaceBetween={isTablet ? 260 : isLargeTablet ? 180 : 0}
           css={css`
             position: relative;
             height: 100%;

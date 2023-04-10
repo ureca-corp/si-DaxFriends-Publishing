@@ -41,10 +41,11 @@ const st = {
     gap: 20px;
 
     @media ${MediaQueries.xll} {
-      width: 100%;
-      height: 27.7vh;
+      width: 65%;
+      height: 28.5vh;
       border-radius: 4.81vw;
       padding: 3.2vh;
+      margin: 0 auto;
     }
 
     @media ${MediaQueries.lg} {
