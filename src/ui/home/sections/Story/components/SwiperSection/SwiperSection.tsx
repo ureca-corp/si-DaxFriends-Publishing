@@ -127,6 +127,16 @@ const st = {
     }
   `,
   title: css`
+    background: linear-gradient(
+      90deg,
+      #40c8ff 0%,
+      #9770ff 50.52%,
+      #e81cff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
     @media ${MediaQueries.lg} {
       font-size: 5.98vw;
       text-align: center;
@@ -139,6 +149,15 @@ const st = {
     }
   `,
   desc: css`
+    background: linear-gradient(
+      90deg,
+      #40c8ff 0%,
+      #9770ff 50.52%,
+      #e81cff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     @media ${MediaQueries.lg} {
       font-size: 3.9vw;
     }
@@ -169,10 +188,10 @@ const SlideImage = ({ image }: SlideProps) => {
 const SlideText = ({ title, desc }: SlideProps) => {
   return (
     <div css={st.textWrapper}>
-      <Typography variant="h1" color={LightColor.BrandWhite} css={st.title}>
+      <Typography variant="h1" css={st.title}>
         {title}
       </Typography>
-      <Typography variant="body2" color={LightColor.BrandWhite} css={st.desc}>
+      <Typography variant="body2" css={st.desc}>
         {desc}
       </Typography>
     </div>
