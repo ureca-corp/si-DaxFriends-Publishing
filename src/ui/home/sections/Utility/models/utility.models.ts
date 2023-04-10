@@ -5,7 +5,7 @@ export interface MemoType {
 
 export const UtilityModels: MemoType[] = [
   {
-    title: "C. U3 Investment",
+    title: "U3 Investment",
     desc: [
       "1. 선정된 디지털 자산에 대한 리서치 리포트 특별판 제공",
       "2. 투자자 보호 교육에 우선 초대",
@@ -14,7 +14,7 @@ export const UtilityModels: MemoType[] = [
     ],
   },
   {
-    title: "A. U1 Physical Giveaways",
+    title: "U1 Physical Giveaways",
     desc: [
       "1. 카드형 하드월렛(키페어)",
       "2. 블록체인 도서",
@@ -25,7 +25,7 @@ export const UtilityModels: MemoType[] = [
     ],
   },
   {
-    title: "B. U2 Digital Giveaways",
+    title: "U2 Digital Giveaways",
     desc: [
       "1. 닥스프렌즈 시즌2 민팅 시 혜택",
       "2. 닥스포인트 제공",
