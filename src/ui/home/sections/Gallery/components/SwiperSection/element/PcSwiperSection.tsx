@@ -36,17 +36,9 @@ export const PcSwiperSection = () => {
           position: relative;
           width: 100%;
 
-          & > .swiper-wrapper .swiper-card {
+          & > .swiper-wrapper .swiper-card .swiper-inner-card {
             width: 100%;
-            transition: all 0.5s ease-in-out;
-          }
-
-          & > .swiper-wrapper .swiper-slide-prev .swiper-card {
-            /* padding: 1.04vw;
-            margin-left: -0.52vw;
-            margin-right: 0;
-            padding-top: 0.52px;
-            padding-bottom: 0px; */
+            transform: scale(1);
             transition: all 0.5s ease-in-out;
           }
           &
@@ -54,6 +46,8 @@ export const PcSwiperSection = () => {
             .swiper-slide-prev
             .swiper-card
             .swiper-inner-card {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
             transform: scale(1.3);
             transition: all 0.5s ease-in-out;
           }
