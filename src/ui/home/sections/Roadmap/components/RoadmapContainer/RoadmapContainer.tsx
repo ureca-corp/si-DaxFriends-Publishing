@@ -30,6 +30,8 @@ const st = {
   root: css`
     width: 100%;
     @media ${MediaQueries.xll} {
+      position: relative;
+      height: 70vh;
       overflow-y: scroll;
       ::-webkit-scrollbar {
         display: none;
