@@ -22,7 +22,7 @@ export const SwiperSection = () => {
           loop
           freeMode={{ enabled: true, momentumBounce: false, momentum: false }}
           spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
-          slidesPerView={isSmall ? 1 : isTablet ? 2.6 : 6}
+          slidesPerView={isSmall ? 1.4 : isTablet ? 2.6 : 6}
           onResize={(e) => {
             e.autoplay.start();
           }}
@@ -58,7 +58,7 @@ export const SwiperSection = () => {
             enabled: true,
           }}
           spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
-          slidesPerView={isSmall ? 1 : isTablet ? 2.6 : 6}
+          slidesPerView={isSmall ? 1.4 : isTablet ? 2.6 : 6}
           modules={[Autoplay]}
           autoplay={{
             delay: 1,
