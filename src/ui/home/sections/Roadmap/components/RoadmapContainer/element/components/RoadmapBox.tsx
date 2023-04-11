@@ -30,7 +30,7 @@ export const RoadmapBox = ({ title, descList }: RoadmapItemType) => {
 const st = {
   box: css`
     width: 51.85vh;
-    height: 32.5vh;
+    height: 30vh;
     max-height: 32.5vh;
     background-color: white;
     padding: 3.7vh;
