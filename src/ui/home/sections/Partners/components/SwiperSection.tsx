@@ -53,9 +53,6 @@ export const SwiperSection = () => {
       <div css={st.swiper}>
         <CustomSwiper
           className="partners-swiper"
-          observer={true}
-          resizeObserver={true}
-          observeParents={true}
           loop
           freeMode={{
             enabled: true,
@@ -72,6 +69,9 @@ export const SwiperSection = () => {
             position: relative;
             width: 100%;
           `}
+          onResize={(e) => {
+            e.autoplay.start();
+          }}
         >
           {models.secondModels.map((it, index) => (
             <SwiperSlide key={`down-${index}`}>
