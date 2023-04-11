@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
-import Swiper, { Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { PartnerModels } from "../models/partner.models";
@@ -19,17 +19,18 @@ export const SwiperSection = () => {
       <div css={st.swiper}>
         <CustomSwiper
           className="partners-reverse-swiper"
-          observer={true}
-          observeParents={true}
-          watchSlidesProgress={true}
           loop
-          freeMode={{ enabled: true }}
+          freeMode={{ enabled: true, momentumBounce: false, momentum: false }}
           spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
           slidesPerView={isSmall ? 1 : isTablet ? 2.6 : 6}
+          onResize={(e) => {
+            e.autoplay.start();
+          }}
+          onTouchEnd={(e) => {
+            e.autoplay.start();
+          }}
           modules={[Autoplay]}
           autoplay={{
-            waitForTransition: false,
-            stopOnLastSlide: false,
             delay: 1,
             disableOnInteraction: false,
             reverseDirection: true,
@@ -65,7 +66,6 @@ export const SwiperSection = () => {
           autoplay={{
             delay: 1,
             disableOnInteraction: false,
-            stopOnLastSlide: false,
           }}
           speed={6000}
           css={css`
