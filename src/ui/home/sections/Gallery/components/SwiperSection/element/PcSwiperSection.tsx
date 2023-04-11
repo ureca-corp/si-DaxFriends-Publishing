@@ -20,12 +20,14 @@ export const PcSwiperSection = () => {
       <Swiper
         id="gallery-swiper"
         loop
+        freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
         spaceBetween={isSmall ? 40 : isTablet ? 80 : 0}
         slidesPerView={isSmall ? 1.5 : isTablet ? 2.2 : 5.6}
         centeredSlides={true}
         modules={[Autoplay]}
+        speed={2500}
         autoplay={{
-          delay: 2500,
+          delay: 0,
           disableOnInteraction: false,
         }}
         grabCursor={false}
