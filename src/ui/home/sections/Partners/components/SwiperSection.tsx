@@ -22,7 +22,6 @@ export const SwiperSection = () => {
           observer={true}
           observeParents={true}
           watchSlidesProgress={true}
-          initialSlide={0}
           loop
           freeMode={{ enabled: true }}
           spaceBetween={isSmall ? 0 : isTablet ? 60 : 0}
