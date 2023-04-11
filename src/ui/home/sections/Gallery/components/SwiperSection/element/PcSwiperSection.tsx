@@ -37,22 +37,25 @@ export const PcSwiperSection = () => {
           width: 100%;
 
           & > .swiper-wrapper .swiper-card {
+            width: 100%;
             transition: all 0.5s ease-in-out;
           }
 
           & > .swiper-wrapper .swiper-slide-prev .swiper-card {
-            padding: 1.04vw;
+            /* padding: 1.04vw;
             margin-left: -0.52vw;
             margin-right: 0;
             padding-top: 0.52px;
-            padding-bottom: 0px;
+            padding-bottom: 0px; */
+            transition: all 0.5s ease-in-out;
           }
           &
             > .swiper-wrapper
             .swiper-slide-prev
             .swiper-card
             .swiper-inner-card {
-            width: 110%;
+            transform: scale(1.3);
+            transition: all 0.5s ease-in-out;
           }
         `}
       >
