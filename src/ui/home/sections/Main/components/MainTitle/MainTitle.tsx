@@ -27,6 +27,7 @@ const st = {
     z-index: 1;
   `,
   main: css`
+    font-size: 4.25vh;
     background: linear-gradient(
       90deg,
       #40c8ff 0%,
@@ -36,7 +37,7 @@ const st = {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 4.25vh;
+    border-right: 1px solid transparent;
     line-height: 1.4;
     margin-bottom: 1.04vw; //20px
   `,
