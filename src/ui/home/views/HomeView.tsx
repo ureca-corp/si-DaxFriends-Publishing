@@ -66,36 +66,33 @@ export const HomeView = () => {
             gap: 20px;
             margin-right: 1.45vw;
 
-            @media ${MediaQueries.lg} {
+            @media ${MediaQueries.xll} {
+              top: 45% !important;
               gap: 16px;
             }
-            @media ${MediaQueries.sm} {
-              gap: 12px;
+            @media ${MediaQueries.lg} {
+              top: 50%;
             }
           }
           & > .swiper-pagination .swiper-pagination-bullet {
             background: white;
             opacity: 1;
-            width: 20px;
-            height: 20px;
-            @media ${MediaQueries.lg} {
-              width: 16px;
-              height: 16px;
+            width: 16px;
+            height: 16px;
+            @media ${MediaQueries.xll} {
+              width: 12px;
+              height: 12px;
             }
-            @media ${MediaQueries.sm} {
+            @media ${MediaQueries.lg} {
               width: 12px;
               height: 12px;
             }
           }
           & > .swiper-pagination .swiper-pagination-bullet-active {
             background: #9000ff;
-            width: 30px;
-            height: 30px;
-            @media ${MediaQueries.lg} {
-              width: 24px;
-              height: 24px;
-            }
-            @media ${MediaQueries.sm} {
+            width: 26px;
+            height: 26px;
+            @media ${MediaQueries.xll} {
               width: 20px;
               height: 20px;
             }
