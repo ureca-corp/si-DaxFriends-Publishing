@@ -25,9 +25,9 @@ export const PcSwiperSection = () => {
         slidesPerView={isSmall ? 1.5 : isTablet ? 2.2 : 5.6}
         centeredSlides={true}
         modules={[Autoplay]}
-        speed={2500}
+        speed={3000}
         autoplay={{
-          delay: 0,
+          delay: 1,
           disableOnInteraction: false,
         }}
         grabCursor={false}
