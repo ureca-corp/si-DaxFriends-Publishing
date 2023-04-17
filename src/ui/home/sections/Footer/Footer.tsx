@@ -41,10 +41,17 @@ const st = {
     flex-direction: column;
     gap: 10px;
     z-index: 9;
+
+    @media ${MediaQueries.xll} {
+      height: 228px;
+      padding: 3.12vw 5.2vw;
+    }
     @media ${MediaQueries.lg} {
+      height: unset;
       padding: 4.2vw;
     }
     @media ${MediaQueries.xs} {
+      height: unset;
       padding: 5.55vw;
     }
   `,
@@ -86,6 +93,9 @@ const st = {
     font-family: "Pretendard";
     font-weight: 400;
     line-height: 1;
+    @media ${MediaQueries.xll} {
+      font-size: 1vw;
+    }
     @media ${MediaQueries.lg} {
       font-size: 1.82vw;
       line-height: 1.4;
